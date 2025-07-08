@@ -1,0 +1,25 @@
+cozmo.camera
+============
+
+.. automodule:: cozmo.camera
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Camera
+      CameraConfig
+      EvtNewRawCameraImage
+      EvtRobotObservedMotion
+   
+   
+
+   
+   
+   

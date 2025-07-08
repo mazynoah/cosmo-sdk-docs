@@ -1,0 +1,734 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cozmo.action" href="cozmo.action.html" />
+    <link rel="prev" title="The API" href="../api.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.action.html">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.annotate.html">cozmo.annotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.audio.html">cozmo.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.behavior.html">cozmo.behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.camera.html">cozmo.camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.conn.html">cozmo.conn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.event.html">cozmo.event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.exceptions.html">cozmo.exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.faces.html">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.opengl.html">cozmo.opengl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.pets.html">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.world.html">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo">
+<span id="cozmo"></span><h1>cozmo<a class="headerlink" href="#module-cozmo" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">Functions</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">verify_min_clad_version</span></code>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="data">
+<dt id="cozmo.logger">
+<code class="descclassname">cozmo.</code><code class="descname">logger</code><em class="property"> = &lt;Logger cozmo.general (WARNING)&gt;</em><a class="headerlink" href="#cozmo.logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>The general purpose logger logs high level information about Cozmo events.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.logger_protocol">
+<code class="descclassname">cozmo.</code><code class="descname">logger_protocol</code><em class="property"> = &lt;Logger cozmo.protocol (WARNING)&gt;</em><a class="headerlink" href="#cozmo.logger_protocol" title="Permalink to this definition">¶</a></dt>
+<dd><p>The protocol logger logs low level messages that are sent back and forth to Cozmo.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.DeviceConnector">
+<em class="property">class </em><code class="descclassname">cozmo.</code><code class="descname">DeviceConnector</code><span class="sig-paren">(</span><em>cozmo_port=5106</em>, <em>enable_env_vars=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.DeviceConnector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for objects that setup the physical connection to a device.</p>
+<dl class="method">
+<dt id="cozmo.DeviceConnector.connect">
+<code class="descname">connect</code><span class="sig-paren">(</span><em>loop</em>, <em>protocol_factory</em>, <em>conn_check</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.DeviceConnector.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect attempts to open a connection transport to the Cozmo app on a device.</p>
+<p>On opening a transport it will create a protocol from the supplied
+factory and connect it to the transport, returning a (transport, protocol)
+tuple. See <code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.BaseEventLoop.create_connection()</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.IOSConnector">
+<em class="property">class </em><code class="descclassname">cozmo.</code><code class="descname">IOSConnector</code><span class="sig-paren">(</span><em>serial=None</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.IOSConnector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects to an attached iOS device over USB.</p>
+<p>Opens a connection to the first iOS device that’s found to be running
+the Cozmo app in SDK mode.</p>
+<p>iTunes (or another service providing usbmuxd) must be installed in order
+for this connector to be able to open a connection to a device.</p>
+<p>An instance of this class can be passed to the <code class="docutils literal notranslate"><span class="pre">connect_</span></code> prefixed
+functions in this module.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>serial</strong> (<em>string</em>) – Serial number of the device to connect to.
+If None, then connect to the first available iOS device running
+the Cozmo app in SDK mode.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="cozmo.IOSConnector.connect">
+<code class="descname">connect</code><span class="sig-paren">(</span><em>loop</em>, <em>protocol_factory</em>, <em>conn_check</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.IOSConnector.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect attempts to open a connection transport to the Cozmo app on a device.</p>
+<p>On opening a transport it will create a protocol from the supplied
+factory and connect it to the transport, returning a (transport, protocol)
+tuple. See <code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.BaseEventLoop.create_connection()</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.AndroidConnector">
+<em class="property">class </em><code class="descclassname">cozmo.</code><code class="descname">AndroidConnector</code><span class="sig-paren">(</span><em>adb_cmd=None</em>, <em>serial=None</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.AndroidConnector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects to an attached Android device over USB.</p>
+<p>This requires the Android Studio command line tools to be installed,
+specifically <cite>adb</cite>.</p>
+<p>By default the connector will attempt to locate <cite>adb</cite> (or <cite>adb.exe</cite>
+on Windows) in common locations, but it may also be supplied by setting
+the <code class="docutils literal notranslate"><span class="pre">ANDROID_ADB_PATH</span></code> environment variable, or by passing it
+to the constructor.</p>
+<p>An instance of this class can be passed to the <code class="docutils literal notranslate"><span class="pre">connect_</span></code> prefixed
+functions in this module.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>serial</strong> (<em>string</em>) – Serial number of the device to connect to.
+If None, then connect to the first available Android device running
+the Cozmo app in SDK mode.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="cozmo.AndroidConnector.connect">
+<code class="descname">connect</code><span class="sig-paren">(</span><em>loop</em>, <em>protocol_factory</em>, <em>conn_check</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.AndroidConnector.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect attempts to open a connection transport to the Cozmo app on a device.</p>
+<p>On opening a transport it will create a protocol from the supplied
+factory and connect it to the transport, returning a (transport, protocol)
+tuple. See <code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.BaseEventLoop.create_connection()</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.TCPConnector">
+<em class="property">class </em><code class="descclassname">cozmo.</code><code class="descname">TCPConnector</code><span class="sig-paren">(</span><em>tcp_port=None</em>, <em>ip_addr='127.0.0.1'</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.TCPConnector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects to the Cozmo app directly via TCP.</p>
+<p>Generally only used for testing and debugging.</p>
+<p>Requires that a SDK_TCP_PORT environment variable be set to the port
+number to connect to.</p>
+<dl class="method">
+<dt id="cozmo.TCPConnector.connect">
+<code class="descname">connect</code><span class="sig-paren">(</span><em>loop</em>, <em>protocol_factory</em>, <em>conn_check</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.TCPConnector.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect attempts to open a connection transport to the Cozmo app on a device.</p>
+<p>On opening a transport it will create a protocol from the supplied
+factory and connect it to the transport, returning a (transport, protocol)
+tuple. See <code class="xref py py-meth docutils literal notranslate"><span class="pre">asyncio.BaseEventLoop.create_connection()</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.connect">
+<code class="descclassname">cozmo.</code><code class="descname">connect</code><span class="sig-paren">(</span><em>f</em>, <em>conn_factory=&lt;class 'cozmo.conn.CozmoConnection'&gt;</em>, <em>connector=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects to the Cozmo Engine on the mobile device and supplies the connection to a function.</p>
+<p>Accepts a function, f, that is given a <a class="reference internal" href="cozmo.conn.html#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.conn.CozmoConnection</span></code></a> object as
+a parameter.</p>
+<p>The supplied function may be either an asynchronous coroutine function
+(normally defined using <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code>) or a regular synchronous function.</p>
+<p>If an asynchronous function is supplied it will be run on the same thread
+as the Cozmo event loop and must use the <code class="docutils literal notranslate"><span class="pre">await</span></code> keyword to yield control
+back to the loop.</p>
+<p>If a synchronous function is supplied then it will run on the main thread
+and Cozmo’s event loop will run on a separate thread.  Calls to
+asynchronous methods returned from CozmoConnection will automatically
+be translated to synchronous ones.</p>
+<p>The connect function will return once the supplied function has completed,
+as which time it will terminate the connection to the robot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>f</strong> (<em>callable</em>) – The function to execute</li>
+<li><strong>conn_factory</strong> (<em>callable</em>) – Override the factory function to generate a
+<a class="reference internal" href="cozmo.conn.html#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.conn.CozmoConnection</span></code></a> (or subclass) instance.</li>
+<li><strong>connector</strong> (<a class="reference internal" href="#cozmo.DeviceConnector" title="cozmo.DeviceConnector"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeviceConnector</span></code></a>) – Optional instance of a DeviceConnector
+subclass that handles opening the USB connection to a device.
+By default it will connect to the first Android or iOS device that
+has the Cozmo app running in SDK mode.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.connect_with_3dviewer">
+<code class="descclassname">cozmo.</code><code class="descname">connect_with_3dviewer</code><span class="sig-paren">(</span><em>f</em>, <em>conn_factory=&lt;class 'cozmo.conn.CozmoConnection'&gt;</em>, <em>connector=None</em>, <em>enable_camera_view=False</em>, <em>show_viewer_controls=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.connect_with_3dviewer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup a connection to a device and run a user function while displaying Cozmo’s 3d world.</p>
+<p>This displays an OpenGL window on the screen with a 3D view of Cozmo’s
+understanding of the world. Optionally, if <cite>use_viewer</cite> is True, a 2nd OpenGL
+window will also display showing a view of Cozmo’s camera. It will return an
+error if the current system does not support PyOpenGL.</p>
+<p>The function may be either synchronous or asynchronous (defined
+used <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code>).</p>
+<p>The function must accept a <code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.CozmoConnection</span></code> object as
+its only argument.
+This call will block until the supplied function completes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>f</strong> (<em>callable</em>) – The function to execute</li>
+<li><strong>conn_factory</strong> (<em>callable</em>) – Override the factory function to generate a
+<a class="reference internal" href="cozmo.conn.html#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.conn.CozmoConnection</span></code></a> (or subclass) instance.</li>
+<li><strong>connector</strong> (<a class="reference internal" href="#cozmo.DeviceConnector" title="cozmo.DeviceConnector"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeviceConnector</span></code></a>) – Optional instance of a DeviceConnector
+subclass that handles opening the USB connection to a device.
+By default it will connect to the first Android or iOS device that
+has the Cozmo app running in SDK mode.</li>
+<li><strong>enable_camera_view</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether to also open a 2D camera
+view in a second OpenGL window.</li>
+<li><strong>show_viewer_controls</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether to draw controls on the view.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.connect_with_tkviewer">
+<code class="descclassname">cozmo.</code><code class="descname">connect_with_tkviewer</code><span class="sig-paren">(</span><em>f</em>, <em>conn_factory=&lt;class 'cozmo.conn.CozmoConnection'&gt;</em>, <em>connector=None</em>, <em>force_on_top=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.connect_with_tkviewer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup a connection to a device and run a user function while displaying Cozmo’s camera.</p>
+<p>This displays a Tk window on the screen showing a view of Cozmo’s camera.
+It will return an error if the current system does not support Tk.</p>
+<p>The function may be either synchronous or asynchronous (defined
+used <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code>).</p>
+<p>The function must accept a <code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.CozmoConnection</span></code> object as
+its only argument.
+This call will block until the supplied function completes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>f</strong> (<em>callable</em>) – The function to execute</li>
+<li><strong>conn_factory</strong> (<em>callable</em>) – Override the factory function to generate a
+<a class="reference internal" href="cozmo.conn.html#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.conn.CozmoConnection</span></code></a> (or subclass) instance.</li>
+<li><strong>connector</strong> (<a class="reference internal" href="#cozmo.DeviceConnector" title="cozmo.DeviceConnector"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeviceConnector</span></code></a>) – Optional instance of a DeviceConnector
+subclass that handles opening the USB connection to a device.
+By default it will connect to the first Android or iOS device that
+has the Cozmo app running in SDK mode.</li>
+<li><strong>force_on_top</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether the window should be forced on top of all others</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.connect_on_loop">
+<code class="descclassname">cozmo.</code><code class="descname">connect_on_loop</code><span class="sig-paren">(</span><em>loop</em>, <em>conn_factory=&lt;class 'cozmo.conn.CozmoConnection'&gt;</em>, <em>connector=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.connect_on_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uses the supplied event loop to connect to a device.</p>
+<p>Will run the event loop in the current thread until the
+connection succeeds or fails.</p>
+<p>If you do not want/need to manage your own loop, then use the
+<a class="reference internal" href="#cozmo.connect" title="cozmo.connect"><code class="xref py py-func docutils literal notranslate"><span class="pre">connect()</span></code></a> function to handle setup/teardown and execute
+a user-supplied function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>loop</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/asyncio-eventloop.html#asyncio.BaseEventLoop" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.BaseEventLoop</span></code></a>) – The event loop to use to
+connect to Cozmo.</li>
+<li><strong>conn_factory</strong> (<em>callable</em>) – Override the factory function to generate a
+<a class="reference internal" href="cozmo.conn.html#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.conn.CozmoConnection</span></code></a> (or subclass) instance.</li>
+<li><strong>connector</strong> (<a class="reference internal" href="#cozmo.DeviceConnector" title="cozmo.DeviceConnector"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeviceConnector</span></code></a>) – Optional instance of a DeviceConnector
+subclass that handles opening the USB connection to a device.
+By default, it will connect to the first Android or iOS device that
+has the Cozmo app running in SDK mode.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A <a class="reference internal" href="cozmo.conn.html#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.conn.CozmoConnection</span></code></a> instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.run_program">
+<code class="descclassname">cozmo.</code><code class="descname">run_program</code><span class="sig-paren">(</span><em>f</em>, <em>use_viewer=False</em>, <em>conn_factory=&lt;class 'cozmo.conn.CozmoConnection'&gt;</em>, <em>connector=None</em>, <em>force_viewer_on_top=False</em>, <em>deprecated_filter='default'</em>, <em>use_3d_viewer=False</em>, <em>show_viewer_controls=True</em>, <em>exit_on_connection_error=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.run_program" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect to Cozmo and run the provided program/function f.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>f</strong> (<em>callable</em>) – The function to execute, accepts a connected
+<a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot" title="cozmo.robot.Robot"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.robot.Robot</span></code></a> as the parameter.</li>
+<li><strong>use_viewer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether to display a view of Cozmo’s camera
+in a window.</li>
+<li><strong>conn_factory</strong> (<em>callable</em>) – Override the factory function to generate a
+<a class="reference internal" href="cozmo.conn.html#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.conn.CozmoConnection</span></code></a> (or subclass) instance.</li>
+<li><strong>connector</strong> (<a class="reference internal" href="#cozmo.DeviceConnector" title="cozmo.DeviceConnector"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeviceConnector</span></code></a>) – Optional instance of a DeviceConnector
+subclass that handles opening the USB connection to a device.
+By default it will connect to the first Android or iOS device that
+has the Cozmo app running in SDK mode.</li>
+<li><strong>force_viewer_on_top</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether the window should be
+forced on top of all others (only relevant if use_viewer is True).
+Note that this is ignored if use_3d_viewer is True (as it’s not
+currently supported on that windowing system).</li>
+<li><strong>deprecated_filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The filter for any DeprecationWarning messages.
+This is defaulted to “default” which shows the warning once per
+location. You can hide all deprecated warnings by passing in “ignore”,
+see <a class="reference external" href="https://docs.python.org/3/library/warnings.html#warning-filter">https://docs.python.org/3/library/warnings.html#warning-filter</a>
+for more information.</li>
+<li><strong>use_3d_viewer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether to display a 3D view of Cozmo’s
+understanding of the world in a window. Note that if both this and
+<cite>use_viewer</cite> are set then the 2D camera view will render in an OpenGL
+window instead of a TkView window.</li>
+<li><strong>show_viewer_controls</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether to draw controls on the view.</li>
+<li><strong>exit_on_connection_error</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specify whether the program should exit on
+connection error or should an error be raised. Default to true.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.setup_basic_logging">
+<code class="descclassname">cozmo.</code><code class="descname">setup_basic_logging</code><span class="sig-paren">(</span><em>general_log_level=None</em>, <em>protocol_log_level=None</em>, <em>protocol_log_messages='all'</em>, <em>target=&lt;_io.TextIOWrapper name='&lt;stderr&gt;' mode='w' encoding='UTF-8'&gt;</em>, <em>deprecated_filter='default'</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.setup_basic_logging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper to perform basic setup of the Python logging machinery.</p>
+<p>The SDK defines two loggers:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#cozmo.logger" title="cozmo.logger"><code class="xref py py-data docutils literal notranslate"><span class="pre">logger</span></code></a> (“cozmo.general”) - For general purpose information
+about events within the SDK; and</li>
+<li><a class="reference internal" href="#cozmo.logger_protocol" title="cozmo.logger_protocol"><code class="xref py py-data docutils literal notranslate"><span class="pre">logger_protocol</span></code></a> (“cozmo.protocol”) - For low level
+communication messages between the device and the SDK.</li>
+</ul>
+<p>Generally only <a class="reference internal" href="#cozmo.logger" title="cozmo.logger"><code class="xref py py-data docutils literal notranslate"><span class="pre">logger</span></code></a> is interesting.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>general_log_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ‘DEBUG’, ‘INFO’, ‘WARN’, ‘ERROR’ or an equivalent
+constant from the <a class="reference external" href="https://docs.python.org/3.5/library/logging.html#module-logging" title="(in Python v3.5)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a> module.  If None then a
+value will be read from the COZMO_LOG_LEVEL environment variable.</li>
+<li><strong>protocol_log_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – as general_log_level.  If None then a
+value will be read from the COZMO_PROTOCOL_LOG_LEVEL environment
+variable.</li>
+<li><strong>protocol_log_messages</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a>) – The low level messages that should be
+logged to the protocol log.  Defaults to all.  Will read from
+the COMZO_PROTOCOL_LOG_MESSAGES if available which should be
+a comma separated list of message names (case sensitive).</li>
+<li><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – The stream to send the log data to; defaults to stderr</li>
+<li><strong>deprecated_filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The filter for any DeprecationWarning messages.
+This is defaulted to “default” which shows the warning once per
+location. You can hide all deprecated warnings by passing in “ignore”,
+see <a class="reference external" href="https://docs.python.org/3/library/warnings.html#warning-filter">https://docs.python.org/3/library/warnings.html#warning-filter</a>
+for more information.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.CozmoSDKException">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">CozmoSDKException</code><a class="headerlink" href="#cozmo.CozmoSDKException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class of all Cozmo SDK exceptions.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.SDKShutdown">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">SDKShutdown</code><a class="headerlink" href="#cozmo.SDKShutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised when the SDK is being shut down</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.StopPropogation">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">StopPropogation</code><a class="headerlink" href="#cozmo.StopPropogation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised by event handlers to prevent further handlers from being triggered.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.AnimationsNotLoaded">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">AnimationsNotLoaded</code><a class="headerlink" href="#cozmo.AnimationsNotLoaded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if an attempt is made to play a named animation before animations have been received.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.ActionError">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">ActionError</code><a class="headerlink" href="#cozmo.ActionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for errors that occur with robot actions.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.ConnectionError">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">ConnectionError</code><a class="headerlink" href="#cozmo.ConnectionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for errors regarding connection to the device.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.ConnectionAborted">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">ConnectionAborted</code><a class="headerlink" href="#cozmo.ConnectionAborted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if the connection to the device is unexpectedly lost.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.ConnectionCheckFailed">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">ConnectionCheckFailed</code><a class="headerlink" href="#cozmo.ConnectionCheckFailed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if the connection check has failed.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.NoDevicesFound">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">NoDevicesFound</code><a class="headerlink" href="#cozmo.NoDevicesFound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if no devices connected running Cozmo in SDK mode</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.SDKVersionMismatch">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">SDKVersionMismatch</code><span class="sig-paren">(</span><em>message</em>, <em>sdk_version</em>, <em>sdk_app_version</em>, <em>app_version</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.SDKVersionMismatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if the Cozmo SDK version is not compatible with the software running on the device.</p>
+<dl class="attribute">
+<dt id="cozmo.SDKVersionMismatch.app_version">
+<code class="descname">app_version</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.SDKVersionMismatch.app_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of the App that was detected, and is incompatible, in Major.Minor.Patch format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.SDKVersionMismatch.sdk_app_version">
+<code class="descname">sdk_app_version</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.SDKVersionMismatch.sdk_app_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of the App that this SDK is compatible with in Major.Minor.Patch format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.SDKVersionMismatch.sdk_version">
+<code class="descname">sdk_version</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.SDKVersionMismatch.sdk_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SDK version number in Major.Minor.Patch format.
+See <a class="reference internal" href="../sdk-versions.html#sdk-versions"><span class="std std-ref">SDK vs. App Versions</span></a> for which App version is compatible with each SDK version.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.NotPickupable">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">NotPickupable</code><a class="headerlink" href="#cozmo.NotPickupable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if an attempt is made to pick up or place an object that can’t be picked up by Cozmo</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.CannotPlaceObjectsOnThis">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">CannotPlaceObjectsOnThis</code><a class="headerlink" href="#cozmo.CannotPlaceObjectsOnThis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if an attempt is made to place an object on top of an invalid object</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.RobotBusy">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">RobotBusy</code><a class="headerlink" href="#cozmo.RobotBusy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if an attempt is made to perform an action while another action is still running.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.InvalidOpenGLGlutImplementation">
+<em class="property">exception </em><code class="descclassname">cozmo.</code><code class="descname">InvalidOpenGLGlutImplementation</code><a class="headerlink" href="#cozmo.InvalidOpenGLGlutImplementation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised by opengl viewer if no valid GLUT implementation available.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cozmo.action.html" class="btn btn-neutral float-right" title="cozmo.action" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../api.html" class="btn btn-neutral float-left" title="The API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

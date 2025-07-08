@@ -1,0 +1,35 @@
+cozmo.event
+===========
+
+.. automodule:: cozmo.event
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      filter_handler
+      oneshot
+      wait_for_first
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Dispatcher
+      Event
+      Filter
+      Handler
+      NullHandler
+      docstr
+   
+   
+
+   
+   
+   

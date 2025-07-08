@@ -1,0 +1,45 @@
+cozmo.robot
+===========
+
+.. automodule:: cozmo.robot
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      DisplayOledFaceImage
+      DockWithCube
+      DriveOffChargerContacts
+      DriveStraight
+      EvtRobotReady
+      EvtRobotStateUpdated
+      EvtUnexpectedMovement
+      GoToObject
+      GoToPose
+      LiftPosition
+      PerformOffChargerContext
+      PickupObject
+      PlaceObjectOnGroundHere
+      PlaceOnObject
+      PopAWheelie
+      Robot
+      RollCube
+      SayText
+      SetHeadAngle
+      SetLiftHeight
+      TurnInPlace
+      TurnTowardsFace
+      UnexpectedMovementSide
+      UnexpectedMovementType
+   
+   
+
+   
+   
+   

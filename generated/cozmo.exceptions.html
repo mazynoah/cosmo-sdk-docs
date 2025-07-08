@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo.exceptions &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cozmo.faces" href="cozmo.faces.html" />
+    <link rel="prev" title="cozmo.event" href="cozmo.event.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cozmo.html">cozmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.action.html">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.annotate.html">cozmo.annotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.audio.html">cozmo.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.behavior.html">cozmo.behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.camera.html">cozmo.camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.conn.html">cozmo.conn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.event.html">cozmo.event</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo.exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.faces.html">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.opengl.html">cozmo.opengl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.pets.html">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.world.html">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo.exceptions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.exceptions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo.exceptions">
+<span id="cozmo-exceptions"></span><h1>cozmo.exceptions<a class="headerlink" href="#module-cozmo.exceptions" title="Permalink to this headline">¶</a></h1>
+<p>SDK-specific exception classes.</p>
+<p class="rubric">Exceptions</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.exceptions.ActionError" title="cozmo.exceptions.ActionError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionError</span></code></a></td>
+<td>Base class for errors that occur with robot actions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.exceptions.AnimationsNotLoaded" title="cozmo.exceptions.AnimationsNotLoaded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnimationsNotLoaded</span></code></a></td>
+<td>Raised if an attempt is made to play a named animation before animations have been received.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.exceptions.CannotPlaceObjectsOnThis" title="cozmo.exceptions.CannotPlaceObjectsOnThis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CannotPlaceObjectsOnThis</span></code></a></td>
+<td>Raised if an attempt is made to place an object on top of an invalid object</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.exceptions.ConnectionAborted" title="cozmo.exceptions.ConnectionAborted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConnectionAborted</span></code></a></td>
+<td>Raised if the connection to the device is unexpectedly lost.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.exceptions.ConnectionCheckFailed" title="cozmo.exceptions.ConnectionCheckFailed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConnectionCheckFailed</span></code></a></td>
+<td>Raised if the connection check has failed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.exceptions.ConnectionError" title="cozmo.exceptions.ConnectionError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConnectionError</span></code></a></td>
+<td>Base class for errors regarding connection to the device.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.exceptions.CozmoSDKException" title="cozmo.exceptions.CozmoSDKException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CozmoSDKException</span></code></a></td>
+<td>Base class of all Cozmo SDK exceptions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.exceptions.InvalidOpenGLGlutImplementation" title="cozmo.exceptions.InvalidOpenGLGlutImplementation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvalidOpenGLGlutImplementation</span></code></a></td>
+<td>Raised by opengl viewer if no valid GLUT implementation available.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.exceptions.NoDevicesFound" title="cozmo.exceptions.NoDevicesFound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NoDevicesFound</span></code></a></td>
+<td>Raised if no devices connected running Cozmo in SDK mode</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.exceptions.NotPickupable" title="cozmo.exceptions.NotPickupable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotPickupable</span></code></a></td>
+<td>Raised if an attempt is made to pick up or place an object that can’t be picked up by Cozmo</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.exceptions.RobotBusy" title="cozmo.exceptions.RobotBusy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RobotBusy</span></code></a></td>
+<td>Raised if an attempt is made to perform an action while another action is still running.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.exceptions.SDKShutdown" title="cozmo.exceptions.SDKShutdown"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SDKShutdown</span></code></a></td>
+<td>Raised when the SDK is being shut down</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.exceptions.SDKVersionMismatch" title="cozmo.exceptions.SDKVersionMismatch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SDKVersionMismatch</span></code></a>(message,&nbsp;sdk_version,&nbsp;…)</td>
+<td>Raised if the Cozmo SDK version is not compatible with the software running on the device.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.exceptions.StopPropogation" title="cozmo.exceptions.StopPropogation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StopPropogation</span></code></a></td>
+<td>Raised by event handlers to prevent further handlers from being triggered.</td>
+</tr>
+</tbody>
+</table>
+<dl class="exception">
+<dt id="cozmo.exceptions.CozmoSDKException">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">CozmoSDKException</code><a class="headerlink" href="#cozmo.exceptions.CozmoSDKException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class of all Cozmo SDK exceptions.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.SDKShutdown">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">SDKShutdown</code><a class="headerlink" href="#cozmo.exceptions.SDKShutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised when the SDK is being shut down</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.StopPropogation">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">StopPropogation</code><a class="headerlink" href="#cozmo.exceptions.StopPropogation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised by event handlers to prevent further handlers from being triggered.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.AnimationsNotLoaded">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">AnimationsNotLoaded</code><a class="headerlink" href="#cozmo.exceptions.AnimationsNotLoaded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if an attempt is made to play a named animation before animations have been received.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.ActionError">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">ActionError</code><a class="headerlink" href="#cozmo.exceptions.ActionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for errors that occur with robot actions.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.ConnectionError">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">ConnectionError</code><a class="headerlink" href="#cozmo.exceptions.ConnectionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for errors regarding connection to the device.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.ConnectionAborted">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">ConnectionAborted</code><a class="headerlink" href="#cozmo.exceptions.ConnectionAborted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if the connection to the device is unexpectedly lost.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.ConnectionCheckFailed">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">ConnectionCheckFailed</code><a class="headerlink" href="#cozmo.exceptions.ConnectionCheckFailed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if the connection check has failed.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.NoDevicesFound">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">NoDevicesFound</code><a class="headerlink" href="#cozmo.exceptions.NoDevicesFound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if no devices connected running Cozmo in SDK mode</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.SDKVersionMismatch">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">SDKVersionMismatch</code><span class="sig-paren">(</span><em>message</em>, <em>sdk_version</em>, <em>sdk_app_version</em>, <em>app_version</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.exceptions.SDKVersionMismatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if the Cozmo SDK version is not compatible with the software running on the device.</p>
+<dl class="attribute">
+<dt id="cozmo.exceptions.SDKVersionMismatch.app_version">
+<code class="descname">app_version</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.exceptions.SDKVersionMismatch.app_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of the App that was detected, and is incompatible, in Major.Minor.Patch format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.exceptions.SDKVersionMismatch.sdk_app_version">
+<code class="descname">sdk_app_version</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.exceptions.SDKVersionMismatch.sdk_app_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of the App that this SDK is compatible with in Major.Minor.Patch format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.exceptions.SDKVersionMismatch.sdk_version">
+<code class="descname">sdk_version</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.exceptions.SDKVersionMismatch.sdk_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SDK version number in Major.Minor.Patch format.
+See <a class="reference internal" href="../sdk-versions.html#sdk-versions"><span class="std std-ref">SDK vs. App Versions</span></a> for which App version is compatible with each SDK version.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.NotPickupable">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">NotPickupable</code><a class="headerlink" href="#cozmo.exceptions.NotPickupable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if an attempt is made to pick up or place an object that can’t be picked up by Cozmo</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.CannotPlaceObjectsOnThis">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">CannotPlaceObjectsOnThis</code><a class="headerlink" href="#cozmo.exceptions.CannotPlaceObjectsOnThis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if an attempt is made to place an object on top of an invalid object</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.RobotBusy">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">RobotBusy</code><a class="headerlink" href="#cozmo.exceptions.RobotBusy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if an attempt is made to perform an action while another action is still running.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cozmo.exceptions.InvalidOpenGLGlutImplementation">
+<em class="property">exception </em><code class="descclassname">cozmo.exceptions.</code><code class="descname">InvalidOpenGLGlutImplementation</code><a class="headerlink" href="#cozmo.exceptions.InvalidOpenGLGlutImplementation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised by opengl viewer if no valid GLUT implementation available.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cozmo.faces.html" class="btn btn-neutral float-right" title="cozmo.faces" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cozmo.event.html" class="btn btn-neutral float-left" title="cozmo.event" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

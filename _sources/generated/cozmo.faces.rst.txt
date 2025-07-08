@@ -1,0 +1,36 @@
+cozmo.faces
+===========
+
+.. automodule:: cozmo.faces
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      erase_all_enrolled_faces
+      erase_enrolled_face_by_id
+      update_enrolled_face_by_id
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      EvtErasedEnrolledFace
+      EvtFaceAppeared
+      EvtFaceDisappeared
+      EvtFaceIdChanged
+      EvtFaceObserved
+      EvtFaceRenamed
+      Face
+   
+   
+
+   
+   
+   

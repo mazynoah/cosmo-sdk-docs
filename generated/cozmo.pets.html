@@ -1,0 +1,430 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo.pets &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cozmo.robot" href="cozmo.robot.html" />
+    <link rel="prev" title="cozmo.opengl" href="cozmo.opengl.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cozmo.html">cozmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.action.html">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.annotate.html">cozmo.annotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.audio.html">cozmo.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.behavior.html">cozmo.behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.camera.html">cozmo.camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.conn.html">cozmo.conn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.event.html">cozmo.event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.exceptions.html">cozmo.exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.faces.html">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.opengl.html">cozmo.opengl</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.world.html">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo.pets</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.pets.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo.pets">
+<span id="cozmo-pets"></span><h1>cozmo.pets<a class="headerlink" href="#module-cozmo.pets" title="Permalink to this headline">¶</a></h1>
+<p>Pet detection.</p>
+<p>Cozmo is capable of detecting pet faces (cats and dogs).</p>
+<p>The <a class="reference internal" href="cozmo.world.html#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.world.World</span></code></a> object keeps track of pets the robot currently
+knows about, along with those that are currently visible to the camera.</p>
+<p>Each pet is assigned a <a class="reference internal" href="#cozmo.pets.Pet" title="cozmo.pets.Pet"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pet</span></code></a> object, which generates a number of
+observable events whenever the pet is observed, etc.</p>
+<p>If a pet goes off-screen, it will be assigned a new object_id (and
+therefore a new Pet object will be created) when it returns.
+This is because the system can only tell if something appears to be
+a cat or a dog; it cannot recognize a specific pet or, for instance,
+tell the difference between two dogs.</p>
+<p>Note that these pet-specific events are also passed up to the
+<a class="reference internal" href="cozmo.world.html#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.world.World</span></code></a> object, so events for all pets can be
+observed by adding handlers there.</p>
+<p class="rubric">Classes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.pets.EvtPetAppeared" title="cozmo.pets.EvtPetAppeared"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtPetAppeared</span></code></a>(**kwargs)</td>
+<td>Triggered whenever a pet is first visually identified by a robot.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.pets.EvtPetDisappeared" title="cozmo.pets.EvtPetDisappeared"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtPetDisappeared</span></code></a>(**kwargs)</td>
+<td>Triggered whenever a pet that was previously being observed is no longer visible.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.pets.EvtPetObserved" title="cozmo.pets.EvtPetObserved"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtPetObserved</span></code></a>(**kwargs)</td>
+<td>Triggered whenever a pet is visually identified by the robot.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.pets.Pet" title="cozmo.pets.Pet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pet</span></code></a>(conn,&nbsp;world,&nbsp;robot[,&nbsp;pet_id])</td>
+<td>A single pet that Cozmo has detected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="data">
+<dt id="cozmo.pets.PET_VISIBILITY_TIMEOUT">
+<code class="descclassname">cozmo.pets.</code><code class="descname">PET_VISIBILITY_TIMEOUT</code><em class="property"> = 0.4</em><a class="headerlink" href="#cozmo.pets.PET_VISIBILITY_TIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Length of time in seconds to go without receiving an observed event before
+assuming that Cozmo can no longer see a pet.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.pets.PET_TYPE_CAT">
+<code class="descclassname">cozmo.pets.</code><code class="descname">PET_TYPE_CAT</code><em class="property"> = 'cat'</em><a class="headerlink" href="#cozmo.pets.PET_TYPE_CAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pet Type reported by Cozmo when he thinks it’s a cat</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.pets.PET_TYPE_DOG">
+<code class="descclassname">cozmo.pets.</code><code class="descname">PET_TYPE_DOG</code><em class="property"> = 'dog'</em><a class="headerlink" href="#cozmo.pets.PET_TYPE_DOG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pet Type reported by Cozmo when he thinks it’s a dog</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.pets.PET_TYPE_UNKNOWN">
+<code class="descclassname">cozmo.pets.</code><code class="descname">PET_TYPE_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#cozmo.pets.PET_TYPE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pet Type reported by Cozmo when unsure of type of pet</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.pets.EvtPetAppeared">
+<em class="property">class </em><code class="descclassname">cozmo.pets.</code><code class="descname">EvtPetAppeared</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.pets.EvtPetAppeared" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered whenever a pet is first visually identified by a robot.</p>
+<p>This differs from EvtPetObserved in that it’s only triggered when
+a pet initially becomes visible.  If it disappears for more than
+PET_VISIBILITY_TIMEOUT seconds and then is seen again, a
+EvtPetDisappeared will be dispatched, followed by another
+EvtPetAppeared event.</p>
+<p>For continuous tracking information about a visible pet, see
+EvtPetObserved.</p>
+<dl class="attribute">
+<dt id="cozmo.pets.EvtPetAppeared.image_box">
+<code class="descname">image_box</code><em class="property"> = &quot;A comzo.util.ImageBox defining where the pet is within Cozmo's camera view&quot;</em><a class="headerlink" href="#cozmo.pets.EvtPetAppeared.image_box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.pets.EvtPetAppeared.pet">
+<code class="descname">pet</code><em class="property"> = 'The Pet instance that was observed'</em><a class="headerlink" href="#cozmo.pets.EvtPetAppeared.pet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.pets.EvtPetAppeared.updated">
+<code class="descname">updated</code><em class="property"> = 'A set of field names that have changed'</em><a class="headerlink" href="#cozmo.pets.EvtPetAppeared.updated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.pets.EvtPetDisappeared">
+<em class="property">class </em><code class="descclassname">cozmo.pets.</code><code class="descname">EvtPetDisappeared</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.pets.EvtPetDisappeared" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered whenever a pet that was previously being observed is no longer visible.</p>
+<dl class="attribute">
+<dt id="cozmo.pets.EvtPetDisappeared.pet">
+<code class="descname">pet</code><em class="property"> = 'The Pet instance that is no longer being observed'</em><a class="headerlink" href="#cozmo.pets.EvtPetDisappeared.pet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.pets.EvtPetObserved">
+<em class="property">class </em><code class="descclassname">cozmo.pets.</code><code class="descname">EvtPetObserved</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.pets.EvtPetObserved" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered whenever a pet is visually identified by the robot.</p>
+<p>A stream of these events are produced while a pet is visible to the robot.
+Each event has an updated image_box field.</p>
+<p>See EvtPetAppeared if you only want to know when a pet first
+becomes visible.</p>
+<dl class="attribute">
+<dt id="cozmo.pets.EvtPetObserved.image_box">
+<code class="descname">image_box</code><em class="property"> = &quot;A comzo.util.ImageBox defining where the pet is within Cozmo's camera view&quot;</em><a class="headerlink" href="#cozmo.pets.EvtPetObserved.image_box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.pets.EvtPetObserved.pet">
+<code class="descname">pet</code><em class="property"> = 'The Pet instance that was observed'</em><a class="headerlink" href="#cozmo.pets.EvtPetObserved.pet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.pets.EvtPetObserved.updated">
+<code class="descname">updated</code><em class="property"> = 'A set of field names that have changed'</em><a class="headerlink" href="#cozmo.pets.EvtPetObserved.updated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.pets.Pet">
+<em class="property">class </em><code class="descclassname">cozmo.pets.</code><code class="descname">Pet</code><span class="sig-paren">(</span><em>conn</em>, <em>world</em>, <em>robot</em>, <em>pet_id=None</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.pets.Pet" title="Permalink to this definition">¶</a></dt>
+<dd><p>A single pet that Cozmo has detected.</p>
+<p>See parent class <a class="reference internal" href="cozmo.objects.html#cozmo.objects.ObservableElement" title="cozmo.objects.ObservableElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">ObservableElement</span></code></a> for additional properties
+and methods.</p>
+<dl class="attribute">
+<dt id="cozmo.pets.Pet.pet_id">
+<code class="descname">pet_id</code><a class="headerlink" href="#cozmo.pets.Pet.pet_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The internal ID assigned to the pet.</p>
+<p>This value can only be assigned once as it is static in the engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.pets.Pet.pet_type">
+<code class="descname">pet_type</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.pets.Pet.pet_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of Pet (PET_TYPE_CAT, PET_TYPE_DOG or PET_TYPE_UNKNOWN)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.pets.Pet.visibility_timeout">
+<code class="descname">visibility_timeout</code><em class="property"> = 0.4</em><a class="headerlink" href="#cozmo.pets.Pet.visibility_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Length of time in seconds to go without receiving an observed event before
+assuming that Cozmo can no longer see a pet.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cozmo.robot.html" class="btn btn-neutral float-right" title="cozmo.robot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cozmo.opengl.html" class="btn btn-neutral float-left" title="cozmo.opengl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+cozmo.run
+=========
+
+.. automodule:: cozmo.run
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      connect
+      connect_on_loop
+      connect_with_3dviewer
+      connect_with_tkviewer
+      run_program
+      setup_basic_logging
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AndroidConnector
+      DeviceConnector
+      FirstAvailableConnector
+      IOSConnector
+      TCPConnector
+   
+   
+
+   
+   
+   

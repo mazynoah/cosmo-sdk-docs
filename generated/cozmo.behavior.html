@@ -1,0 +1,538 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo.behavior &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cozmo.camera" href="cozmo.camera.html" />
+    <link rel="prev" title="cozmo.audio" href="cozmo.audio.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cozmo.html">cozmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.action.html">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.annotate.html">cozmo.annotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.audio.html">cozmo.audio</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo.behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.camera.html">cozmo.camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.conn.html">cozmo.conn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.event.html">cozmo.event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.exceptions.html">cozmo.exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.faces.html">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.opengl.html">cozmo.opengl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.pets.html">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.world.html">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo.behavior</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.behavior.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo.behavior">
+<span id="cozmo-behavior"></span><h1>cozmo.behavior<a class="headerlink" href="#module-cozmo.behavior" title="Permalink to this headline">¶</a></h1>
+<p>Behaviors represent a task that Cozmo may perform for an
+indefinite amount of time.</p>
+<p>For example, the “LookAroundInPlace” behavior causes Cozmo to start looking
+around him (without driving), which will cause events such as
+<a class="reference internal" href="cozmo.objects.html#cozmo.objects.EvtObjectObserved" title="cozmo.objects.EvtObjectObserved"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.EvtObjectObserved</span></code></a> to be generated as he comes across
+objects.</p>
+<p>Behaviors must be explicitly stopped before having the robot do something else
+(for example, pick up the object he just observed).</p>
+<p>Behaviors are started by a call to <a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot.start_behavior" title="cozmo.robot.Robot.start_behavior"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cozmo.robot.Robot.start_behavior()</span></code></a>,
+which returns a <a class="reference internal" href="#cozmo.behavior.Behavior" title="cozmo.behavior.Behavior"><code class="xref py py-class docutils literal notranslate"><span class="pre">Behavior</span></code></a> object.  Calling the <a class="reference internal" href="#cozmo.behavior.Behavior.stop" title="cozmo.behavior.Behavior.stop"><code class="xref py py-meth docutils literal notranslate"><span class="pre">stop()</span></code></a>
+method on that object terminate the behavior.</p>
+<p>The <a class="reference internal" href="#cozmo.behavior.BehaviorTypes" title="cozmo.behavior.BehaviorTypes"><code class="xref py py-class docutils literal notranslate"><span class="pre">BehaviorTypes</span></code></a> class in this module holds a list of all available
+behaviors.</p>
+<p class="rubric">Classes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.behavior.Behavior" title="cozmo.behavior.Behavior"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Behavior</span></code></a>(robot,&nbsp;behavior_type[,&nbsp;is_active])</td>
+<td>A Behavior instance describes a behavior the robot is currently performing.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.behavior.BehaviorTypes" title="cozmo.behavior.BehaviorTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BehaviorTypes</span></code></a></td>
+<td>Defines all executable robot behaviors.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.behavior.EvtBehaviorRequested" title="cozmo.behavior.EvtBehaviorRequested"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtBehaviorRequested</span></code></a>(**kwargs)</td>
+<td>Triggered when a behavior is requested to start.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.behavior.EvtBehaviorStarted" title="cozmo.behavior.EvtBehaviorStarted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtBehaviorStarted</span></code></a>(**kwargs)</td>
+<td>Triggered when a behavior starts running on the robot.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.behavior.EvtBehaviorStopped" title="cozmo.behavior.EvtBehaviorStopped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtBehaviorStopped</span></code></a>(**kwargs)</td>
+<td>Triggered when a behavior stops.</td>
+</tr>
+</tbody>
+</table>
+<dl class="data">
+<dt id="cozmo.behavior.BEHAVIOR_IDLE">
+<code class="descclassname">cozmo.behavior.</code><code class="descname">BEHAVIOR_IDLE</code><em class="property"> = 'behavior_idle'</em><a class="headerlink" href="#cozmo.behavior.BEHAVIOR_IDLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Behavior idle state (not requested to run)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.behavior.BEHAVIOR_REQUESTED">
+<code class="descclassname">cozmo.behavior.</code><code class="descname">BEHAVIOR_REQUESTED</code><em class="property"> = 'behavior_requested'</em><a class="headerlink" href="#cozmo.behavior.BEHAVIOR_REQUESTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Behavior requested state (waiting for engine to start it)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.behavior.BEHAVIOR_RUNNING">
+<code class="descclassname">cozmo.behavior.</code><code class="descname">BEHAVIOR_RUNNING</code><em class="property"> = 'behavior_running'</em><a class="headerlink" href="#cozmo.behavior.BEHAVIOR_RUNNING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Behavior running state</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.behavior.BEHAVIOR_STOPPED">
+<code class="descclassname">cozmo.behavior.</code><code class="descname">BEHAVIOR_STOPPED</code><em class="property"> = 'behavior_stopped'</em><a class="headerlink" href="#cozmo.behavior.BEHAVIOR_STOPPED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Behavior stopped state</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.behavior.EvtBehaviorRequested">
+<em class="property">class </em><code class="descclassname">cozmo.behavior.</code><code class="descname">EvtBehaviorRequested</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.behavior.EvtBehaviorRequested" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered when a behavior is requested to start.</p>
+<dl class="attribute">
+<dt id="cozmo.behavior.EvtBehaviorRequested.behavior">
+<code class="descname">behavior</code><em class="property"> = 'The Behavior object'</em><a class="headerlink" href="#cozmo.behavior.EvtBehaviorRequested.behavior" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.behavior.EvtBehaviorRequested.behavior_type_name">
+<code class="descname">behavior_type_name</code><em class="property"> = 'The behavior type name - equivalent to behavior.type.name'</em><a class="headerlink" href="#cozmo.behavior.EvtBehaviorRequested.behavior_type_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.behavior.EvtBehaviorStarted">
+<em class="property">class </em><code class="descclassname">cozmo.behavior.</code><code class="descname">EvtBehaviorStarted</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.behavior.EvtBehaviorStarted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered when a behavior starts running on the robot.</p>
+<dl class="attribute">
+<dt id="cozmo.behavior.EvtBehaviorStarted.behavior">
+<code class="descname">behavior</code><em class="property"> = 'The Behavior object'</em><a class="headerlink" href="#cozmo.behavior.EvtBehaviorStarted.behavior" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.behavior.EvtBehaviorStarted.behavior_type_name">
+<code class="descname">behavior_type_name</code><em class="property"> = 'The behavior type name - equivalent to behavior.type.name'</em><a class="headerlink" href="#cozmo.behavior.EvtBehaviorStarted.behavior_type_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.behavior.EvtBehaviorStopped">
+<em class="property">class </em><code class="descclassname">cozmo.behavior.</code><code class="descname">EvtBehaviorStopped</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.behavior.EvtBehaviorStopped" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered when a behavior stops.</p>
+<dl class="attribute">
+<dt id="cozmo.behavior.EvtBehaviorStopped.behavior">
+<code class="descname">behavior</code><em class="property"> = 'The behavior type object'</em><a class="headerlink" href="#cozmo.behavior.EvtBehaviorStopped.behavior" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.behavior.EvtBehaviorStopped.behavior_type_name">
+<code class="descname">behavior_type_name</code><em class="property"> = 'The behavior type name - equivalent to behavior.type.name'</em><a class="headerlink" href="#cozmo.behavior.EvtBehaviorStopped.behavior_type_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.behavior.Behavior">
+<em class="property">class </em><code class="descclassname">cozmo.behavior.</code><code class="descname">Behavior</code><span class="sig-paren">(</span><em>robot</em>, <em>behavior_type</em>, <em>is_active=False</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.behavior.Behavior" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Behavior instance describes a behavior the robot is currently performing.</p>
+<p>Returned by <a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot.start_behavior" title="cozmo.robot.Robot.start_behavior"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cozmo.robot.Robot.start_behavior()</span></code></a>.</p>
+<dl class="attribute">
+<dt id="cozmo.behavior.Behavior.is_active">
+<code class="descname">is_active</code><a class="headerlink" href="#cozmo.behavior.Behavior.is_active" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the behavior is currently active and may run on the robot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.behavior.Behavior.is_running">
+<code class="descname">is_running</code><a class="headerlink" href="#cozmo.behavior.Behavior.is_running" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the behavior is currently running on the robot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.behavior.Behavior.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.behavior.Behavior.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Requests that the robot stop performing the behavior.</p>
+<p>Has no effect if the behavior is not presently active.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.behavior.Behavior.wait_for_completed">
+<code class="descname">wait_for_completed</code><span class="sig-paren">(</span><em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.behavior.Behavior.wait_for_completed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for the behavior to complete.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)"><em>None</em></a>) – Maximum time in seconds to wait for the event.
+Pass None to wait indefinitely.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/asyncio-task.html#asyncio.TimeoutError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.TimeoutError</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.behavior.Behavior.wait_for_started">
+<code class="descname">wait_for_started</code><span class="sig-paren">(</span><em>timeout=5</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.behavior.Behavior.wait_for_started" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for the behavior to start.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)"><em>None</em></a>) – Maximum time in seconds to wait for the event.
+Pass None to wait indefinitely. If a behavior can run it should
+usually start within ~0.2 seconds.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/asyncio-task.html#asyncio.TimeoutError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.TimeoutError</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.behavior.BehaviorTypes">
+<em class="property">class </em><code class="descclassname">cozmo.behavior.</code><code class="descname">BehaviorTypes</code><a class="headerlink" href="#cozmo.behavior.BehaviorTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines all executable robot behaviors.</p>
+<p>For use with <a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot.start_behavior" title="cozmo.robot.Robot.start_behavior"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cozmo.robot.Robot.start_behavior()</span></code></a>.</p>
+<dl class="attribute">
+<dt id="cozmo.behavior.BehaviorTypes.FindFaces">
+<code class="descname">FindFaces</code><em class="property"> = _BehaviorType(name='FindFaces', id=1)</em><a class="headerlink" href="#cozmo.behavior.BehaviorTypes.FindFaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn and move head, but don’t drive, with Cozmo’s head angled
+upwards where faces are likely to be.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.behavior.BehaviorTypes.KnockOverCubes">
+<code class="descname">KnockOverCubes</code><em class="property"> = _BehaviorType(name='KnockOverCubes', id=4)</em><a class="headerlink" href="#cozmo.behavior.BehaviorTypes.KnockOverCubes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Knock over a stack of cubes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.behavior.BehaviorTypes.LookAroundInPlace">
+<code class="descname">LookAroundInPlace</code><em class="property"> = _BehaviorType(name='LookAroundInPlace', id=6)</em><a class="headerlink" href="#cozmo.behavior.BehaviorTypes.LookAroundInPlace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn and move head, but don’t drive, to see what is around Cozmo.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.behavior.BehaviorTypes.PounceOnMotion">
+<code class="descname">PounceOnMotion</code><em class="property"> = _BehaviorType(name='PounceOnMotion', id=7)</em><a class="headerlink" href="#cozmo.behavior.BehaviorTypes.PounceOnMotion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to “pounce” (drive forward and lower lift) when it detects
+nearby motion on the ground plane.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.behavior.BehaviorTypes.RollBlock">
+<code class="descname">RollBlock</code><em class="property"> = _BehaviorType(name='RollBlock', id=8)</em><a class="headerlink" href="#cozmo.behavior.BehaviorTypes.RollBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Roll a block, regardless of orientation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.behavior.BehaviorTypes.StackBlocks">
+<code class="descname">StackBlocks</code><em class="property"> = _BehaviorType(name='StackBlocks', id=9)</em><a class="headerlink" href="#cozmo.behavior.BehaviorTypes.StackBlocks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pickup one block, and stack it onto another block.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.behavior.BehaviorTypes._EnrollFace">
+<code class="descname">_EnrollFace</code><em class="property"> = _BehaviorType(name='EnrollFace', id=0)</em><a class="headerlink" href="#cozmo.behavior.BehaviorTypes._EnrollFace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cozmo.camera.html" class="btn btn-neutral float-right" title="cozmo.camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cozmo.audio.html" class="btn btn-neutral float-left" title="cozmo.audio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

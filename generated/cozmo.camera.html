@@ -1,0 +1,676 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo.camera &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cozmo.conn" href="cozmo.conn.html" />
+    <link rel="prev" title="cozmo.behavior" href="cozmo.behavior.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cozmo.html">cozmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.action.html">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.annotate.html">cozmo.annotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.audio.html">cozmo.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.behavior.html">cozmo.behavior</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo.camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.conn.html">cozmo.conn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.event.html">cozmo.event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.exceptions.html">cozmo.exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.faces.html">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.opengl.html">cozmo.opengl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.pets.html">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.world.html">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo.camera</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.camera.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo.camera">
+<span id="cozmo-camera"></span><h1>cozmo.camera<a class="headerlink" href="#module-cozmo.camera" title="Permalink to this headline">¶</a></h1>
+<p>Support for Cozmo’s camera.</p>
+<p>Cozmo has a built-in camera which he uses to observe the world around him.</p>
+<p>The <a class="reference internal" href="#cozmo.camera.Camera" title="cozmo.camera.Camera"><code class="xref py py-class docutils literal notranslate"><span class="pre">Camera</span></code></a> class defined in this module is made available as
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">cozmo.world.World.camera</span></code> and can be used to enable/disable image
+sending, enable/disable color images, modify various camera settings,
+read the robot’s unique camera calibration settings, as well as observe
+raw unprocessed images being sent by the robot.</p>
+<p>Generally, however, it is more useful to observe
+<a class="reference internal" href="cozmo.world.html#cozmo.world.EvtNewCameraImage" title="cozmo.world.EvtNewCameraImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.world.EvtNewCameraImage</span></code></a> events, which include the raw camera
+images along with annotated images, which can illustrate objects the robot
+has identified.</p>
+<p class="rubric">Classes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.camera.Camera" title="cozmo.camera.Camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Camera</span></code></a>(robot,&nbsp;**kw)</td>
+<td>Represents Cozmo’s camera.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.camera.CameraConfig" title="cozmo.camera.CameraConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CameraConfig</span></code></a>(focal_length_x,&nbsp;focal_length_y,&nbsp;…)</td>
+<td>The fixed properties for Cozmo’s Camera</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.camera.EvtNewRawCameraImage" title="cozmo.camera.EvtNewRawCameraImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtNewRawCameraImage</span></code></a>(**kwargs)</td>
+<td>Dispatched when a new raw image is received from the robot’s camera.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.camera.EvtRobotObservedMotion" title="cozmo.camera.EvtRobotObservedMotion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtRobotObservedMotion</span></code></a>(**kwargs)</td>
+<td>Generated when the robot observes motion.</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="cozmo.camera.EvtNewRawCameraImage">
+<em class="property">class </em><code class="descclassname">cozmo.camera.</code><code class="descname">EvtNewRawCameraImage</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.camera.EvtNewRawCameraImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatched when a new raw image is received from the robot’s camera.</p>
+<p>See also <a class="reference internal" href="cozmo.world.html#cozmo.world.EvtNewCameraImage" title="cozmo.world.EvtNewCameraImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvtNewCameraImage</span></code></a> which provides access
+to both the raw image and a scaled and annotated version.</p>
+<dl class="attribute">
+<dt id="cozmo.camera.EvtNewRawCameraImage.image">
+<code class="descname">image</code><em class="property"> = 'A PIL.Image.Image object'</em><a class="headerlink" href="#cozmo.camera.EvtNewRawCameraImage.image" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.camera.EvtRobotObservedMotion">
+<em class="property">class </em><code class="descclassname">cozmo.camera.</code><code class="descname">EvtRobotObservedMotion</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.camera.EvtRobotObservedMotion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generated when the robot observes motion.</p>
+<dl class="attribute">
+<dt id="cozmo.camera.EvtRobotObservedMotion.ground_area">
+<code class="descname">ground_area</code><em class="property"> = 'Area of the supporting region for the point, as a fraction of the ground ROI'</em><a class="headerlink" href="#cozmo.camera.EvtRobotObservedMotion.ground_area" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.EvtRobotObservedMotion.ground_pos">
+<code class="descname">ground_pos</code><em class="property"> = 'Approximate coordinates of observed motion on the ground, relative to robot, in mm'</em><a class="headerlink" href="#cozmo.camera.EvtRobotObservedMotion.ground_pos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.EvtRobotObservedMotion.has_left_movement">
+<code class="descname">has_left_movement</code><em class="property"> = &quot;Movement detected near the left edge of the robot's view&quot;</em><a class="headerlink" href="#cozmo.camera.EvtRobotObservedMotion.has_left_movement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.EvtRobotObservedMotion.has_right_movement">
+<code class="descname">has_right_movement</code><em class="property"> = &quot;Movement detected near the right edge of the robot's view&quot;</em><a class="headerlink" href="#cozmo.camera.EvtRobotObservedMotion.has_right_movement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.EvtRobotObservedMotion.has_top_movement">
+<code class="descname">has_top_movement</code><em class="property"> = &quot;Movement detected near the top of the robot's view&quot;</em><a class="headerlink" href="#cozmo.camera.EvtRobotObservedMotion.has_top_movement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.EvtRobotObservedMotion.img_area">
+<code class="descname">img_area</code><em class="property"> = 'Area of the supporting region for the point, as a fraction of the image'</em><a class="headerlink" href="#cozmo.camera.EvtRobotObservedMotion.img_area" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.EvtRobotObservedMotion.img_pos">
+<code class="descname">img_pos</code><em class="property"> = 'Centroid of observed motion, relative to top-left corner'</em><a class="headerlink" href="#cozmo.camera.EvtRobotObservedMotion.img_pos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.EvtRobotObservedMotion.left_img_pos">
+<code class="descname">left_img_pos</code><em class="property"> = 'Coordinates of the centroid of observed motion, relative to top-left corner'</em><a class="headerlink" href="#cozmo.camera.EvtRobotObservedMotion.left_img_pos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.EvtRobotObservedMotion.right_img_pos">
+<code class="descname">right_img_pos</code><em class="property"> = 'Coordinates of the centroid of observed motion, relative to top-left corner'</em><a class="headerlink" href="#cozmo.camera.EvtRobotObservedMotion.right_img_pos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.EvtRobotObservedMotion.timestamp">
+<code class="descname">timestamp</code><em class="property"> = 'Robot timestamp for when movement was observed'</em><a class="headerlink" href="#cozmo.camera.EvtRobotObservedMotion.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.EvtRobotObservedMotion.top_img_pos">
+<code class="descname">top_img_pos</code><em class="property"> = 'Coordinates of the centroid of observed motion, relative to top-left corner'</em><a class="headerlink" href="#cozmo.camera.EvtRobotObservedMotion.top_img_pos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.camera.CameraConfig">
+<em class="property">class </em><code class="descclassname">cozmo.camera.</code><code class="descname">CameraConfig</code><span class="sig-paren">(</span><em>focal_length_x: float</em>, <em>focal_length_y: float</em>, <em>center_x: float</em>, <em>center_y: float</em>, <em>fov_x_degrees: float</em>, <em>fov_y_degrees: float</em>, <em>min_exposure_time_ms: int</em>, <em>max_exposure_time_ms: int</em>, <em>min_gain: float</em>, <em>max_gain: float</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.camera.CameraConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fixed properties for Cozmo’s Camera</p>
+<p>A full 3x3 calibration matrix for doing 3D reasoning based on the camera
+images would look like:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>focal_length.x</td>
+<td>0</td>
+<td>center.x</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>focal_length.y</td>
+<td>center.y</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<dl class="attribute">
+<dt id="cozmo.camera.CameraConfig.center">
+<code class="descname">center</code><a class="headerlink" href="#cozmo.camera.CameraConfig.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>The focal center of the camera.</p>
+<p>This is the position of the optical center of projection within the
+image. It will be close to the center of the image, but adjusted based
+on the calibration of the lens at the factory. It is in floating point
+pixel values e.g. &lt;155.11, 111.40&gt;.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.util.html#cozmo.util.Vector2" title="cozmo.util.Vector2"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.util.Vector2</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.CameraConfig.focal_length">
+<code class="descname">focal_length</code><a class="headerlink" href="#cozmo.camera.CameraConfig.focal_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>The focal length of the camera.</p>
+<p>This is focal length combined with pixel skew (as the pixels aren’t
+perfectly square), so there are subtly different values for x and y.
+It is in floating point pixel values e.g. &lt;288.87, 288.36&gt;.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.util.html#cozmo.util.Vector2" title="cozmo.util.Vector2"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.util.Vector2</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.CameraConfig.fov_x">
+<code class="descname">fov_x</code><a class="headerlink" href="#cozmo.camera.CameraConfig.fov_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>The x (horizontal) field of view.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.util.html#cozmo.util.Angle" title="cozmo.util.Angle"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.util.Angle</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.CameraConfig.fov_y">
+<code class="descname">fov_y</code><a class="headerlink" href="#cozmo.camera.CameraConfig.fov_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>The y (vertical) field of view.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.util.html#cozmo.util.Angle" title="cozmo.util.Angle"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.util.Angle</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.CameraConfig.max_exposure_time_ms">
+<code class="descname">max_exposure_time_ms</code><a class="headerlink" href="#cozmo.camera.CameraConfig.max_exposure_time_ms" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum supported exposure time in milliseconds.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.CameraConfig.max_gain">
+<code class="descname">max_gain</code><a class="headerlink" href="#cozmo.camera.CameraConfig.max_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum supported camera gain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)">float</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.CameraConfig.min_exposure_time_ms">
+<code class="descname">min_exposure_time_ms</code><a class="headerlink" href="#cozmo.camera.CameraConfig.min_exposure_time_ms" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum supported exposure time in milliseconds.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.CameraConfig.min_gain">
+<code class="descname">min_gain</code><a class="headerlink" href="#cozmo.camera.CameraConfig.min_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum supported camera gain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)">float</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.camera.Camera">
+<em class="property">class </em><code class="descclassname">cozmo.camera.</code><code class="descname">Camera</code><span class="sig-paren">(</span><em>robot</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.camera.Camera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents Cozmo’s camera.</p>
+<p>The Camera object receives images from Cozmo’s camera and emits
+EvtNewRawCameraImage events.</p>
+<p>The <a class="reference internal" href="cozmo.world.html#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.world.World</span></code></a> instance observes the camera and provides
+more useful methods for accessing the camera images.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">The camera will not receive any image data unless you
+explicitly enable it by setting <a class="reference internal" href="#cozmo.camera.Camera.image_stream_enabled" title="cozmo.camera.Camera.image_stream_enabled"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Camera.image_stream_enabled</span></code></a>
+to <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</div>
+<dl class="attribute">
+<dt id="cozmo.camera.Camera.color_image_enabled">
+<code class="descname">color_image_enabled</code><a class="headerlink" href="#cozmo.camera.Camera.color_image_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to true to receive color images from the robot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.Camera.config">
+<code class="descname">config</code><a class="headerlink" href="#cozmo.camera.Camera.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>The read-only config/calibration for the camera</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#cozmo.camera.CameraConfig" title="cozmo.camera.CameraConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.camera.CameraConfig</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.camera.Camera.enable_auto_exposure">
+<code class="descname">enable_auto_exposure</code><span class="sig-paren">(</span><em>enable_auto_exposure=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.camera.Camera.enable_auto_exposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable auto exposure on Cozmo’s Camera.</p>
+<p>Enable auto exposure on Cozmo’s camera to constantly update the exposure
+time and gain values based on the recent images. This is the default mode
+when any SDK program starts.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable_auto_exposure</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – whether the camera should automcatically adjust exposure</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.Camera.exposure_ms">
+<code class="descname">exposure_ms</code><a class="headerlink" href="#cozmo.camera.Camera.exposure_ms" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current camera exposure setting in milliseconds.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.Camera.gain">
+<code class="descname">gain</code><a class="headerlink" href="#cozmo.camera.Camera.gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current camera gain setting.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)">float</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.Camera.image_stream_enabled">
+<code class="descname">image_stream_enabled</code><a class="headerlink" href="#cozmo.camera.Camera.image_stream_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to true to receive camera images from the robot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.camera.Camera.is_auto_exposure_enabled">
+<code class="descname">is_auto_exposure_enabled</code><a class="headerlink" href="#cozmo.camera.Camera.is_auto_exposure_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if auto exposure is currently enabled</p>
+<p>If auto exposure is enabled the <cite>gain</cite> and <cite>exposure_ms</cite>
+values will constantly be updated by Cozmo.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.camera.Camera.set_manual_exposure">
+<code class="descname">set_manual_exposure</code><span class="sig-paren">(</span><em>exposure_ms</em>, <em>gain</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.camera.Camera.set_manual_exposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set manual exposure values for Cozmo’s Camera.</p>
+<p>Disable auto exposure on Cozmo’s camera and force the specified exposure
+time and gain values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>exposure_ms</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The desired exposure time in milliseconds.
+Must be within the robot’s
+<a class="reference internal" href="#cozmo.camera.Camera.config" title="cozmo.camera.Camera.config"><code class="xref py py-attr docutils literal notranslate"><span class="pre">config</span></code></a> exposure range from
+<a class="reference internal" href="#cozmo.camera.CameraConfig.min_exposure_time_ms" title="cozmo.camera.CameraConfig.min_exposure_time_ms"><code class="xref py py-attr docutils literal notranslate"><span class="pre">min_exposure_time_ms</span></code></a> to
+<a class="reference internal" href="#cozmo.camera.CameraConfig.max_exposure_time_ms" title="cozmo.camera.CameraConfig.max_exposure_time_ms"><code class="xref py py-attr docutils literal notranslate"><span class="pre">max_exposure_time_ms</span></code></a></li>
+<li><strong>gain</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The desired gain value.
+Must be within the robot’s
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">camera_config</span></code> gain range from
+<a class="reference internal" href="#cozmo.camera.CameraConfig.min_gain" title="cozmo.camera.CameraConfig.min_gain"><code class="xref py py-attr docutils literal notranslate"><span class="pre">min_gain</span></code></a> to
+<a class="reference internal" href="#cozmo.camera.CameraConfig.max_gain" title="cozmo.camera.CameraConfig.max_gain"><code class="xref py py-attr docutils literal notranslate"><span class="pre">max_gain</span></code></a></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></a> if supplied an out-of-range exposure or gain.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cozmo.conn.html" class="btn btn-neutral float-right" title="cozmo.conn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cozmo.behavior.html" class="btn btn-neutral float-left" title="cozmo.behavior" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

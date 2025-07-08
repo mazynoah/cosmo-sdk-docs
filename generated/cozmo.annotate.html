@@ -1,0 +1,804 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo.annotate &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cozmo.audio" href="cozmo.audio.html" />
+    <link rel="prev" title="cozmo.anim" href="cozmo.anim.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cozmo.html">cozmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.action.html">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo.annotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.audio.html">cozmo.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.behavior.html">cozmo.behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.camera.html">cozmo.camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.conn.html">cozmo.conn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.event.html">cozmo.event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.exceptions.html">cozmo.exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.faces.html">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.opengl.html">cozmo.opengl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.pets.html">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.world.html">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo.annotate</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.annotate.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo.annotate">
+<span id="cozmo-annotate"></span><h1>cozmo.annotate<a class="headerlink" href="#module-cozmo.annotate" title="Permalink to this headline">¶</a></h1>
+<p>Camera image annotation.</p>
+<img alt="../_images/annotate.jpg" src="../_images/annotate.jpg" />
+<p>This module defines an <a class="reference internal" href="#cozmo.annotate.ImageAnnotator" title="cozmo.annotate.ImageAnnotator"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAnnotator</span></code></a> class used by
+<a class="reference internal" href="cozmo.world.html#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.world.World</span></code></a> to add annotations to camera images received by Cozmo.</p>
+<p>This can include the location of cubes, faces and pets that Cozmo currently sees,
+along with user-defined custom annotations.</p>
+<p>The ImageAnnotator instance can be accessed as
+<a class="reference internal" href="cozmo.world.html#cozmo.world.World.image_annotator" title="cozmo.world.World.image_annotator"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cozmo.world.World.image_annotator</span></code></a>.</p>
+<p class="rubric">Functions</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.annotate.add_img_box_to_image" title="cozmo.annotate.add_img_box_to_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_img_box_to_image</span></code></a>(image,&nbsp;box,&nbsp;color[,&nbsp;text])</td>
+<td>Draw a box on an image and optionally add text.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.annotate.add_polygon_to_image" title="cozmo.annotate.add_polygon_to_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_polygon_to_image</span></code></a>(image,&nbsp;poly_points,&nbsp;…)</td>
+<td>Draw a polygon on an image</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.annotate.annotator" title="cozmo.annotate.annotator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">annotator</span></code></a>(f)</td>
+<td>A decorator for converting a regular function/method into an Annotator.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Classes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.annotate.Annotator" title="cozmo.annotate.Annotator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Annotator</span></code></a>(img_annotator[,&nbsp;priority])</td>
+<td>Annotation base class</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.annotate.FaceAnnotator" title="cozmo.annotate.FaceAnnotator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FaceAnnotator</span></code></a>(img_annotator[,&nbsp;box_color])</td>
+<td>Adds annotations of currently detected faces to a camera image.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.annotate.ImageAnnotator" title="cozmo.annotate.ImageAnnotator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImageAnnotator</span></code></a>(world,&nbsp;**kw)</td>
+<td>ImageAnnotator applies annotations to the camera image received from the robot.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.annotate.ImageText" title="cozmo.annotate.ImageText"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImageText</span></code></a>(text[,&nbsp;position,&nbsp;align,&nbsp;color,&nbsp;…])</td>
+<td>ImageText represents some text that can be applied to an image.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.annotate.ObjectAnnotator" title="cozmo.annotate.ObjectAnnotator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObjectAnnotator</span></code></a>(img_annotator[,&nbsp;object_colors])</td>
+<td>Adds object annotations to an Image.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.annotate.PetAnnotator" title="cozmo.annotate.PetAnnotator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PetAnnotator</span></code></a>(img_annotator[,&nbsp;box_color])</td>
+<td>Adds annotations of currently detected pets to a camera image.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.annotate.TextAnnotator" title="cozmo.annotate.TextAnnotator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TextAnnotator</span></code></a>(img_annotator,&nbsp;text)</td>
+<td>Adds simple text annotations to a camera image.</td>
+</tr>
+</tbody>
+</table>
+<dl class="data">
+<dt id="cozmo.annotate.TOP_LEFT">
+<code class="descclassname">cozmo.annotate.</code><code class="descname">TOP_LEFT</code><em class="property"> = 5</em><a class="headerlink" href="#cozmo.annotate.TOP_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Top left position</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.annotate.TOP_RIGHT">
+<code class="descclassname">cozmo.annotate.</code><code class="descname">TOP_RIGHT</code><em class="property"> = 6</em><a class="headerlink" href="#cozmo.annotate.TOP_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Top right position</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.annotate.BOTTOM_LEFT">
+<code class="descclassname">cozmo.annotate.</code><code class="descname">BOTTOM_LEFT</code><em class="property"> = 9</em><a class="headerlink" href="#cozmo.annotate.BOTTOM_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bottom left position</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.annotate.BOTTOM_RIGHT">
+<code class="descclassname">cozmo.annotate.</code><code class="descname">BOTTOM_RIGHT</code><em class="property"> = 10</em><a class="headerlink" href="#cozmo.annotate.BOTTOM_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bottom right position</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.annotate.RESAMPLE_MODE_NEAREST">
+<code class="descclassname">cozmo.annotate.</code><code class="descname">RESAMPLE_MODE_NEAREST</code><em class="property"> = 0</em><a class="headerlink" href="#cozmo.annotate.RESAMPLE_MODE_NEAREST" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fastest resampling mode, use nearest pixel</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.annotate.RESAMPLE_MODE_BILINEAR">
+<code class="descclassname">cozmo.annotate.</code><code class="descname">RESAMPLE_MODE_BILINEAR</code><em class="property"> = 2</em><a class="headerlink" href="#cozmo.annotate.RESAMPLE_MODE_BILINEAR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slower, but smoother, resampling mode - linear interpolation from 2x2 grid of pixels</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.annotate.ImageText">
+<em class="property">class </em><code class="descclassname">cozmo.annotate.</code><code class="descname">ImageText</code><span class="sig-paren">(</span><em>text</em>, <em>position=10</em>, <em>align='left'</em>, <em>color='white'</em>, <em>font=None</em>, <em>line_spacing=3</em>, <em>outline_color=None</em>, <em>full_outline=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ImageText" title="Permalink to this definition">¶</a></dt>
+<dd><p>ImageText represents some text that can be applied to an image.</p>
+<p>The class allows the text to be placed at various positions inside a
+bounding box within the image itself.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>text</strong> (<em>string</em>) – The text to display; may contain newlines</li>
+<li><strong>position</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Where on the screen to render the text
+- A constant such at TOP_LEFT or BOTTOM_RIGHT</li>
+<li><strong>align</strong> (<em>string</em>) – Text alignment for multi-line strings</li>
+<li><strong>color</strong> (<em>string</em>) – Color to use for the text - see <a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/ImageColor.html#module-PIL.ImageColor" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PIL.ImageColor</span></code></a></li>
+<li><strong>font</strong> (<a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/ImageFont.html#module-PIL.ImageFont" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PIL.ImageFont</span></code></a>) – Font to use (None for a default font)</li>
+<li><strong>line_spacing</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The vertical spacing for multi-line strings</li>
+<li><strong>outline_color</strong> (<em>string</em>) – Color to use for the outline - see
+<a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/ImageColor.html#module-PIL.ImageColor" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PIL.ImageColor</span></code></a> - use None for no outline.</li>
+<li><strong>full_outline</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – True if the outline should surround the text,
+otherwise a cheaper drop-shadow is displayed. Only relevant if
+outline_color is specified.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="cozmo.annotate.ImageText.render">
+<code class="descname">render</code><span class="sig-paren">(</span><em>draw</em>, <em>bounds</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ImageText.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renders the text onto an image within the specified bounding box.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>draw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">PIL.ImageDraw.ImageDraw</span></code>) – The drawable surface to write on</li>
+<li><strong>bounds</strong> (<em>tuple of int</em>) – (top_left_x, top_left_y, bottom_right_x, bottom_right_y):
+bounding box</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The same <code class="xref py py-class docutils literal notranslate"><span class="pre">PIL.ImageDraw.ImageDraw</span></code> object as was passed-in with text applied.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.annotate.Annotator">
+<em class="property">class </em><code class="descclassname">cozmo.annotate.</code><code class="descname">Annotator</code><span class="sig-paren">(</span><em>img_annotator</em>, <em>priority=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.Annotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotation base class</p>
+<p>Subclasses of Annotator handle applying a single annotation to an image.</p>
+<dl class="method">
+<dt id="cozmo.annotate.Annotator.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>image</em>, <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.Annotator.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the annotation to the image.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.annotate.Annotator.enabled">
+<code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.annotate.Annotator.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set enabled to false to prevent the annotator being called</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.annotate.Annotator.img_annotator">
+<code class="descname">img_annotator</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.annotate.Annotator.img_annotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>The object managing camera annotations</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#cozmo.annotate.ImageAnnotator" title="cozmo.annotate.ImageAnnotator"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAnnotator</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.annotate.Annotator.priority">
+<code class="descname">priority</code><em class="property"> = 100</em><a class="headerlink" href="#cozmo.annotate.Annotator.priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>The priority of the annotator - Annotators with higher numbered
+priorities are applied first.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.annotate.Annotator.world">
+<code class="descname">world</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.annotate.Annotator.world" title="Permalink to this definition">¶</a></dt>
+<dd><p>The world object for the robot who owns the camera</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.world.html#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">World</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.annotate.ObjectAnnotator">
+<em class="property">class </em><code class="descclassname">cozmo.annotate.</code><code class="descname">ObjectAnnotator</code><span class="sig-paren">(</span><em>img_annotator</em>, <em>object_colors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ObjectAnnotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds object annotations to an Image.</p>
+<p>This handles <a class="reference internal" href="cozmo.objects.html#cozmo.objects.LightCube" title="cozmo.objects.LightCube"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.LightCube</span></code></a> objects
+as well as custom objects.</p>
+<dl class="method">
+<dt id="cozmo.annotate.ObjectAnnotator.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>image</em>, <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ObjectAnnotator.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the annotation to the image.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.annotate.ObjectAnnotator.label_for_obj">
+<code class="descname">label_for_obj</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ObjectAnnotator.label_for_obj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a label to display for the object.</p>
+<p>Override or replace to customize.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.annotate.FaceAnnotator">
+<em class="property">class </em><code class="descclassname">cozmo.annotate.</code><code class="descname">FaceAnnotator</code><span class="sig-paren">(</span><em>img_annotator</em>, <em>box_color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.FaceAnnotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds annotations of currently detected faces to a camera image.</p>
+<p>This handles the display of <a class="reference internal" href="cozmo.faces.html#cozmo.faces.Face" title="cozmo.faces.Face"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.faces.Face</span></code></a> objects.</p>
+<dl class="method">
+<dt id="cozmo.annotate.FaceAnnotator.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>image</em>, <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.FaceAnnotator.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the annotation to the image.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.annotate.FaceAnnotator.label_for_face">
+<code class="descname">label_for_face</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.FaceAnnotator.label_for_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a label to display for the face.</p>
+<p>Override or replace to customize.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.annotate.PetAnnotator">
+<em class="property">class </em><code class="descclassname">cozmo.annotate.</code><code class="descname">PetAnnotator</code><span class="sig-paren">(</span><em>img_annotator</em>, <em>box_color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.PetAnnotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds annotations of currently detected pets to a camera image.</p>
+<p>This handles the display of <a class="reference internal" href="cozmo.pets.html#cozmo.pets.Pet" title="cozmo.pets.Pet"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.pets.Pet</span></code></a> objects.</p>
+<dl class="method">
+<dt id="cozmo.annotate.PetAnnotator.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>image</em>, <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.PetAnnotator.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the annotation to the image.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.annotate.PetAnnotator.label_for_pet">
+<code class="descname">label_for_pet</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.PetAnnotator.label_for_pet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a label to display for the pet.</p>
+<p>Override or replace to customize.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.annotate.TextAnnotator">
+<em class="property">class </em><code class="descclassname">cozmo.annotate.</code><code class="descname">TextAnnotator</code><span class="sig-paren">(</span><em>img_annotator</em>, <em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.TextAnnotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds simple text annotations to a camera image.</p>
+<dl class="method">
+<dt id="cozmo.annotate.TextAnnotator.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>image</em>, <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.TextAnnotator.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the annotation to the image.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.annotate.ImageAnnotator">
+<em class="property">class </em><code class="descclassname">cozmo.annotate.</code><code class="descname">ImageAnnotator</code><span class="sig-paren">(</span><em>world</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ImageAnnotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>ImageAnnotator applies annotations to the camera image received from the robot.</p>
+<p>This is instantiated by <a class="reference internal" href="cozmo.world.html#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.world.World</span></code></a> and is accessible as
+<a class="reference internal" href="cozmo.world.html#cozmo.world.World.image_annotator" title="cozmo.world.World.image_annotator"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.world.World.image_annotator</span></code></a>.</p>
+<p>By default it defines three active annotators named <code class="docutils literal notranslate"><span class="pre">objects</span></code>, <code class="docutils literal notranslate"><span class="pre">faces</span></code> and <code class="docutils literal notranslate"><span class="pre">pets</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">objects</span></code> annotator adds a box around each object (such as light cubes)
+that Cozmo can see.  The <code class="docutils literal notranslate"><span class="pre">faces</span></code> annotator adds a box around each person’s
+face that Cozmo can recognize. The <code class="docutils literal notranslate"><span class="pre">pets</span></code> annotator adds a box around each pet
+face that Cozmo can recognize.</p>
+<p>Custom annotations can be defined by calling <a class="reference internal" href="#cozmo.annotate.ImageAnnotator.add_annotator" title="cozmo.annotate.ImageAnnotator.add_annotator"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_annotator()</span></code></a> with
+a name of your choosing and an instance of a <a class="reference internal" href="#cozmo.annotate.Annotator" title="cozmo.annotate.Annotator"><code class="xref py py-class docutils literal notranslate"><span class="pre">Annotator</span></code></a> subclass,
+or use a regular function wrapped with the <a class="reference internal" href="#cozmo.annotate.annotator" title="cozmo.annotate.annotator"><code class="xref py py-func docutils literal notranslate"><span class="pre">annotator()</span></code></a> decorator.</p>
+<p>Individual annotations can be disabled and re-enabled using the
+<a class="reference internal" href="#cozmo.annotate.ImageAnnotator.disable_annotator" title="cozmo.annotate.ImageAnnotator.disable_annotator"><code class="xref py py-meth docutils literal notranslate"><span class="pre">disable_annotator()</span></code></a> and <a class="reference internal" href="#cozmo.annotate.ImageAnnotator.enable_annotator" title="cozmo.annotate.ImageAnnotator.enable_annotator"><code class="xref py py-meth docutils literal notranslate"><span class="pre">enable_annotator()</span></code></a> methods.</p>
+<p>All annotations can be disabled by setting the
+<a class="reference internal" href="#cozmo.annotate.ImageAnnotator.annotation_enabled" title="cozmo.annotate.ImageAnnotator.annotation_enabled"><code class="xref py py-attr docutils literal notranslate"><span class="pre">annotation_enabled</span></code></a> property to False.</p>
+<p>E.g. to disable face annotations, call
+<code class="docutils literal notranslate"><span class="pre">coz.world.image_annotator.disable_annotator('faces')</span></code></p>
+<p>Annotators each have a priority number associated with them. Annotators
+with a larger priority number are rendered first and may be overdrawn by those
+with a lower/smaller priority number.</p>
+<dl class="method">
+<dt id="cozmo.annotate.ImageAnnotator.add_annotator">
+<code class="descname">add_annotator</code><span class="sig-paren">(</span><em>name</em>, <em>annotator</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ImageAnnotator.add_annotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new annotator for display.</p>
+<p>Annotators are enabled by default.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>string</em>) – An arbitrary name for the annotator; must not
+already be defined</li>
+<li><strong>annotator</strong> (<a class="reference internal" href="#cozmo.annotate.Annotator" title="cozmo.annotate.Annotator"><code class="xref py py-class docutils literal notranslate"><span class="pre">Annotator</span></code></a> or callable) – The annotator to add
+may either by an instance of Annotator, or a factory callable
+that will return an instance of Annotator. The callable will
+be called with an ImageAnnotator instance as its first argument.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></a> if the annotator is already defined.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.annotate.ImageAnnotator.add_static_text">
+<code class="descname">add_static_text</code><span class="sig-paren">(</span><em>name</em>, <em>text</em>, <em>color='white'</em>, <em>position=5</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ImageAnnotator.add_static_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add some static text to annotated images.</p>
+<p>This is a convenience method to create a <code class="xref py py-class docutils literal notranslate"><span class="pre">TextAnnnotator</span></code>
+and add it to the image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>string</em>) – An arbitrary name for the annotator; must not
+already be defined</li>
+<li><strong>text</strong> (str or <a class="reference internal" href="#cozmo.annotate.ImageText" title="cozmo.annotate.ImageText"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageText</span></code></a> instance) – The text to display
+may be a plain string, or an ImageText instance</li>
+<li><strong>color</strong> (<em>string</em>) – Used if text is a string; defaults to white</li>
+<li><strong>position</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Used if text is a string; defaults to TOP_LEFT</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.annotate.ImageAnnotator.annotate_image">
+<code class="descname">annotate_image</code><span class="sig-paren">(</span><em>image</em>, <em>scale=None</em>, <em>fit_size=None</em>, <em>resample_mode=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ImageAnnotator.annotate_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by <a class="reference internal" href="cozmo.world.html#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">World</span></code></a> to annotate camera images.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>image</strong> (<a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/Image.html#PIL.Image.Image" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PIL.Image.Image</span></code></a>) – The image to annotate</li>
+<li><strong>scale</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – If set then the base image will be scaled by the
+supplied multiplier.  Cannot be combined with fit_size</li>
+<li><strong>fit_size</strong> (<em>tuple of int</em>) – If set, then scale the image to fit inside
+the supplied (width, height) dimensions. The original aspect
+ratio will be preserved.  Cannot be combined with scale.</li>
+<li><strong>resample_mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The resampling mode to use when scaling the
+image. Should be either <a class="reference internal" href="#cozmo.annotate.RESAMPLE_MODE_NEAREST" title="cozmo.annotate.RESAMPLE_MODE_NEAREST"><code class="xref py py-attr docutils literal notranslate"><span class="pre">RESAMPLE_MODE_NEAREST</span></code></a> (fast) or
+<a class="reference internal" href="#cozmo.annotate.RESAMPLE_MODE_BILINEAR" title="cozmo.annotate.RESAMPLE_MODE_BILINEAR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">RESAMPLE_MODE_BILINEAR</span></code></a> (slower, but smoother).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/Image.html#PIL.Image.Image" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PIL.Image.Image</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.annotate.ImageAnnotator.annotation_enabled">
+<code class="descname">annotation_enabled</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.annotate.ImageAnnotator.annotation_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this attribute is set to false, the <a class="reference internal" href="#cozmo.annotate.ImageAnnotator.annotate_image" title="cozmo.annotate.ImageAnnotator.annotate_image"><code class="xref py py-meth docutils literal notranslate"><span class="pre">annotate_image()</span></code></a> method
+will continue to provide a scaled image, but will not apply any annotations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.annotate.ImageAnnotator.disable_annotator">
+<code class="descname">disable_annotator</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ImageAnnotator.disable_annotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable a named annotator.</p>
+<p>Leaves the annotator as registered, but does not include its output
+in the annotated image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>string</em>) – The name of the annotator to disable</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.annotate.ImageAnnotator.enable_annotator">
+<code class="descname">enable_annotator</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ImageAnnotator.enable_annotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enabled a named annotator.</p>
+<p>(re)enable an annotator if it was previously disabled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>string</em>) – The name of the annotator to enable</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.annotate.ImageAnnotator.get_annotator">
+<code class="descname">get_annotator</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ImageAnnotator.get_annotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a named annotator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>string</em>) – The name of the annotator to return</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">KeyError if the annotator isn’t registered</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.annotate.ImageAnnotator.remove_annotator">
+<code class="descname">remove_annotator</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.ImageAnnotator.remove_annotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove an annotator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>string</em>) – The name of the annotator to remove as passed to
+<a class="reference internal" href="#cozmo.annotate.ImageAnnotator.add_annotator" title="cozmo.annotate.ImageAnnotator.add_annotator"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_annotator()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">KeyError if the annotator isn’t registered</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.annotate.ImageAnnotator.world">
+<code class="descname">world</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.annotate.ImageAnnotator.world" title="Permalink to this definition">¶</a></dt>
+<dd><p>World object that created the annotator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.world.html#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.world.World</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.annotate.add_img_box_to_image">
+<code class="descclassname">cozmo.annotate.</code><code class="descname">add_img_box_to_image</code><span class="sig-paren">(</span><em>image</em>, <em>box</em>, <em>color</em>, <em>text=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.add_img_box_to_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a box on an image and optionally add text.</p>
+<p>This will draw the outline of a rectangle to the passed in image
+in the specified color and optionally add one or more pieces of text
+along the inside edge of the rectangle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>image</strong> (<a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/Image.html#PIL.Image.Image" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PIL.Image.Image</span></code></a>) – The image to draw on</li>
+<li><strong>box</strong> (<a class="reference internal" href="cozmo.util.html#cozmo.util.ImageBox" title="cozmo.util.ImageBox"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.util.ImageBox</span></code></a>) – The ImageBox defining the rectangle to draw</li>
+<li><strong>color</strong> (<em>string</em>) – A color string suitable for use with PIL - see <a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/ImageColor.html#module-PIL.ImageColor" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PIL.ImageColor</span></code></a></li>
+<li><strong>text</strong> (instance or iterable of <a class="reference internal" href="#cozmo.annotate.ImageText" title="cozmo.annotate.ImageText"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageText</span></code></a>) – The text to display
+- may be a single ImageText instance, or any iterable (eg a list
+of ImageText instances) to display multiple pieces of text.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.annotate.add_polygon_to_image">
+<code class="descclassname">cozmo.annotate.</code><code class="descname">add_polygon_to_image</code><span class="sig-paren">(</span><em>image</em>, <em>poly_points</em>, <em>scale</em>, <em>line_color</em>, <em>fill_color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.add_polygon_to_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a polygon on an image</p>
+<p>This will draw a polygon on the passed-in image in the specified
+colors and scale.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>image</strong> (<a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/Image.html#PIL.Image.Image" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PIL.Image.Image</span></code></a>) – The image to draw on</li>
+<li><strong>poly_points</strong> – A sequence of points representing the polygon,
+where each point has float members (x, y)</li>
+<li><strong>scale</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Scale to multiply each point to match the image scaling</li>
+<li><strong>line_color</strong> (<em>string</em>) – The color for the outline of the polygon. The string value
+must be a color string suitable for use with PIL - see <a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/ImageColor.html#module-PIL.ImageColor" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PIL.ImageColor</span></code></a></li>
+<li><strong>fill_color</strong> (<em>string</em>) – The color for the inside of the polygon. The string value
+must be a color string suitable for use with PIL - see <a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/ImageColor.html#module-PIL.ImageColor" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PIL.ImageColor</span></code></a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.annotate.annotator">
+<code class="descclassname">cozmo.annotate.</code><code class="descname">annotator</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.annotate.annotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>A decorator for converting a regular function/method into an Annotator.</p>
+<p>The wrapped function should have a signature of
+<code class="docutils literal notranslate"><span class="pre">(image,</span> <span class="pre">scale,</span> <span class="pre">img_annotator=None,</span> <span class="pre">world=None,</span> <span class="pre">**kw)</span></code></p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cozmo.audio.html" class="btn btn-neutral float-right" title="cozmo.audio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cozmo.anim.html" class="btn btn-neutral float-left" title="cozmo.anim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

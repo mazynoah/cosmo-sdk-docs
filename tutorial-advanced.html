@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Programming Cozmo - Advanced Tutorials &mdash; Cozmo SDK 1.4.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SDK vs. App Versions" href="sdk-versions.html" />
+    <link rel="prev" title="Getting Started With the Cozmo SDK" href="getstarted.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Programming Cozmo - Advanced Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#twitter-integration">Twitter Integration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-1-control-by-tweet">Example 1 - Control by Tweet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">The API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Programming Cozmo - Advanced Tutorials</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tutorial-advanced.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="programming-cozmo-advanced-tutorials">
+<h1>Programming Cozmo - Advanced Tutorials<a class="headerlink" href="#programming-cozmo-advanced-tutorials" title="Permalink to this headline">¶</a></h1>
+<p>Cozmo is designed for more than just simple move-and-speak programming. Cozmo can be integrated into many other applications through his API.</p>
+<p>If you are new to Python, <a class="reference external" href="http://www.afterhoursprogramming.com/tutorial/Python/Overview/">After Hours Programming</a> and <a class="reference external" href="http://www.codecademy.com/tracks/python">Codecademy</a> offer beginner’s courses in learning Python; <a class="reference external" href="https://wiki.python.org/moin/BeginnersGuide/NonProgrammers">Python.org’s website</a> offers a more comprehensive list of video and web tutorials. This tutorial assumes you have a minimal understanding of programming in general.</p>
+<div class="section" id="twitter-integration">
+<h2>Twitter Integration<a class="headerlink" href="#twitter-integration" title="Permalink to this headline">¶</a></h2>
+<p>The following examples require installation of the <a class="reference external" href="http://www.tweepy.org">Tweepy</a> Python module - you can do this by typing the following into a Command-Prompt/Terminal window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">tweepy</span>
+</pre></div>
+</div>
+<p>This also requires a Twitter account with developer keys set up specifically for your Cozmo.</p>
+<p>To set up a Twitter account with developer keys:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Create a twitter account for your Cozmo and login to that account in your web browser.</li>
+<li>Go to <a class="reference external" href="https://apps.twitter.com/app/new">Twitter Application Management</a> and create your application:</li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Fill in the name, details, etc. Most of these fields are optional.</li>
+<li>Select the <strong>Permissions</strong> tab and set <em>Access</em> to <em>Read and Write</em>.</li>
+<li>Select the <strong>Keys and Access Tokens</strong> tab and click <em>Generate an Access Token and Secret</em>.</li>
+<li>In your source code editor, open <code class="docutils literal notranslate"><span class="pre">cozmo_twitter_keys.py</span></code> and paste your consumer key and secret, and access token and secret into the corresponding <strong>XXXXXXXXXX</strong> fields.</li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Keep the <code class="docutils literal notranslate"><span class="pre">cozmo_twitter_keys.py</span></code> file safe - don’t distribute it to other people! These keys allow anyone full access to the associated Twitter account!</p>
+</div>
+<div class="section" id="example-1-control-by-tweet">
+<h3>Example 1 - Control by Tweet<a class="headerlink" href="#example-1-control-by-tweet" title="Permalink to this headline">¶</a></h3>
+<p>The code for this example can be found in tweet_at_cozmo.py in the twitter folder of the examples, which can be downloaded from the <a class="reference internal" href="downloads.html"><span class="doc">Downloads page</span></a>.</p>
+<ol class="arabic simple">
+<li><code class="docutils literal notranslate"><span class="pre">twitter_helpers</span></code> is a wrapper that consolidates a list of Tweepy helpers that integrate certain Twitter functions (OAuth authentication, behavior for posting tweets) and define certain scenarios (tweet from user, receiving data that is not a tweet, etc.). Having a Cozmo wrapper like this means that Tweepy does not have to be imported multiple times.</li>
+<li><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">cozmo_twitter_keys</span></code> imports the Twitter keys and access tokens required for Cozmo to access his Twitter account.</li>
+<li>The <code class="docutils literal notranslate"><span class="pre">ReactToTweetsStreamListener</span></code> class contains all the different functions that control Cozmo’s reactions to tweets sent to &#64;Cozmo’sTwitterHandle.</li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><code class="docutils literal notranslate"><span class="pre">do_drive</span></code></li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Cozmo drives in a straight line for X number of seconds.</li>
+<li>A positive number of seconds drives him forwards; a negative number drives him backwards.</li>
+<li>Cozmo will interrupt this action if he detects a cliff or runs into an impassible object such as a wall.</li>
+</ol>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li><code class="docutils literal notranslate"><span class="pre">do_turn</span></code></li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Cozmo turns X number of degrees when given this command.</li>
+<li>The valid range of degrees is -360 to 0 to 360.</li>
+</ol>
+</div></blockquote>
+<ol class="loweralpha simple" start="3">
+<li><code class="docutils literal notranslate"><span class="pre">do_lift</span></code></li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Cozmo lifts his forklift.</li>
+<li>X is the desired height for the lift; valid range is any number between 0 and 1.</li>
+</ol>
+</div></blockquote>
+<ol class="loweralpha simple" start="4">
+<li><code class="docutils literal notranslate"><span class="pre">do_head</span></code></li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Cozmo tilts his head up or down.</li>
+<li>X is the angle for the head in degrees; valid range is any number between -25 and 44.5.</li>
+</ol>
+</div></blockquote>
+<ol class="loweralpha simple" start="5">
+<li><code class="docutils literal notranslate"><span class="pre">do_say</span></code></li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Cozmo says the word or phrase tweeted at him.</li>
+</ol>
+</div></blockquote>
+<ol class="loweralpha simple" start="6">
+<li><code class="docutils literal notranslate"><span class="pre">do_photo</span></code></li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Cozmo uploads a photo of what his camera can currently see.</li>
+<li>If Cozmo has no photos or cannot see anything, he will tweet back an error message.</li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li>The <code class="docutils literal notranslate"><span class="pre">on_tweet_from_user</span></code> function defines how Cozmo behaves in regards to retweets and reply posts from his own account, as well as holds information on error handling.</li>
+</ol>
+<hr class="docutils" />
+<p><a class="reference external" href="https://www.anki.com/en-us/company/terms-and-conditions">Terms and Conditions</a> and <a class="reference external" href="https://www.anki.com/en-us/company/privacy">Privacy Policy</a></p>
+<p><a class="reference external" href="http://developer.anki.com">Click here to return to the Cozmo Developer website.</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sdk-versions.html" class="btn btn-neutral float-right" title="SDK vs. App Versions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getstarted.html" class="btn btn-neutral" title="Getting Started With the Cozmo SDK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki.
+      Last updated on Sep, 12, 2018 01:57:46 Coordinated Universal Time.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.4.5',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

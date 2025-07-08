@@ -1,0 +1,25 @@
+cozmo.pets
+==========
+
+.. automodule:: cozmo.pets
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      EvtPetAppeared
+      EvtPetDisappeared
+      EvtPetObserved
+      Pet
+   
+   
+
+   
+   
+   

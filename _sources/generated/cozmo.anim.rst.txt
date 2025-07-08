@@ -1,0 +1,33 @@
+cozmo.anim
+==========
+
+.. automodule:: cozmo.anim
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      animation_completed_filter
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Animation
+      AnimationNames
+      AnimationTrigger
+      EvtAnimationCompleted
+      EvtAnimationsLoaded
+      Triggers
+   
+   
+
+   
+   
+   

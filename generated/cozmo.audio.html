@@ -1,0 +1,1115 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo.audio &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cozmo.behavior" href="cozmo.behavior.html" />
+    <link rel="prev" title="cozmo.annotate" href="cozmo.annotate.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cozmo.html">cozmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.action.html">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.annotate.html">cozmo.annotate</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.behavior.html">cozmo.behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.camera.html">cozmo.camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.conn.html">cozmo.conn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.event.html">cozmo.event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.exceptions.html">cozmo.exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.faces.html">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.opengl.html">cozmo.opengl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.pets.html">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.world.html">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo.audio</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.audio.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo.audio">
+<span id="cozmo-audio"></span><h1>cozmo.audio<a class="headerlink" href="#module-cozmo.audio" title="Permalink to this headline">¶</a></h1>
+<p>Audio related classes, functions, events and values.</p>
+<p class="rubric">Classes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.audio.AudioEvents" title="cozmo.audio.AudioEvents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AudioEvents</span></code></a></td>
+<td>The possible values for an AudioEvent.</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="cozmo.audio.AudioEvents">
+<em class="property">class </em><code class="descclassname">cozmo.audio.</code><code class="descname">AudioEvents</code><a class="headerlink" href="#cozmo.audio.AudioEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>The possible values for an AudioEvent.
+Pass one of these event objects to robot.play_audio() to play the corresponding sound clip.
+Example: <code class="docutils literal notranslate"><span class="pre">robot.play_audio(cozmo.audio.AudioEvents.MusicFunLoop)</span></code></p>
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Invalid">
+<code class="descname">Invalid</code><em class="property"> = _AudioEvent(name='Invalid', id=0)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Invalid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reserved Id for invalid sound events</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicBackgroundSilenceOff">
+<code class="descname">MusicBackgroundSilenceOff</code><em class="property"> = _AudioEvent(name='MusicBackgroundSilenceOff', id=3328628191)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicBackgroundSilenceOff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unmute cozmo background music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicBackgroundSilenceOn">
+<code class="descname">MusicBackgroundSilenceOn</code><em class="property"> = _AudioEvent(name='MusicBackgroundSilenceOn', id=4207184651)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicBackgroundSilenceOn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mute cozmo background music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicCubeWhack">
+<code class="descname">MusicCubeWhack</code><em class="property"> = _AudioEvent(name='MusicCubeWhack', id=3324716189)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicCubeWhack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the cube whack music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicFunLoop">
+<code class="descname">MusicFunLoop</code><em class="property"> = _AudioEvent(name='Music_Fun_Loop', id=1284343309)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicFunLoop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays a fun music sound (that loops indefinitely).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicFunLoopStop">
+<code class="descname">MusicFunLoopStop</code><em class="property"> = _AudioEvent(name='Music_Fun_Loop_Stop', id=2123694542)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicFunLoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the fun music sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicGlobalStop">
+<code class="descname">MusicGlobalStop</code><em class="property"> = _AudioEvent(name='MusicGlobalStop', id=2512535841)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicGlobalStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop all playing music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicHotPotatoLevel1Loop">
+<code class="descname">MusicHotPotatoLevel1Loop</code><em class="property"> = _AudioEvent(name='MusicHotPotatoLevel1Loop', id=716489468)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicHotPotatoLevel1Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the level 1 hot potato music
+(Does not repeat)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicHotPotatoLevel1LoopStop">
+<code class="descname">MusicHotPotatoLevel1LoopStop</code><em class="property"> = _AudioEvent(name='MusicHotPotatoLevel1LoopStop', id=2689778401)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicHotPotatoLevel1LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the level 1 hot potato music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicHotPotatoLevel2Loop">
+<code class="descname">MusicHotPotatoLevel2Loop</code><em class="property"> = _AudioEvent(name='MusicHotPotatoLevel2Loop', id=2357357213)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicHotPotatoLevel2Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the level 2 hot potato music
+(Does not repeat)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicHotPotatoLevel2LoopStop">
+<code class="descname">MusicHotPotatoLevel2LoopStop</code><em class="property"> = _AudioEvent(name='MusicHotPotatoLevel2LoopStop', id=3058241090)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicHotPotatoLevel2LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the level 2 hot potato music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicHotPotatoLevel3Loop">
+<code class="descname">MusicHotPotatoLevel3Loop</code><em class="property"> = _AudioEvent(name='MusicHotPotatoLevel3Loop', id=2340195146)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicHotPotatoLevel3Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the level 3 hot potato music
+(Does not repeat)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicHotPotatoLevel3LoopStop">
+<code class="descname">MusicHotPotatoLevel3LoopStop</code><em class="property"> = _AudioEvent(name='MusicHotPotatoLevel3LoopStop', id=2301371667)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicHotPotatoLevel3LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the level 3 hot potato music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicHotPotatoLevel4Loop">
+<code class="descname">MusicHotPotatoLevel4Loop</code><em class="property"> = _AudioEvent(name='MusicHotPotatoLevel4Loop', id=4097176099)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicHotPotatoLevel4Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the level 4 hot potato music
+(Does not repeat)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicHotPotatoLevel4LoopStop">
+<code class="descname">MusicHotPotatoLevel4LoopStop</code><em class="property"> = _AudioEvent(name='MusicHotPotatoLevel4LoopStop', id=3129138908)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicHotPotatoLevel4LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the level 4 hot potato music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicMagic8RevealStinger">
+<code class="descname">MusicMagic8RevealStinger</code><em class="property"> = _AudioEvent(name='MusicMagic8RevealStinger', id=1998467689)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicMagic8RevealStinger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the magic fortune teller reveal music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicMagic8RevealStingerStop">
+<code class="descname">MusicMagic8RevealStingerStop</code><em class="property"> = _AudioEvent(name='MusicMagic8RevealStingerStop', id=16687378)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicMagic8RevealStingerStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the magic fortune teller reveal music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicStyle80S1159BpmLoop">
+<code class="descname">MusicStyle80S1159BpmLoop</code><em class="property"> = _AudioEvent(name='MusicStyle80S1159BpmLoop', id=1808088864)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicStyle80S1159BpmLoop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays 80s style music
+(Does not repeat)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicStyle80S1159BpmLoopStop">
+<code class="descname">MusicStyle80S1159BpmLoopStop</code><em class="property"> = _AudioEvent(name='MusicStyle80S1159BpmLoopStop', id=1451276801)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicStyle80S1159BpmLoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of 80s style music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicStyleDisco1135BpmLoop">
+<code class="descname">MusicStyleDisco1135BpmLoop</code><em class="property"> = _AudioEvent(name='MusicStyleDisco1135BpmLoop', id=2717741607)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicStyleDisco1135BpmLoop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays disco style music
+(Does not repeat)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicStyleDisco1135BpmLoopStop">
+<code class="descname">MusicStyleDisco1135BpmLoopStop</code><em class="property"> = _AudioEvent(name='MusicStyleDisco1135BpmLoopStop', id=3069781320)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicStyleDisco1135BpmLoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of disco style music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicStyleMambo1183BpmLoop">
+<code class="descname">MusicStyleMambo1183BpmLoop</code><em class="property"> = _AudioEvent(name='MusicStyleMambo1183BpmLoop', id=1905159696)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicStyleMambo1183BpmLoop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays mambo style music
+(Does not repeat)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicStyleMambo1183BpmLoopStop">
+<code class="descname">MusicStyleMambo1183BpmLoopStop</code><em class="property"> = _AudioEvent(name='MusicStyleMambo1183BpmLoopStop', id=1709157641)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicStyleMambo1183BpmLoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of mambo style music</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBass01Loop">
+<code class="descname">MusicTinyOrchestraBass01Loop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBass01Loop', id=1352943452)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBass01Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the first tiny orchestra bass track
+(Does not repeat. Does not interact with the synchronized tiny orchestra system)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBass01LoopStop">
+<code class="descname">MusicTinyOrchestraBass01LoopStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBass01LoopStop', id=1353021637)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBass01LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the first tiny orchestra bass track</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBass02Loop">
+<code class="descname">MusicTinyOrchestraBass02Loop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBass02Loop', id=3270107901)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBass02Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the second tiny orchestra bass track
+(Does not repeat. Does not interact with the synchronized tiny orchestra system)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBass02LoopStop">
+<code class="descname">MusicTinyOrchestraBass02LoopStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBass02LoopStop', id=3636979286)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBass02LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the second tiny orchestra bass track</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBass03Loop">
+<code class="descname">MusicTinyOrchestraBass03Loop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBass03Loop', id=3677506218)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBass03Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the third tiny orchestra bass track
+(Does not repeat. Does not interact with the synchronized tiny orchestra system)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBass03LoopStop">
+<code class="descname">MusicTinyOrchestraBass03LoopStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBass03LoopStop', id=1838210855)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBass03LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the third tiny orchestra bass track</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBassMode1">
+<code class="descname">MusicTinyOrchestraBassMode1</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBassMode1', id=2111780371)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBassMode1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on the first mode of the synchronized tiny orchestra bass channel
+(Requires the tiny orchestra system be initialized, and will loop until the system is turned off)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBassMode1Stop">
+<code class="descname">MusicTinyOrchestraBassMode1Stop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBassMode1Stop', id=222737888)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBassMode1Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off the first mode of the synchronized tiny orchestra bass channel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBassMode2">
+<code class="descname">MusicTinyOrchestraBassMode2</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBassMode2', id=2111780368)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBassMode2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on the second mode of the synchronized tiny orchestra bass channel
+(Requires the tiny orchestra system be initialized, and will loop until the system is turned off)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBassMode2Stop">
+<code class="descname">MusicTinyOrchestraBassMode2Stop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBassMode2Stop', id=1587327405)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBassMode2Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off the second mode of the synchronized tiny orchestra bass channel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBassMode3">
+<code class="descname">MusicTinyOrchestraBassMode3</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBassMode3', id=2111780369)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBassMode3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on the third mode of the synchronized tiny orchestra bass channel
+(Requires the tiny orchestra system be initialized, and will loop until the system is turned off)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBassMode3Stop">
+<code class="descname">MusicTinyOrchestraBassMode3Stop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBassMode3Stop', id=1731643034)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBassMode3Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off the third mode of the synchronized tiny orchestra bass channel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraBassStop">
+<code class="descname">MusicTinyOrchestraBassStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraBassStop', id=1011028768)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraBassStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off all synchronized tiny orchestra bass channels</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluck01Loop">
+<code class="descname">MusicTinyOrchestraGlockPluck01Loop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluck01Loop', id=2091022501)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluck01Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the first tiny orchestra glock pluck track
+(Does not repeat. Does not interact with the synchronized tiny orchestra system)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluck01LoopStop">
+<code class="descname">MusicTinyOrchestraGlockPluck01LoopStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluck01LoopStop', id=1371551766)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluck01LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the first tiny orchestra glock pluck track</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluck02Loop">
+<code class="descname">MusicTinyOrchestraGlockPluck02Loop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluck02Loop', id=1416718788)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluck02Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the second tiny orchestra glock pluck track
+(Does not repeat. Does not interact with the synchronized tiny orchestra system)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluck02LoopStop">
+<code class="descname">MusicTinyOrchestraGlockPluck02LoopStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluck02LoopStop', id=1925511301)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluck02LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the second tiny orchestra glock pluck track</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluck03Loop">
+<code class="descname">MusicTinyOrchestraGlockPluck03Loop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluck03Loop', id=668702647)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluck03Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the third tiny orchestra glock pluck track
+(Does not repeat. Does not interact with the synchronized tiny orchestra system)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluck03LoopStop">
+<code class="descname">MusicTinyOrchestraGlockPluck03LoopStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluck03LoopStop', id=2578133564)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluck03LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the third tiny orchestra glock pluck track</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckMode1">
+<code class="descname">MusicTinyOrchestraGlockPluckMode1</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluckMode1', id=1774266660)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckMode1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on the first mode of the synchronized tiny orchestra glock pluck channel
+(Requires the tiny orchestra system be initialized, and will loop until the system is turned off)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckMode1Stop">
+<code class="descname">MusicTinyOrchestraGlockPluckMode1Stop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluckMode1Stop', id=1662844729)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckMode1Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off the first mode of the synchronized tiny orchestra glock pluck channel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckMode2">
+<code class="descname">MusicTinyOrchestraGlockPluckMode2</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluckMode2', id=1774266663)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckMode2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on the second mode of the synchronized tiny orchestra glock pluck channel
+(Requires the tiny orchestra system be initialized, and will loop until the system is turned off)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckMode2Stop">
+<code class="descname">MusicTinyOrchestraGlockPluckMode2Stop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluckMode2Stop', id=2287415996)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckMode2Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off the second mode of the synchronized tiny orchestra glock pluck channel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckMode3">
+<code class="descname">MusicTinyOrchestraGlockPluckMode3</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluckMode3', id=1774266662)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckMode3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on the third mode of the synchronized tiny orchestra glock pluck channel
+(Requires the tiny orchestra system be initialized, and will loop until the system is turned off)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckMode3Stop">
+<code class="descname">MusicTinyOrchestraGlockPluckMode3Stop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluckMode3Stop', id=3420658727)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckMode3Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off the third mode of the synchronized tiny orchestra glock pluck channel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckStop">
+<code class="descname">MusicTinyOrchestraGlockPluckStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraGlockPluckStop', id=3644877187)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraGlockPluckStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off all synchronized tiny orchestra glock pluck channels</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraInit">
+<code class="descname">MusicTinyOrchestraInit</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraInit', id=4134268600)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraInit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the synchronized tiny orchestra system
+(Will not produce any sound on its own, one of the modes must be triggered)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStop">
+<code class="descname">MusicTinyOrchestraStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStop', id=4261649076)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off the synchronized tiny orchestra system</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStrings01Loop">
+<code class="descname">MusicTinyOrchestraStrings01Loop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStrings01Loop', id=846761783)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStrings01Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the first tiny orchestra string track
+(Does not repeat. Does not interact with the synchronized tiny orchestra system)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStrings01LoopStop">
+<code class="descname">MusicTinyOrchestraStrings01LoopStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStrings01LoopStop', id=3051334784)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStrings01LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the first tiny orchestra strings track</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStrings02Loop">
+<code class="descname">MusicTinyOrchestraStrings02Loop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStrings02Loop', id=363664914)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStrings02Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the second tiny orchestra string track
+(Does not repeat. Does not interact with the synchronized tiny orchestra system)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStrings02LoopStop">
+<code class="descname">MusicTinyOrchestraStrings02LoopStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStrings02LoopStop', id=3105309531)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStrings02LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the second tiny orchestra strings track</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStrings03Loop">
+<code class="descname">MusicTinyOrchestraStrings03Loop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStrings03Loop', id=2269081637)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStrings03Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the third tiny orchestra string track
+(Does not repeat. Does not interact with the synchronized tiny orchestra system)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStrings03LoopStop">
+<code class="descname">MusicTinyOrchestraStrings03LoopStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStrings03LoopStop', id=4031668042)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStrings03LoopStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of the third tiny orchestra strings track</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStringsMode1">
+<code class="descname">MusicTinyOrchestraStringsMode1</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStringsMode1', id=3175211494)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStringsMode1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on the first mode of the synchronized tiny orchestra strings channel
+(Requires the tiny orchestra system be initialized, and will loop until the system is turned off)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStringsMode1Stop">
+<code class="descname">MusicTinyOrchestraStringsMode1Stop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStringsMode1Stop', id=2836526843)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStringsMode1Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off the first mode of the synchronized tiny orchestra strings channel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStringsMode2">
+<code class="descname">MusicTinyOrchestraStringsMode2</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStringsMode2', id=3175211493)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStringsMode2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on the second mode of the synchronized tiny orchestra strings channel
+(Requires the tiny orchestra system be initialized, and will loop until the system is turned off)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStringsMode2Stop">
+<code class="descname">MusicTinyOrchestraStringsMode2Stop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStringsMode2Stop', id=3381154170)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStringsMode2Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off the second mode of the synchronized tiny orchestra strings channel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStringsMode3">
+<code class="descname">MusicTinyOrchestraStringsMode3</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStringsMode3', id=3175211492)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStringsMode3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on the third mode of the synchronized tiny orchestra strings channel
+(Requires the tiny orchestra system be initialized, and will loop until the system is turned off)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStringsMode3Stop">
+<code class="descname">MusicTinyOrchestraStringsMode3Stop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStringsMode3Stop', id=2812380813)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStringsMode3Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off the third mode of the synchronized tiny orchestra strings channel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.MusicTinyOrchestraStringsStop">
+<code class="descname">MusicTinyOrchestraStringsStop</code><em class="property"> = _AudioEvent(name='MusicTinyOrchestraStringsStop', id=3805843413)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.MusicTinyOrchestraStringsStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn off all synchronized tiny orchestra strings channels</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxCubeLight">
+<code class="descname">SfxCubeLight</code><em class="property"> = _AudioEvent(name='SfxCubeLight', id=1237348851)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxCubeLight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays cube light sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxCubeLightStop">
+<code class="descname">SfxCubeLightStop</code><em class="property"> = _AudioEvent(name='SfxCubeLightStop', id=2096539976)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxCubeLightStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of cube light sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxFiretruckTimerEnd">
+<code class="descname">SfxFiretruckTimerEnd</code><em class="property"> = _AudioEvent(name='SfxFiretruckTimerEnd', id=2490749974)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxFiretruckTimerEnd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays firetruck timer end sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxFiretruckTimerEndStop">
+<code class="descname">SfxFiretruckTimerEndStop</code><em class="property"> = _AudioEvent(name='SfxFiretruckTimerEndStop', id=421166967)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxFiretruckTimerEndStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of firetruck timer end sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxFiretruckTimerStart">
+<code class="descname">SfxFiretruckTimerStart</code><em class="property"> = _AudioEvent(name='SfxFiretruckTimerStart', id=2969457917)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxFiretruckTimerStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays firetruck timer start sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxFiretruckTimerStartStop">
+<code class="descname">SfxFiretruckTimerStartStop</code><em class="property"> = _AudioEvent(name='SfxFiretruckTimerStartStop', id=494556302)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxFiretruckTimerStartStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of firetruck timer start sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxGameLose">
+<code class="descname">SfxGameLose</code><em class="property"> = _AudioEvent(name='SfxGameLose', id=1551222965)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxGameLose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays game lose sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxGameLoseStop">
+<code class="descname">SfxGameLoseStop</code><em class="property"> = _AudioEvent(name='SfxGameLoseStop', id=347471374)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxGameLoseStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of game lose sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxGameWin">
+<code class="descname">SfxGameWin</code><em class="property"> = _AudioEvent(name='SfxGameWin', id=2440620400)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxGameWin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays game win sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxGameWinStop">
+<code class="descname">SfxGameWinStop</code><em class="property"> = _AudioEvent(name='SfxGameWinStop', id=1156077641)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxGameWinStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of game win sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxGlobalStop">
+<code class="descname">SfxGlobalStop</code><em class="property"> = _AudioEvent(name='SfxGlobalStop', id=2451909313)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxGlobalStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all playing sound effects</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxHotPotatoCubeCharge">
+<code class="descname">SfxHotPotatoCubeCharge</code><em class="property"> = _AudioEvent(name='SfxHotPotatoCubeCharge', id=1053690875)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxHotPotatoCubeCharge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays hot potato cube charge sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxHotPotatoCubeChargeStop">
+<code class="descname">SfxHotPotatoCubeChargeStop</code><em class="property"> = _AudioEvent(name='SfxHotPotatoCubeChargeStop', id=3280818964)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxHotPotatoCubeChargeStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of hot potato cube charge sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxHotPotatoCubeReady">
+<code class="descname">SfxHotPotatoCubeReady</code><em class="property"> = _AudioEvent(name='SfxHotPotatoCubeReady', id=1379908684)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxHotPotatoCubeReady" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays hot potato cube ready sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxHotPotatoCubeReadyStop">
+<code class="descname">SfxHotPotatoCubeReadyStop</code><em class="property"> = _AudioEvent(name='SfxHotPotatoCubeReadyStop', id=3293236253)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxHotPotatoCubeReadyStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of hot potato cube ready sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxHotPotatoPass">
+<code class="descname">SfxHotPotatoPass</code><em class="property"> = _AudioEvent(name='SfxHotPotatoPass', id=17262752)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxHotPotatoPass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays hot potato pass sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxHotPotatoPassStop">
+<code class="descname">SfxHotPotatoPassStop</code><em class="property"> = _AudioEvent(name='SfxHotPotatoPassStop', id=2579746409)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxHotPotatoPassStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of hot potato pass sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxHotPotatoTimerEnd">
+<code class="descname">SfxHotPotatoTimerEnd</code><em class="property"> = _AudioEvent(name='SfxHotPotatoTimerEnd', id=1167243172)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxHotPotatoTimerEnd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays hot potato timer end sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxHotPotatoTimerEndStop">
+<code class="descname">SfxHotPotatoTimerEndStop</code><em class="property"> = _AudioEvent(name='SfxHotPotatoTimerEndStop', id=1930994181)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxHotPotatoTimerEndStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of hot potato timer end sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxMagic8MessageReveal">
+<code class="descname">SfxMagic8MessageReveal</code><em class="property"> = _AudioEvent(name='SfxMagic8MessageReveal', id=4071915446)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxMagic8MessageReveal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays magic fortune teller message reveal sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxMagic8MessageRevealStop">
+<code class="descname">SfxMagic8MessageRevealStop</code><em class="property"> = _AudioEvent(name='SfxMagic8MessageRevealStop', id=3951709903)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxMagic8MessageRevealStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of magic fortune teller message reveal sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxMagnetAttract">
+<code class="descname">SfxMagnetAttract</code><em class="property"> = _AudioEvent(name='SfxMagnetAttract', id=3253652261)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxMagnetAttract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays magnet attract sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxMagnetAttractStop">
+<code class="descname">SfxMagnetAttractStop</code><em class="property"> = _AudioEvent(name='SfxMagnetAttractStop', id=1573765534)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxMagnetAttractStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of magnet attrack sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxMagnetRepel">
+<code class="descname">SfxMagnetRepel</code><em class="property"> = _AudioEvent(name='SfxMagnetRepel', id=131125164)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxMagnetRepel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays magnet repel sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxMagnetRepelStop">
+<code class="descname">SfxMagnetRepelStop</code><em class="property"> = _AudioEvent(name='SfxMagnetRepelStop', id=827939469)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxMagnetRepelStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of magnet repel sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxPuttHoleSuccess">
+<code class="descname">SfxPuttHoleSuccess</code><em class="property"> = _AudioEvent(name='Sfx_Putt_Hole_Success', id=3020894301)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxPuttHoleSuccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the putt-hole-success sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxPuttHoleSuccessStop">
+<code class="descname">SfxPuttHoleSuccessStop</code><em class="property"> = _AudioEvent(name='Sfx_Putt_Hole_Success_Stop', id=3048074246)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxPuttHoleSuccessStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the putt-hole-success sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedCountdown">
+<code class="descname">SfxSharedCountdown</code><em class="property"> = _AudioEvent(name='SfxSharedCountdown', id=3959673678)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedCountdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays countdown sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedCountdownStop">
+<code class="descname">SfxSharedCountdownStop</code><em class="property"> = _AudioEvent(name='SfxSharedCountdownStop', id=769770611)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedCountdownStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of countdown sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedCubeLightOn">
+<code class="descname">SfxSharedCubeLightOn</code><em class="property"> = _AudioEvent(name='SfxSharedCubeLightOn', id=2279105405)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedCubeLightOn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays cube light on sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedCubeLightOnStop">
+<code class="descname">SfxSharedCubeLightOnStop</code><em class="property"> = _AudioEvent(name='SfxSharedCubeLightOnStop', id=3298580386)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedCubeLightOnStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of cube light on sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedError">
+<code class="descname">SfxSharedError</code><em class="property"> = _AudioEvent(name='SfxSharedError', id=2368558265)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays error sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedErrorStop">
+<code class="descname">SfxSharedErrorStop</code><em class="property"> = _AudioEvent(name='SfxSharedErrorStop', id=63429898)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedErrorStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of error sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedSuccess">
+<code class="descname">SfxSharedSuccess</code><em class="property"> = _AudioEvent(name='SfxSharedSuccess', id=211381434)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedSuccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays success sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedSuccessStop">
+<code class="descname">SfxSharedSuccessStop</code><em class="property"> = _AudioEvent(name='SfxSharedSuccessStop', id=2158984211)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedSuccessStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of success sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedTimerClick">
+<code class="descname">SfxSharedTimerClick</code><em class="property"> = _AudioEvent(name='SfxSharedTimerClick', id=3038792837)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedTimerClick" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays timer click sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedTimerClickStop">
+<code class="descname">SfxSharedTimerClickStop</code><em class="property"> = _AudioEvent(name='SfxSharedTimerClickStop', id=165689370)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedTimerClickStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of timer click sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedTimerEnd">
+<code class="descname">SfxSharedTimerEnd</code><em class="property"> = _AudioEvent(name='SfxSharedTimerEnd', id=343938494)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedTimerEnd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays timer end sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedTimerEndStop">
+<code class="descname">SfxSharedTimerEndStop</code><em class="property"> = _AudioEvent(name='SfxSharedTimerEndStop', id=1219615815)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedTimerEndStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops active plays of timer end sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedTimerWarning">
+<code class="descname">SfxSharedTimerWarning</code><em class="property"> = _AudioEvent(name='SfxSharedTimerWarning', id=1420860677)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedTimerWarning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays timer warning sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.SfxSharedTimerWarningStop">
+<code class="descname">SfxSharedTimerWarningStop</code><em class="property"> = _AudioEvent(name='SfxSharedTimerWarningStop', id=3016301418)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.SfxSharedTimerWarningStop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop all active plays of timer warning sound</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Alien_Invasion_Ufo">
+<code class="descname">Sfx_Alien_Invasion_Ufo</code><em class="property"> = _AudioEvent(name='Sfx_Alien_Invasion_Ufo', id=72626837)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Alien_Invasion_Ufo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays alien invasion sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Alien_Invasion_Ufo_Stop">
+<code class="descname">Sfx_Alien_Invasion_Ufo_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Alien_Invasion_Ufo_Stop', id=2912905250)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Alien_Invasion_Ufo_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the alien invasion sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Brick_Bash">
+<code class="descname">Sfx_Brick_Bash</code><em class="property"> = _AudioEvent(name='Sfx_Brick_Bash', id=773532685)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Brick_Bash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays brick bash sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Brick_Bash_Stop">
+<code class="descname">Sfx_Brick_Bash_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Brick_Bash_Stop', id=1455749214)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Brick_Bash_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the brick bash sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Constellation_Star">
+<code class="descname">Sfx_Constellation_Star</code><em class="property"> = _AudioEvent(name='Sfx_Constellation_Star', id=1881919109)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Constellation_Star" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays constellation star sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Constellation_Star_Stop">
+<code class="descname">Sfx_Constellation_Star_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Constellation_Star_Stop', id=579345806)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Constellation_Star_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the constellation star sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Egg_Decorating_Crack">
+<code class="descname">Sfx_Egg_Decorating_Crack</code><em class="property"> = _AudioEvent(name='Sfx_Egg_Decorating_Crack', id=1294616912)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Egg_Decorating_Crack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays egg cracking sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Egg_Decorating_Crack_Stop">
+<code class="descname">Sfx_Egg_Decorating_Crack_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Egg_Decorating_Crack_Stop', id=3818701437)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Egg_Decorating_Crack_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the egg cracking sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Fidget_Spinner_Loop_Play">
+<code class="descname">Sfx_Fidget_Spinner_Loop_Play</code><em class="property"> = _AudioEvent(name='Sfx_Fidget_Spinner_Loop_Play', id=711055678)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Fidget_Spinner_Loop_Play" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays fidget spinner loop.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Fidget_Spinner_Loop_Stop">
+<code class="descname">Sfx_Fidget_Spinner_Loop_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Fidget_Spinner_Loop_Stop', id=2909245734)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Fidget_Spinner_Loop_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all the fidget spinned looping sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Fidget_Spinner_Start">
+<code class="descname">Sfx_Fidget_Spinner_Start</code><em class="property"> = _AudioEvent(name='Sfx_Fidget_Spinner_Start', id=2368469177)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Fidget_Spinner_Start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays fidget spinner sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Fidget_Spinner_Start_Stop">
+<code class="descname">Sfx_Fidget_Spinner_Start_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Fidget_Spinner_Start_Stop', id=2997419718)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Fidget_Spinner_Start_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the fidget spinner sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Flappy_Increase">
+<code class="descname">Sfx_Flappy_Increase</code><em class="property"> = _AudioEvent(name='Sfx_Flappy_Increase', id=3457937792)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Flappy_Increase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays flappy sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Flappy_Increase_Stop">
+<code class="descname">Sfx_Flappy_Increase_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Flappy_Increase_Stop', id=437871341)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Flappy_Increase_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the flappy sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Morse_Code_Dash">
+<code class="descname">Sfx_Morse_Code_Dash</code><em class="property"> = _AudioEvent(name='Sfx_Morse_Code_Dash', id=3631133922)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Morse_Code_Dash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays morse code dash sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Morse_Code_Dash_Stop">
+<code class="descname">Sfx_Morse_Code_Dash_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Morse_Code_Dash_Stop', id=4156175391)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Morse_Code_Dash_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the morse code dash sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Morse_Code_Dot">
+<code class="descname">Sfx_Morse_Code_Dot</code><em class="property"> = _AudioEvent(name='Sfx_Morse_Code_Dot', id=4212384135)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Morse_Code_Dot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays morse code dot sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Morse_Code_Dot_Stop">
+<code class="descname">Sfx_Morse_Code_Dot_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Morse_Code_Dot_Stop', id=850860868)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Morse_Code_Dot_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the morse code dot sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Morse_Code_Silent">
+<code class="descname">Sfx_Morse_Code_Silent</code><em class="property"> = _AudioEvent(name='Sfx_Morse_Code_Silent', id=1002265509)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Morse_Code_Silent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays morse code silent sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Morse_Code_Silent_Stop">
+<code class="descname">Sfx_Morse_Code_Silent_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Morse_Code_Silent_Stop', id=620507378)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Morse_Code_Silent_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the morse code silent sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Paddle_Ball_Bounce">
+<code class="descname">Sfx_Paddle_Ball_Bounce</code><em class="property"> = _AudioEvent(name='Sfx_Paddle_Ball_Bounce', id=1845849602)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Paddle_Ball_Bounce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays paddle ball bounce sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Paddle_Ball_Bounce_Stop">
+<code class="descname">Sfx_Paddle_Ball_Bounce_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Paddle_Ball_Bounce_Stop', id=3192082383)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Paddle_Ball_Bounce_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the paddle ball bounce sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Pot_O_Gold_Blip_Level1">
+<code class="descname">Sfx_Pot_O_Gold_Blip_Level1</code><em class="property"> = _AudioEvent(name='Sfx_Pot_O_Gold_Blip_Level1', id=3533103863)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Pot_O_Gold_Blip_Level1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the first pot of gold sound sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Pot_O_Gold_Blip_Level1_Stop">
+<code class="descname">Sfx_Pot_O_Gold_Blip_Level1_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Pot_O_Gold_Blip_Level1_Stop', id=970660780)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Pot_O_Gold_Blip_Level1_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the first pot of gold blip sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Pot_O_Gold_Blip_Level2">
+<code class="descname">Sfx_Pot_O_Gold_Blip_Level2</code><em class="property"> = _AudioEvent(name='Sfx_Pot_O_Gold_Blip_Level2', id=3533103860)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Pot_O_Gold_Blip_Level2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the second pot of gold sound sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Pot_O_Gold_Blip_Level2_Stop">
+<code class="descname">Sfx_Pot_O_Gold_Blip_Level2_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Pot_O_Gold_Blip_Level2_Stop', id=3985940521)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Pot_O_Gold_Blip_Level2_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the second pot of gold blip sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Pot_O_Gold_Blip_Level3">
+<code class="descname">Sfx_Pot_O_Gold_Blip_Level3</code><em class="property"> = _AudioEvent(name='Sfx_Pot_O_Gold_Blip_Level3', id=3533103861)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Pot_O_Gold_Blip_Level3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays the third pot of gold sound sound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.audio.AudioEvents.Sfx_Pot_O_Gold_Blip_Level3_Stop">
+<code class="descname">Sfx_Pot_O_Gold_Blip_Level3_Stop</code><em class="property"> = _AudioEvent(name='Sfx_Pot_O_Gold_Blip_Level3_Stop', id=2482812534)</em><a class="headerlink" href="#cozmo.audio.AudioEvents.Sfx_Pot_O_Gold_Blip_Level3_Stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all active plays of the third pot of gold blip sound.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cozmo.behavior.html" class="btn btn-neutral float-right" title="cozmo.behavior" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cozmo.annotate.html" class="btn btn-neutral float-left" title="cozmo.annotate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

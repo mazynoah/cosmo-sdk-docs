@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo.conn &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cozmo.event" href="cozmo.event.html" />
+    <link rel="prev" title="cozmo.camera" href="cozmo.camera.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cozmo.html">cozmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.action.html">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.annotate.html">cozmo.annotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.audio.html">cozmo.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.behavior.html">cozmo.behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.camera.html">cozmo.camera</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo.conn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.event.html">cozmo.event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.exceptions.html">cozmo.exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.faces.html">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.opengl.html">cozmo.opengl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.pets.html">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.world.html">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo.conn</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.conn.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo.conn">
+<span id="cozmo-conn"></span><h1>cozmo.conn<a class="headerlink" href="#module-cozmo.conn" title="Permalink to this headline">¶</a></h1>
+<p>Engine connection.</p>
+<p>The SDK operates by connecting to the Cozmo “engine” - typically the Cozmo
+app that runs on an iOS or Android device.</p>
+<p>The engine is responsible for much of the work that Cozmo does, including
+image recognition, path planning, behaviors and animation handling, etc.</p>
+<p>The <a class="reference internal" href="cozmo.run.html#module-cozmo.run" title="cozmo.run"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cozmo.run</span></code></a> module takes care of opening a connection over a USB
+connection to a device, but the <a class="reference internal" href="#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">CozmoConnection</span></code></a> class defined in
+this module does the work of relaying messages to and from the engine and
+dispatching them to the <a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot" title="cozmo.robot.Robot"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.robot.Robot</span></code></a> instance.</p>
+<p class="rubric">Classes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CozmoConnection</span></code></a>(*a,&nbsp;**kw)</td>
+<td>Manages the connection to the Cozmo app to communicate with the core engine.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtConnected</span></code>(**kwargs)</td>
+<td>Triggered when the initial connection to the device has been established.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtConnectionClosed</span></code>(**kwargs)</td>
+<td>Triggered when the connection to the controlling device is closed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.conn.EvtRobotFound" title="cozmo.conn.EvtRobotFound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtRobotFound</span></code></a>(**kwargs)</td>
+<td>Triggered when a Cozmo robot is detected, but before he’s initialized.</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="cozmo.conn.EvtRobotFound">
+<em class="property">class </em><code class="descclassname">cozmo.conn.</code><code class="descname">EvtRobotFound</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.conn.EvtRobotFound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered when a Cozmo robot is detected, but before he’s initialized.</p>
+<p><a class="reference internal" href="cozmo.robot.html#cozmo.robot.EvtRobotReady" title="cozmo.robot.EvtRobotReady"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.robot.EvtRobotReady</span></code></a> is dispatched when the robot is fully initialized.</p>
+<dl class="attribute">
+<dt id="cozmo.conn.EvtRobotFound.robot">
+<code class="descname">robot</code><em class="property"> = 'The Cozmo object for the robot'</em><a class="headerlink" href="#cozmo.conn.EvtRobotFound.robot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.conn.CozmoConnection">
+<em class="property">class </em><code class="descclassname">cozmo.conn.</code><code class="descname">CozmoConnection</code><span class="sig-paren">(</span><em>*a</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.conn.CozmoConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages the connection to the Cozmo app to communicate with the core engine.</p>
+<p>An instance of this class is passed to functions used with
+<a class="reference internal" href="cozmo.run.html#cozmo.run.connect" title="cozmo.run.connect"><code class="xref py py-func docutils literal notranslate"><span class="pre">cozmo.run.connect()</span></code></a>.  At the point the function is executed,
+the connection is already established and verified, and the
+<code class="xref py py-class docutils literal notranslate"><span class="pre">EvtConnected</span></code> has already been sent.</p>
+<p>However, after the initial connection is established, programs will usually
+want to call <a class="reference internal" href="#cozmo.conn.CozmoConnection.wait_for_robot" title="cozmo.conn.CozmoConnection.wait_for_robot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait_for_robot()</span></code></a> to wait for an actual Cozmo robot to
+be detected and initialized before doing useful work.</p>
+<dl class="method">
+<dt id="cozmo.conn.CozmoConnection.abort">
+<code class="descname">abort</code><span class="sig-paren">(</span><em>exc</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.conn.CozmoConnection.abort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abort the connection to the device.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.conn.CozmoConnection.anim_names">
+<code class="descname">anim_names</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.conn.CozmoConnection.anim_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <a class="reference internal" href="cozmo.anim.html#cozmo.anim.AnimationNames" title="cozmo.anim.AnimationNames"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.anim.AnimationNames</span></code></a> object that references all
+available animation names</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.conn.CozmoConnection.anim_names_factory">
+<code class="descname">anim_names_factory</code><em class="property"> = functools.partial(&lt;class 'cozmo.anim.AnimationNames'&gt;, loop=None)</em><a class="headerlink" href="#cozmo.conn.CozmoConnection.anim_names_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The factory function that returns an
+<a class="reference internal" href="cozmo.anim.html#cozmo.anim.AnimationNames" title="cozmo.anim.AnimationNames"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.anim.AnimationNames</span></code></a> class or subclass instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">callable</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.conn.CozmoConnection.clad_decode_union">
+<code class="descname">clad_decode_union</code><a class="headerlink" href="#cozmo.conn.CozmoConnection.clad_decode_union" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">cozmoclad.clad.externalInterface.messageEngineToGame.MessageEngineToGame</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.conn.CozmoConnection.clad_encode_union">
+<code class="descname">clad_encode_union</code><a class="headerlink" href="#cozmo.conn.CozmoConnection.clad_encode_union" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">cozmoclad.clad.externalInterface.messageGameToEngine.MessageGameToEngine</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.conn.CozmoConnection.connection_lost">
+<code class="descname">connection_lost</code><span class="sig-paren">(</span><em>exc</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.conn.CozmoConnection.connection_lost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the connection is lost or closed.</p>
+<p>The argument is an exception object or None (the latter
+meaning a regular EOF is received or the connection was
+aborted or closed).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.conn.CozmoConnection.connection_made">
+<code class="descname">connection_made</code><span class="sig-paren">(</span><em>transport</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.conn.CozmoConnection.connection_made" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a connection is made.</p>
+<p>The argument is the transport representing the pipe connection.
+To receive data, wait for data_received() calls.
+When the connection is closed, connection_lost() is called.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.conn.CozmoConnection.device_info">
+<code class="descname">device_info</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.conn.CozmoConnection.device_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dict containing information about the device the connection is using.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.conn.CozmoConnection.is_connected">
+<code class="descname">is_connected</code><a class="headerlink" href="#cozmo.conn.CozmoConnection.is_connected" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if currently connected to the remote engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.conn.CozmoConnection.msg_received">
+<code class="descname">msg_received</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.conn.CozmoConnection.msg_received" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receives low level communication messages from the engine.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.conn.CozmoConnection.robot_factory">
+<code class="descname">robot_factory</code><em class="property"> = functools.partial(&lt;class 'cozmo.robot.Robot'&gt;, loop=None)</em><a class="headerlink" href="#cozmo.conn.CozmoConnection.robot_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The factory function that returns a
+<a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot" title="cozmo.robot.Robot"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.robot.Robot</span></code></a> class or subclass instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">callable</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.conn.CozmoConnection.shutdown">
+<code class="descname">shutdown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.conn.CozmoConnection.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the connection to the device.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.conn.CozmoConnection.wait_for_robot">
+<code class="descname">wait_for_robot</code><span class="sig-paren">(</span><em>timeout=5</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.conn.CozmoConnection.wait_for_robot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait for a Cozmo robot to connect and complete initialization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Maximum length of time to wait for a robot to be ready in seconds.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A <a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot" title="cozmo.robot.Robot"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.robot.Robot</span></code></a> instance that’s ready to use.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/asyncio-task.html#asyncio.TimeoutError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.TimeoutError</span></code></a> if there’s no response from the robot.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cozmo.event.html" class="btn btn-neutral float-right" title="cozmo.event" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cozmo.camera.html" class="btn btn-neutral float-left" title="cozmo.camera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

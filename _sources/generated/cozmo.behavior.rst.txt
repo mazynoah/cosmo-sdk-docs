@@ -1,0 +1,26 @@
+cozmo.behavior
+==============
+
+.. automodule:: cozmo.behavior
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Behavior
+      BehaviorTypes
+      EvtBehaviorRequested
+      EvtBehaviorStarted
+      EvtBehaviorStopped
+   
+   
+
+   
+   
+   

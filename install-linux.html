@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation - Linux &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Android Debug Bridge" href="adb.html" />
+    <link rel="prev" title="Installation - Windows" href="install-windows.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation - Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu-14-04">Ubuntu 14.04</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python-installation">Python Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sdk-installation">SDK Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sdk-upgrade">SDK Upgrade</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu-16-04">Ubuntu 16.04</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Python Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">SDK Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">SDK Upgrade</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mobile-device-setup">Mobile Device Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">The API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation - Linux</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/install-linux.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation-linux">
+<span id="install-linux"></span><h1>Installation - Linux<a class="headerlink" href="#installation-linux" title="Permalink to this headline">¶</a></h1>
+<p>This guide provides instructions on installing the Cozmo SDK for computers running with an Ubuntu Linux operating system.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The Cozmo SDK is tested and and supported on Ubuntu 14.04 and 16.04. Anki makes no guarantee the Cozmo SDK will work on other versions of Linux.  If you wish to try the Cozmo SDK on versions of Linux <em>other than</em> Ubuntu 14.04 or 16.04, please ensure the following dependencies are installed:</p>
+<ul class="last simple">
+<li>Python 3.5.1 or later</li>
+<li>pip for Python 3 (Python package installer)</li>
+<li>Android command-line tools (<a class="reference external" href="https://developer.android.com/studio/index.html#Other">https://developer.android.com/studio/index.html#Other</a>)</li>
+<li>usbmuxd for iOS / <a class="reference internal" href="adb.html#adb"><span class="std std-ref">Android Debug Bridge</span></a> for Android</li>
+</ul>
+</div>
+<div class="section" id="ubuntu-14-04">
+<h2>Ubuntu 14.04<a class="headerlink" href="#ubuntu-14-04" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="python-installation">
+<h3>Python Installation<a class="headerlink" href="#python-installation" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Type the following into your Terminal window to install Python 3.5:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">deadsnakes</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">.</span><span class="mi">5</span> <span class="n">python3</span><span class="o">.</span><span class="mi">5</span><span class="o">-</span><span class="n">tk</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Then, install and set up virtualenv:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+<span class="n">virtualenv</span> <span class="o">-</span><span class="n">p</span> <span class="n">python3</span><span class="o">.</span><span class="mi">5</span> <span class="o">~/</span><span class="n">cozmo</span><span class="o">-</span><span class="n">env</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Last, make sure to activate the virtualenv any time you use cozmo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/</span><span class="n">cozmo</span><span class="o">-</span><span class="n">env</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You’ll need to activate the virtualenv before running any python or pip commands.  Learn more about virtualenv <a class="reference external" href="https://virtualenv.pypa.io/en/stable/userguide/">here</a>.</p>
+</div>
+</div>
+<div class="section" id="sdk-installation">
+<h3>SDK Installation<a class="headerlink" href="#sdk-installation" title="Permalink to this headline">¶</a></h3>
+<p>To install the SDK, type the following into the Terminal window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s1">&#39;cozmo[camera]&#39;</span>
+</pre></div>
+</div>
+<p>Note that the [camera] option adds support for processing images from Cozmo’s camera.</p>
+</div>
+<div class="section" id="sdk-upgrade">
+<h3>SDK Upgrade<a class="headerlink" href="#sdk-upgrade" title="Permalink to this headline">¶</a></h3>
+<p>To upgrade the SDK from a previous install, enter this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">cozmo</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ubuntu-16-04">
+<h2>Ubuntu 16.04<a class="headerlink" href="#ubuntu-16-04" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Python Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Type the following into your Terminal window to install Python:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Then install pip by typing in the following into the Terminal window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Last, install Tkinter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">pil</span><span class="o">.</span><span class="n">imagetk</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h3>SDK Installation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>To install the SDK, type the following into the Terminal window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="s1">&#39;cozmo[camera]&#39;</span>
+</pre></div>
+</div>
+<p>Note that the [camera] option adds support for processing images from Cozmo’s camera.</p>
+</div>
+<div class="section" id="id3">
+<h3>SDK Upgrade<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>To upgrade the SDK from a previous install, enter this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">cozmo</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="mobile-device-setup">
+<h2>Mobile Device Setup<a class="headerlink" href="#mobile-device-setup" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>iOS</strong> devices require <a class="reference external" href="https://github.com/libimobiledevice/usbmuxd">usbmuxd</a> in order to run the Cozmo SDK. Usbmuxd is required for the computer to communicate with the iOS device over a USB cable.</li>
+<li><strong>Android</strong> devices require installation of <a class="reference internal" href="adb.html#adb"><span class="std std-ref">Android Debug Bridge</span></a> (adb) in order to run the Cozmo SDK. This is required for the computer to communicate with the Android mobile device over a USB cable and runs automatically when required.</li>
+</ul>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>Please see the <a class="reference internal" href="initial.html#trouble"><span class="std std-ref">Troubleshooting</span></a> section of the Initial Setup page for tips, or visit the <a class="reference external" href="https://forums.anki.com/">Cozmo SDK Forums</a> to ask questions, find solutions, or for general discussion.</p>
+<hr class="docutils" />
+<p><a class="reference external" href="https://www.anki.com/en-us/company/terms-and-conditions">Terms and Conditions</a> and <a class="reference external" href="https://www.anki.com/en-us/company/privacy">Privacy Policy</a></p>
+<p><a class="reference external" href="http://developer.anki.com">Click here to return to the Anki Developer website.</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="adb.html" class="btn btn-neutral float-right" title="Android Debug Bridge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install-windows.html" class="btn btn-neutral float-left" title="Installation - Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1224 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo.world &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="cozmo.util" href="cozmo.util.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cozmo.html">cozmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.action.html">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.annotate.html">cozmo.annotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.audio.html">cozmo.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.behavior.html">cozmo.behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.camera.html">cozmo.camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.conn.html">cozmo.conn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.event.html">cozmo.event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.exceptions.html">cozmo.exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.faces.html">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.opengl.html">cozmo.opengl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.pets.html">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo.world</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.world.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo.world">
+<span id="cozmo-world"></span><h1>cozmo.world<a class="headerlink" href="#module-cozmo.world" title="Permalink to this headline">¶</a></h1>
+<p>The “world” represents the robot’s known view of its environment.</p>
+<p>This view includes objects, faces and pets it knows about and can currently
+“see” with its camera, along with what actions or behaviors the robot is
+current performing and the images coming back from the camera (if any).</p>
+<p>Almost all events emitted by the robot itself, objects, faces, pets and the
+camera can be observed directly on the <a class="reference internal" href="#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">World</span></code></a> object, which is
+itself accessible as <a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot.world" title="cozmo.robot.Robot.world"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cozmo.robot.Robot.world</span></code></a>.</p>
+<p>For example, if you only need to know whether a particular cube has been
+tapped, you can call the <a class="reference internal" href="cozmo.event.html#cozmo.event.Dispatcher.wait_for" title="cozmo.event.Dispatcher.wait_for"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait_for()</span></code></a> method
+directly on that cube’s <a class="reference internal" href="cozmo.objects.html#cozmo.objects.LightCube" title="cozmo.objects.LightCube"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.LightCube</span></code></a> instance.  Eg:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_cube</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span><span class="n">cozmo</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">EvtObjectTapped</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If, however, you want to wait for any cube to be tapped, you could instead
+call the <a class="reference internal" href="cozmo.event.html#cozmo.event.Dispatcher.wait_for" title="cozmo.event.Dispatcher.wait_for"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait_for()</span></code></a> method on the
+<a class="reference internal" href="#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">World</span></code></a> object instead.  Eg:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">robot</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span><span class="n">cozmo</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">EvtObjectTapped</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In either case, <code class="docutils literal notranslate"><span class="pre">wait_for</span></code> will return the instance of the event’s
+<a class="reference internal" href="cozmo.objects.html#cozmo.objects.EvtObjectTapped" title="cozmo.objects.EvtObjectTapped"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvtObjectTapped</span></code></a> class, which includes a
+<a class="reference internal" href="cozmo.objects.html#cozmo.objects.EvtObjectTapped.obj" title="cozmo.objects.EvtObjectTapped.obj"><code class="xref py py-attr docutils literal notranslate"><span class="pre">obj</span></code></a> attribute, which identifies
+exactly which cube has been tapped.</p>
+<p>The <a class="reference internal" href="#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">World</span></code></a> object also has a <a class="reference internal" href="cozmo.camera.html#cozmo.camera.Camera" title="cozmo.camera.Camera"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.camera.Camera</span></code></a> instance
+associated with it.  It emits <a class="reference internal" href="#cozmo.world.EvtNewCameraImage" title="cozmo.world.EvtNewCameraImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvtNewCameraImage</span></code></a> objects whenever
+a new camera image is available (generally up to 15 times per second),
+which includes the raw image from the camera, as well as an annotated version
+showing where faces, pets and objects have been observed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The camera must first be enabled to receive images by setting
+<a class="reference internal" href="cozmo.camera.html#cozmo.camera.Camera.image_stream_enabled" title="cozmo.camera.Camera.image_stream_enabled"><code class="xref py py-attr docutils literal notranslate"><span class="pre">image_stream_enabled</span></code></a> to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</div>
+<p class="rubric">Classes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.world.CameraImage" title="cozmo.world.CameraImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CameraImage</span></code></a>(raw_image,&nbsp;image_annotator[,&nbsp;…])</td>
+<td>A single image from Cozmo’s camera.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.world.EvtNewCameraImage" title="cozmo.world.EvtNewCameraImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtNewCameraImage</span></code></a>(**kwargs)</td>
+<td>Dispatched when a new camera image is received and processed from the robot’s camera.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-obj docutils literal notranslate"><span class="pre">World</span></code></a>(conn,&nbsp;robot,&nbsp;**kw)</td>
+<td>Represents the state of the world, as known to a Cozmo robot.</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="cozmo.world.EvtNewCameraImage">
+<em class="property">class </em><code class="descclassname">cozmo.world.</code><code class="descname">EvtNewCameraImage</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.EvtNewCameraImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatched when a new camera image is received and processed from the robot’s camera.</p>
+<dl class="attribute">
+<dt id="cozmo.world.EvtNewCameraImage.image">
+<code class="descname">image</code><em class="property"> = 'A CameraImage object'</em><a class="headerlink" href="#cozmo.world.EvtNewCameraImage.image" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.world.CameraImage">
+<em class="property">class </em><code class="descclassname">cozmo.world.</code><code class="descname">CameraImage</code><span class="sig-paren">(</span><em>raw_image</em>, <em>image_annotator</em>, <em>image_number=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.CameraImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>A single image from Cozmo’s camera.</p>
+<p>This wraps a raw image and provides an <a class="reference internal" href="#cozmo.world.CameraImage.annotate_image" title="cozmo.world.CameraImage.annotate_image"><code class="xref py py-meth docutils literal notranslate"><span class="pre">annotate_image()</span></code></a> method
+that can resize and add dynamic annotations to the image, such as
+marking up the location of objects, faces and pets.</p>
+<dl class="method">
+<dt id="cozmo.world.CameraImage.annotate_image">
+<code class="descname">annotate_image</code><span class="sig-paren">(</span><em>scale=None</em>, <em>fit_size=None</em>, <em>resample_mode=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.CameraImage.annotate_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds any enabled annotations to the image.</p>
+<p>Optionally resizes the image prior to annotations being applied.  The
+aspect ratio of the resulting image always matches that of the raw image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>scale</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – If set then the base image will be scaled by the
+supplied multiplier.  Cannot be combined with fit_size</li>
+<li><strong>fit_size</strong> (<em>tuple of int</em>) – If set, then scale the image to fit inside
+the supplied (width, height) dimensions. The original aspect
+ratio will be preserved.  Cannot be combined with scale.</li>
+<li><strong>resample_mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The resampling mode to use when scaling the
+image. Should be either <a class="reference internal" href="cozmo.annotate.html#cozmo.annotate.RESAMPLE_MODE_NEAREST" title="cozmo.annotate.RESAMPLE_MODE_NEAREST"><code class="xref py py-attr docutils literal notranslate"><span class="pre">RESAMPLE_MODE_NEAREST</span></code></a>
+(fast) or <a class="reference internal" href="cozmo.annotate.html#cozmo.annotate.RESAMPLE_MODE_BILINEAR" title="cozmo.annotate.RESAMPLE_MODE_BILINEAR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">RESAMPLE_MODE_BILINEAR</span></code></a> (slower,
+but smoother).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/Image.html#PIL.Image.Image" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PIL.Image.Image</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.CameraImage.image_annotator">
+<code class="descname">image_annotator</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.world.CameraImage.image_annotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>the image annotation object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.annotate.html#cozmo.annotate.ImageAnnotator" title="cozmo.annotate.ImageAnnotator"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.annotate.ImageAnnotator</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.CameraImage.image_number">
+<code class="descname">image_number</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.world.CameraImage.image_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>An image number that increments on every new image received</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.CameraImage.image_recv_time">
+<code class="descname">image_recv_time</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.world.CameraImage.image_recv_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time the image was received and processed by the SDK</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)">float</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.CameraImage.raw_image">
+<code class="descname">raw_image</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.world.CameraImage.raw_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>the raw unprocessed image from the camera</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/Image.html#PIL.Image.Image" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PIL.Image.Image</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.world.World">
+<em class="property">class </em><code class="descclassname">cozmo.world.</code><code class="descname">World</code><span class="sig-paren">(</span><em>conn</em>, <em>robot</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents the state of the world, as known to a Cozmo robot.</p>
+<dl class="attribute">
+<dt id="cozmo.world.World.active_action">
+<code class="descname">active_action</code><a class="headerlink" href="#cozmo.world.World.active_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if Cozmo is currently executing an action.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.active_behavior">
+<code class="descname">active_behavior</code><a class="headerlink" href="#cozmo.world.World.active_behavior" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the robot is currently executing a behavior.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.annotator_factory">
+<code class="descname">annotator_factory</code><em class="property"> = functools.partial(&lt;class 'cozmo.annotate.ImageAnnotator'&gt;, loop=None)</em><a class="headerlink" href="#cozmo.world.World.annotator_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The factory function that returns an
+<code class="xref py py-class docutils literal notranslate"><span class="pre">annotate.ImageAnnotator</span></code> class or subclass instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">callable</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.auto_disconnect_from_cubes_at_end">
+<code class="descname">auto_disconnect_from_cubes_at_end</code><span class="sig-paren">(</span><em>enable=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.auto_disconnect_from_cubes_at_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tell the SDK to auto disconnect from cubes at the end of every SDK program.</p>
+<p>This can be used to save cube battery life if you spend a lot of time in
+SDK mode but aren’t running programs as much (as you’re busy writing
+them). Call <a class="reference internal" href="#cozmo.world.World.connect_to_cubes" title="cozmo.world.World.connect_to_cubes"><code class="xref py py-meth docutils literal notranslate"><span class="pre">connect_to_cubes()</span></code></a> to re-connect to the cubes later.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – True if cubes should disconnect after every SDK program exits.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.charger">
+<code class="descname">charger</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.world.World.charger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cozmo’s charger.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> if no charger connected or known about yet.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.objects.html#cozmo.objects.Charger" title="cozmo.objects.Charger"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.Charger</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.charger_factory">
+<code class="descname">charger_factory</code><em class="property"> = functools.partial(&lt;class 'cozmo.objects.Charger'&gt;, loop=None)</em><a class="headerlink" href="#cozmo.world.World.charger_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The factory function that returns an
+<code class="xref py py-class docutils literal notranslate"><span class="pre">objects.Charger</span></code> class or subclass instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">callable</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.conn">
+<code class="descname">conn</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.world.World.conn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The underlying connection to a device.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.conn.html#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.conn.CozmoConnection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.connect_to_cubes">
+<code class="descname">connect_to_cubes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.connect_to_cubes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect to all cubes.</p>
+<p>Request that Cozmo connects to all cubes - this is required if you
+previously called <a class="reference internal" href="#cozmo.world.World.disconnect_from_cubes" title="cozmo.world.World.disconnect_from_cubes"><code class="xref py py-meth docutils literal notranslate"><span class="pre">disconnect_from_cubes()</span></code></a> or
+<a class="reference internal" href="#cozmo.world.World.auto_disconnect_from_cubes_at_end" title="cozmo.world.World.auto_disconnect_from_cubes_at_end"><code class="xref py py-meth docutils literal notranslate"><span class="pre">auto_disconnect_from_cubes_at_end()</span></code></a> with enable=False. Connecting
+to a cube can take up to about 5 seconds, and this method will wait until
+either all 3 cubes are connected, or it has timed out waiting for this.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if all 3 cubes are now connected.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.connected_light_cubes">
+<code class="descname">connected_light_cubes</code><a class="headerlink" href="#cozmo.world.World.connected_light_cubes" title="Permalink to this definition">¶</a></dt>
+<dd><p>yields each LightCube that Cozmo is currently connected to.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A generator yielding <a class="reference internal" href="cozmo.objects.html#cozmo.objects.LightCube" title="cozmo.objects.LightCube"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.LightCube</span></code></a> instances</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">generator</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.create_custom_fixed_object">
+<code class="descname">create_custom_fixed_object</code><span class="sig-paren">(</span><em>pose</em>, <em>x_size_mm</em>, <em>y_size_mm</em>, <em>z_size_mm</em>, <em>relative_to_robot=False</em>, <em>use_robot_origin=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.create_custom_fixed_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a cuboid of custom size and places it in the world. It cannot be observed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pose</strong> (<a class="reference internal" href="cozmo.util.html#cozmo.util.Pose" title="cozmo.util.Pose"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.util.Pose</span></code></a>) – The pose of the object we are creating.</li>
+<li><strong>x_size_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – size of the object (in millimeters) in the x axis.</li>
+<li><strong>y_size_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – size of the object (in millimeters) in the y axis.</li>
+<li><strong>z_size_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – size of the object (in millimeters) in the z axis.</li>
+<li><strong>relative_to_robot</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – whether or not the pose given assumes the robot’s pose as its origin.</li>
+<li><strong>use_robot_origin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – whether or not to override the origin_id in the given pose to be
+the origin_id of Cozmo.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A <a class="reference internal" href="cozmo.objects.html#cozmo.objects.FixedCustomObject" title="cozmo.objects.FixedCustomObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.FixedCustomObject</span></code></a> instance with the specified dimensions and pose.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.custom_object_factory">
+<code class="descname">custom_object_factory</code><em class="property"> = functools.partial(&lt;class 'cozmo.objects.CustomObject'&gt;, loop=None)</em><a class="headerlink" href="#cozmo.world.World.custom_object_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The factory function that returns an
+<code class="xref py py-class docutils literal notranslate"><span class="pre">objects.CustomObject</span></code> class or subclass instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">callable</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.define_custom_box">
+<code class="descname">define_custom_box</code><span class="sig-paren">(</span><em>custom_object_type</em>, <em>marker_front</em>, <em>marker_back</em>, <em>marker_top</em>, <em>marker_bottom</em>, <em>marker_left</em>, <em>marker_right</em>, <em>depth_mm</em>, <em>width_mm</em>, <em>height_mm</em>, <em>marker_width_mm</em>, <em>marker_height_mm</em>, <em>is_unique=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.define_custom_box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a cuboid of custom size and binds it to a specific custom object type.</p>
+<p>The engine will now detect the markers associated with this object and send an
+object_observed message when they are seen. The markers must be placed in the center
+of their respective sides. All 6 markers must be unique.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>custom_object_type</strong> (<a class="reference internal" href="cozmo.objects.html#cozmo.objects.CustomObjectTypes" title="cozmo.objects.CustomObjectTypes"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.CustomObjectTypes</span></code></a>) – the
+object type you are binding this custom object to</li>
+<li><strong>marker_front</strong> (<a class="reference internal" href="cozmo.objects.html#cozmo.objects.CustomObjectMarkers" title="cozmo.objects.CustomObjectMarkers"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.CustomObjectMarkers</span></code></a>) – the marker
+affixed to the front of the object</li>
+<li><strong>marker_back</strong> (<a class="reference internal" href="cozmo.objects.html#cozmo.objects.CustomObjectMarkers" title="cozmo.objects.CustomObjectMarkers"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.CustomObjectMarkers</span></code></a>) – the marker
+affixed to the back of the object</li>
+<li><strong>marker_top</strong> (<a class="reference internal" href="cozmo.objects.html#cozmo.objects.CustomObjectMarkers" title="cozmo.objects.CustomObjectMarkers"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.CustomObjectMarkers</span></code></a>) – the marker
+affixed to the top of the object</li>
+<li><strong>marker_bottom</strong> (<a class="reference internal" href="cozmo.objects.html#cozmo.objects.CustomObjectMarkers" title="cozmo.objects.CustomObjectMarkers"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.CustomObjectMarkers</span></code></a>) – the marker
+affixed to the bottom of the object</li>
+<li><strong>marker_left</strong> (<a class="reference internal" href="cozmo.objects.html#cozmo.objects.CustomObjectMarkers" title="cozmo.objects.CustomObjectMarkers"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.CustomObjectMarkers</span></code></a>) – the marker
+affixed to the left of the object</li>
+<li><strong>marker_right</strong> (<a class="reference internal" href="cozmo.objects.html#cozmo.objects.CustomObjectMarkers" title="cozmo.objects.CustomObjectMarkers"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.CustomObjectMarkers</span></code></a>) – the marker
+affixed to the right of the object</li>
+<li><strong>depth_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – depth of the object (in millimeters) (X axis)</li>
+<li><strong>width_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – width of the object (in millimeters) (Y axis)</li>
+<li><strong>height_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – height of the object (in millimeters) (Z axis)
+(the height of the object)</li>
+<li><strong>marker_width_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – width of the printed marker (in millimeters).</li>
+<li><strong>maker_height_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – height of the printed marker (in millimeters).</li>
+<li><strong>is_unique</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – If True, the engine will assume there is only 1 of this object
+(and therefore only 1 of each of any of these markers) in the world.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>A <code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.object.CustomObject</span></code> instance with the specified dimensions.</dt>
+<dd><p class="first last">This is None if the definition failed internally.
+Note: No instances of this object are added to the world until they have been seen.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>TypeError if the custom_object_type is of the wrong type.</li>
+<li>ValueError if the 6 markers aren’t unique.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.define_custom_cube">
+<code class="descname">define_custom_cube</code><span class="sig-paren">(</span><em>custom_object_type</em>, <em>marker</em>, <em>size_mm</em>, <em>marker_width_mm</em>, <em>marker_height_mm</em>, <em>is_unique=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.define_custom_cube" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a cube of custom size and binds it to a specific custom object type.</p>
+<p>The engine will now detect the markers associated with this object and send an
+object_observed message when they are seen. The markers must be placed in the center
+of their respective sides.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>custom_object_type</strong> (<a class="reference internal" href="cozmo.objects.html#cozmo.objects.CustomObjectTypes" title="cozmo.objects.CustomObjectTypes"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.CustomObjectTypes</span></code></a>) – the
+object type you are binding this custom object to.</li>
+<li><strong>marker</strong> – (<a class="reference internal" href="cozmo.objects.html#cozmo.objects.CustomObjectMarkers" title="cozmo.objects.CustomObjectMarkers"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.CustomObjectMarkers</span></code></a>): the marker
+affixed to every side of the cube.</li>
+<li><strong>size_mm</strong> – size of each side of the cube (in millimeters).</li>
+<li><strong>marker_width_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – width of the printed marker (in millimeters).</li>
+<li><strong>maker_height_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – height of the printed marker (in millimeters).</li>
+<li><strong>is_unique</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – If True, the engine will assume there is only 1 of this object
+(and therefore only 1 of each of any of these markers) in the world.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>A <code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.object.CustomObject</span></code> instance with the specified dimensions.</dt>
+<dd><p class="first last">This is None if the definition failed internally.
+Note: No instances of this object are added to the world until they have been seen.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">TypeError if the custom_object_type is of the wrong type.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.define_custom_wall">
+<code class="descname">define_custom_wall</code><span class="sig-paren">(</span><em>custom_object_type</em>, <em>marker</em>, <em>width_mm</em>, <em>height_mm</em>, <em>marker_width_mm</em>, <em>marker_height_mm</em>, <em>is_unique=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.define_custom_wall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a wall of custom width and height, with a fixed depth of 10mm, and binds it to a specific custom object type.</p>
+<p>The engine will now detect the markers associated with this object and send an
+object_observed message when they are seen. The markers must be placed in the center
+of their respective sides.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>custom_object_type</strong> (<a class="reference internal" href="cozmo.objects.html#cozmo.objects.CustomObjectTypes" title="cozmo.objects.CustomObjectTypes"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.CustomObjectTypes</span></code></a>) – the
+object type you are binding this custom object to.</li>
+<li><strong>marker</strong> – (<a class="reference internal" href="cozmo.objects.html#cozmo.objects.CustomObjectMarkers" title="cozmo.objects.CustomObjectMarkers"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.CustomObjectMarkers</span></code></a>): the marker
+affixed to the front and back of the wall</li>
+<li><strong>width_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – width of the object (in millimeters). (Y axis).</li>
+<li><strong>height_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – height of the object (in millimeters). (Z axis).</li>
+<li><strong>width_mm</strong> – width of the wall (along Y axis) (in millimeters).</li>
+<li><strong>height_mm</strong> – height of the wall (along Z axis) (in millimeters).</li>
+<li><strong>marker_width_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – width of the printed marker (in millimeters).</li>
+<li><strong>maker_height_mm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – height of the printed marker (in millimeters).</li>
+<li><strong>is_unique</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – If True, the engine will assume there is only 1 of this object
+(and therefore only 1 of each of any of these markers) in the world.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>A <code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.object.CustomObject</span></code> instance with the specified dimensions.</dt>
+<dd><p class="first last">This is None if the definition failed internally.
+Note: No instances of this object are added to the world until they have been seen.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">TypeError if the custom_object_type is of the wrong type.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.delete_all_custom_objects">
+<code class="descname">delete_all_custom_objects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.delete_all_custom_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Causes the robot to forget about all custom (fixed + marker) objects it currently knows about.</p>
+<p>Note: This includes all fixed custom objects, and all custom marker object instances,
+BUT this does NOT remove the custom marker object definitions, so Cozmo
+will continue to add new objects if he sees the markers again. To remove
+the definitions for those objects use: <a class="reference internal" href="#cozmo.world.World.undefine_all_custom_marker_objects" title="cozmo.world.World.undefine_all_custom_marker_objects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">undefine_all_custom_marker_objects()</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.delete_custom_marker_objects">
+<code class="descname">delete_custom_marker_objects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.delete_custom_marker_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Causes the robot to forget about all custom marker objects it currently knows about.</p>
+<p>Note: This removes custom marker object instances only, it does NOT remove
+fixed custom objects, nor does it remove the custom marker object definitions, so Cozmo
+will continue to add new objects if he sees the markers again. To remove
+the definitions for those objects use: <a class="reference internal" href="#cozmo.world.World.undefine_all_custom_marker_objects" title="cozmo.world.World.undefine_all_custom_marker_objects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">undefine_all_custom_marker_objects()</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.delete_fixed_custom_objects">
+<code class="descname">delete_fixed_custom_objects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.delete_fixed_custom_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Causes the robot to forget about all fixed custom objects it currently knows about.</p>
+<p>Note: This removes fixed custom objects only, it does NOT remove
+the custom marker object instances or definitions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.disconnect_from_cubes">
+<code class="descname">disconnect_from_cubes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.disconnect_from_cubes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconnect from all cubes (to save battery life etc.).</p>
+<p>Call <a class="reference internal" href="#cozmo.world.World.connect_to_cubes" title="cozmo.world.World.connect_to_cubes"><code class="xref py py-meth docutils literal notranslate"><span class="pre">connect_to_cubes()</span></code></a> to re-connect to the cubes later.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.enable_block_tap_filter">
+<code class="descname">enable_block_tap_filter</code><span class="sig-paren">(</span><em>enable=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.enable_block_tap_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or disable the block tap filter in the engine.</p>
+<p>The block (AKA LightCube) tap filter removes low intensity taps, and
+filters out taps that come in rapidly together and instead just sends
+the strongest one</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – specifies whether the filter should be enabled or disabled</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.face_factory">
+<code class="descname">face_factory</code><em class="property"> = functools.partial(&lt;class 'cozmo.faces.Face'&gt;, loop=None)</em><a class="headerlink" href="#cozmo.world.World.face_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The factory function that returns a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">faces.Face</span></code> class or subclass instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">callable</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.get_light_cube">
+<code class="descname">get_light_cube</code><span class="sig-paren">(</span><em>cube_id</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.get_light_cube" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the light cube with the given cube ID</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cube_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The light cube ID - should be one of
+<a class="reference internal" href="cozmo.objects.html#cozmo.objects.LightCube1Id" title="cozmo.objects.LightCube1Id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">LightCube1Id</span></code></a>,
+<a class="reference internal" href="cozmo.objects.html#cozmo.objects.LightCube2Id" title="cozmo.objects.LightCube2Id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">LightCube2Id</span></code></a> and
+<a class="reference internal" href="cozmo.objects.html#cozmo.objects.LightCube3Id" title="cozmo.objects.LightCube3Id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">LightCube3Id</span></code></a>. Note: the cube_id is not
+the same thing as the object_id.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The LightCube object with that cube_id</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="cozmo.objects.html#cozmo.objects.LightCube" title="cozmo.objects.LightCube"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.LightCube</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></a> if the cube_id is invalid.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.image_annotator">
+<code class="descname">image_annotator</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.world.World.image_annotator" title="Permalink to this definition">¶</a></dt>
+<dd><p>The image annotator used
+to add annotations to the raw camera images.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.annotate.html#cozmo.annotate.ImageAnnotator" title="cozmo.annotate.ImageAnnotator"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.annotate.ImageAnnotator</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.latest_image">
+<code class="descname">latest_image</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.world.World.latest_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>The latest image received, or None.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#cozmo.world.CameraImage" title="cozmo.world.CameraImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CameraImage</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.light_cube_factory">
+<code class="descname">light_cube_factory</code><em class="property"> = functools.partial(&lt;class 'cozmo.objects.LightCube'&gt;, loop=None)</em><a class="headerlink" href="#cozmo.world.World.light_cube_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The factory function that returns an
+<code class="xref py py-class docutils literal notranslate"><span class="pre">objects.LightCube</span></code> class or subclass instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">callable</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.nav_memory_map">
+<code class="descname">nav_memory_map</code><a class="headerlink" href="#cozmo.world.World.nav_memory_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the latest navigation memory map for Cozmo.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="docutils">
+<dt>Current navigation</dt>
+<dd>memory map. This will be none unless you’ve previously called
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">request_nav_memory_map()</span></code> with a positive
+frequency to request the data be sent over from the engine.</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="cozmo.nav_memory_map.html#cozmo.nav_memory_map.NavMemoryMapGrid" title="cozmo.nav_memory_map.NavMemoryMapGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">NavMemoryMapGrid</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.pet_factory">
+<code class="descname">pet_factory</code><em class="property"> = functools.partial(&lt;class 'cozmo.pets.Pet'&gt;, loop=None)</em><a class="headerlink" href="#cozmo.world.World.pet_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The factory function that returns a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">pets.Pet</span></code> class or subclass instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">callable</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.request_nav_memory_map">
+<code class="descname">request_nav_memory_map</code><span class="sig-paren">(</span><em>frequency_s</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.request_nav_memory_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request navigation memory map data from Cozmo.</p>
+<p>The memory map can be accessed via <a class="reference internal" href="#cozmo.world.World.nav_memory_map" title="cozmo.world.World.nav_memory_map"><code class="xref py py-attr docutils literal notranslate"><span class="pre">nav_memory_map</span></code></a>,
+it will be None until <a class="reference internal" href="#cozmo.world.World.request_nav_memory_map" title="cozmo.world.World.request_nav_memory_map"><code class="xref py py-meth docutils literal notranslate"><span class="pre">request_nav_memory_map()</span></code></a> has been called and
+a map has been received. The memory map provides a quad-tree map of
+where Cozmo thinks there are objects, and where Cozmo thinks it is safe
+to drive.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>frequency_s</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – number of seconds between each update being sent.
+Negative values, e.g. -1.0, will disable any updates being sent.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.robot">
+<code class="descname">robot</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.world.World.robot" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary robot</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot" title="cozmo.robot.Robot"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.robot.Robot</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.undefine_all_custom_marker_objects">
+<code class="descname">undefine_all_custom_marker_objects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.undefine_all_custom_marker_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all custom marker object definitions, and any instances of them in the world.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.visible_face_count">
+<code class="descname">visible_face_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.visible_face_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of faces that Cozmo can currently see.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The number of faces currently visible.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.visible_faces">
+<code class="descname">visible_faces</code><a class="headerlink" href="#cozmo.world.World.visible_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>yields each face that Cozmo can currently see.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A generator yielding <a class="reference internal" href="cozmo.faces.html#cozmo.faces.Face" title="cozmo.faces.Face"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.faces.Face</span></code></a> instances</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">generator</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.visible_object_count">
+<code class="descname">visible_object_count</code><span class="sig-paren">(</span><em>object_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.visible_object_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of objects that Cozmo can currently see.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>object_type</strong> (<a class="reference internal" href="cozmo.objects.html#cozmo.objects.ObservableObject" title="cozmo.objects.ObservableObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ObservableObject</span></code></a> subclass) – Which type of object to count.  If None, return the total
+number of currently visible objects.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of objects that Cozmo can currently see.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.visible_objects">
+<code class="descname">visible_objects</code><a class="headerlink" href="#cozmo.world.World.visible_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>yields each object that Cozmo can currently see.</p>
+<p>For faces, see <a class="reference internal" href="#cozmo.world.World.visible_faces" title="cozmo.world.World.visible_faces"><code class="xref py py-meth docutils literal notranslate"><span class="pre">visible_faces()</span></code></a>.
+For pets, see <a class="reference internal" href="#cozmo.world.World.visible_pets" title="cozmo.world.World.visible_pets"><code class="xref py py-meth docutils literal notranslate"><span class="pre">visible_pets()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A generator yielding <code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.BaseObject</span></code> instances</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">generator</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.visible_pet_count">
+<code class="descname">visible_pet_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.visible_pet_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of pets that Cozmo can currently see.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The number of pets currently visible.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.world.World.visible_pets">
+<code class="descname">visible_pets</code><a class="headerlink" href="#cozmo.world.World.visible_pets" title="Permalink to this definition">¶</a></dt>
+<dd><p>yields each pet that Cozmo can currently see.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A generator yielding <a class="reference internal" href="cozmo.pets.html#cozmo.pets.Pet" title="cozmo.pets.Pet"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.pets.Pet</span></code></a> instances</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">generator</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.wait_for_observed_charger">
+<code class="descname">wait_for_observed_charger</code><span class="sig-paren">(</span><em>timeout=None</em>, <em>include_existing=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.wait_for_observed_charger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for a charger to be observed by the robot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Number of seconds to wait for a charger to be
+observed, or None for indefinite</li>
+<li><strong>include_existing</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether to include chargers
+that are already visible.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The <a class="reference internal" href="cozmo.objects.html#cozmo.objects.Charger" title="cozmo.objects.Charger"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.Charger</span></code></a> object that was observed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.wait_for_observed_face">
+<code class="descname">wait_for_observed_face</code><span class="sig-paren">(</span><em>timeout=None</em>, <em>include_existing=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.wait_for_observed_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for a face to be observed by the robot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Number of seconds to wait for a face to be
+observed, or None for indefinite</li>
+<li><strong>include_existing</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether to include faces
+that are already visible.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The <a class="reference internal" href="cozmo.faces.html#cozmo.faces.Face" title="cozmo.faces.Face"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.faces.Face</span></code></a> object that was observed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.wait_for_observed_light_cube">
+<code class="descname">wait_for_observed_light_cube</code><span class="sig-paren">(</span><em>timeout=None</em>, <em>include_existing=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.wait_for_observed_light_cube" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for one of the light cubes to be observed by the robot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Number of seconds to wait for a cube to be
+observed, or None for indefinite</li>
+<li><strong>include_existing</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether to include light cubes
+that are already visible.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The <a class="reference internal" href="cozmo.objects.html#cozmo.objects.LightCube" title="cozmo.objects.LightCube"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.LightCube</span></code></a> object that was observed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.wait_for_observed_pet">
+<code class="descname">wait_for_observed_pet</code><span class="sig-paren">(</span><em>timeout=None</em>, <em>include_existing=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.wait_for_observed_pet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for a pet to be observed by the robot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Number of seconds to wait for a pet to be
+observed, or None for indefinite</li>
+<li><strong>include_existing</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether to include pets
+that are already visible.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The <a class="reference internal" href="cozmo.pets.html#cozmo.pets.Pet" title="cozmo.pets.Pet"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.pets.Pet</span></code></a> object that was observed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.wait_until_num_objects_visible">
+<code class="descname">wait_until_num_objects_visible</code><span class="sig-paren">(</span><em>num</em>, <em>object_type=None</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.wait_until_num_objects_visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for at least a specific number of objects to be seen concurrently.</p>
+<p>Unlike <a class="reference internal" href="#cozmo.world.World.wait_until_observe_num_objects" title="cozmo.world.World.wait_until_observe_num_objects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait_until_observe_num_objects()</span></code></a> which returns when
+several objects have become visible, but not necessarily
+simultaneously, this method will only return if the specific
+number of objects are visible to the camera at the same time
+(as defined by <code class="xref py py-const docutils literal notranslate"><span class="pre">objects.OBJECT_VISIBILITY_TIMEOUT</span></code>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>num</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The number of unique objects to wait for.</li>
+<li><strong>(</strong><strong>class</strong> (<em>object_type</em>) – <cite>cozmo.objects.ObservableObject</cite>): If provided
+this will cause only the selected object types to be counted.</li>
+<li><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Maximum amount of time in seconds to wait for the
+requested number of objects to be observed.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The number of objects seen (num or higher).</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">asyncio.TimeoutError if the required count wasn’t seen.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.world.World.wait_until_observe_num_objects">
+<code class="descname">wait_until_observe_num_objects</code><span class="sig-paren">(</span><em>num</em>, <em>object_type=None</em>, <em>timeout=None</em>, <em>include_existing=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.world.World.wait_until_observe_num_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for a certain number of unique objects to be seen at least once.</p>
+<p>This method waits for a number of unique objects to be seen, but not
+necessarily concurrently.  That is, if cube 1 appears to the camera and
+then moves out of view to be replaced by cube 2, then that will count
+as 2 observed objects.</p>
+<p>To wait for multiple objects to be visible simultaneously, see
+<a class="reference internal" href="#cozmo.world.World.wait_until_num_objects_visible" title="cozmo.world.World.wait_until_num_objects_visible"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait_until_num_objects_visible()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>num</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The number of unique objects to wait for.</li>
+<li><strong>(</strong><strong>class</strong> (<em>object_type</em>) – <cite>cozmo.objects.ObservableObject</cite>): If provided
+this will cause only the selected object types to be counted.</li>
+<li><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Maximum amount of time in seconds to wait for the
+requested number of objects to be observed.</li>
+<li><strong>include_existing</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether to include objects
+that are already visible.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A list of length &lt;= num of the unique objects
+class:<cite>cozmo.objects.ObservableObject</cite> observed during this wait.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="cozmo.util.html" class="btn btn-neutral float-left" title="cozmo.util" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

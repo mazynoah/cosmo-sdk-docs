@@ -1,0 +1,48 @@
+cozmo.util
+==========
+
+.. automodule:: cozmo.util
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      angle_z_to_quaternion
+      degrees
+      distance_inches
+      distance_mm
+      pose_quaternion
+      pose_z_angle
+      radians
+      rotation_quaternion
+      rotation_z_angle
+      speed_mmps
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Angle
+      Distance
+      ImageBox
+      Matrix44
+      Pose
+      Position
+      Quaternion
+      Rotation
+      Speed
+      Timeout
+      Vector2
+      Vector3
+   
+   
+
+   
+   
+   

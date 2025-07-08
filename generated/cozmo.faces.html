@@ -1,0 +1,799 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo.faces &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cozmo.lights" href="cozmo.lights.html" />
+    <link rel="prev" title="cozmo.exceptions" href="cozmo.exceptions.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cozmo.html">cozmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.action.html">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.annotate.html">cozmo.annotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.audio.html">cozmo.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.behavior.html">cozmo.behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.camera.html">cozmo.camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.conn.html">cozmo.conn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.event.html">cozmo.event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.exceptions.html">cozmo.exceptions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.opengl.html">cozmo.opengl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.pets.html">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.world.html">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo.faces</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.faces.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo.faces">
+<span id="cozmo-faces"></span><h1>cozmo.faces<a class="headerlink" href="#module-cozmo.faces" title="Permalink to this headline">¶</a></h1>
+<p>Face recognition and enrollment.</p>
+<p>Cozmo is capable of recognizing human faces, tracking their position and rotation
+(“pose”) and assigning names to them via an enrollment process.</p>
+<p>The <a class="reference internal" href="cozmo.world.html#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.world.World</span></code></a> object keeps track of faces the robot currently
+knows about, along with those that are currently visible to the camera.</p>
+<p>Each face is assigned a <a class="reference internal" href="#cozmo.faces.Face" title="cozmo.faces.Face"><code class="xref py py-class docutils literal notranslate"><span class="pre">Face</span></code></a> object, which generates a number of
+observable events whenever the face is observed, has its ID updated, is
+renamed, etc.</p>
+<p>Note that these face-specific events are also passed up to the
+<a class="reference internal" href="cozmo.world.html#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.world.World</span></code></a> object, so events for all known faces can be
+observed by adding handlers there.</p>
+<p class="rubric">Functions</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.faces.erase_all_enrolled_faces" title="cozmo.faces.erase_all_enrolled_faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">erase_all_enrolled_faces</span></code></a>(conn)</td>
+<td>Erase the enrollment (name) records for all faces.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.faces.erase_enrolled_face_by_id" title="cozmo.faces.erase_enrolled_face_by_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">erase_enrolled_face_by_id</span></code></a>(conn,&nbsp;face_id)</td>
+<td>Erase the enrollment (name) record for the face with this ID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.faces.update_enrolled_face_by_id" title="cozmo.faces.update_enrolled_face_by_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_enrolled_face_by_id</span></code></a>(conn,&nbsp;face_id,&nbsp;…)</td>
+<td>Update the name enrolled for a given face.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Classes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.faces.EvtErasedEnrolledFace" title="cozmo.faces.EvtErasedEnrolledFace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtErasedEnrolledFace</span></code></a>(**kwargs)</td>
+<td>Triggered when a face enrollment is removed (via erase_enrolled_face_by_id)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.faces.EvtFaceAppeared" title="cozmo.faces.EvtFaceAppeared"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtFaceAppeared</span></code></a>(**kwargs)</td>
+<td>Triggered whenever a face is first visually identified by a robot.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.faces.EvtFaceDisappeared" title="cozmo.faces.EvtFaceDisappeared"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtFaceDisappeared</span></code></a>(**kwargs)</td>
+<td>Triggered whenever a face that was previously being observed is no longer visible.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.faces.EvtFaceIdChanged" title="cozmo.faces.EvtFaceIdChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtFaceIdChanged</span></code></a>(**kwargs)</td>
+<td>Triggered whenever a face has its ID updated in engine.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.faces.EvtFaceObserved" title="cozmo.faces.EvtFaceObserved"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtFaceObserved</span></code></a>(**kwargs)</td>
+<td>Triggered whenever a face is visually identified by the robot.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.faces.EvtFaceRenamed" title="cozmo.faces.EvtFaceRenamed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtFaceRenamed</span></code></a>(**kwargs)</td>
+<td>Triggered whenever a face is renamed (via RobotRenamedEnrolledFace)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.faces.Face" title="cozmo.faces.Face"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Face</span></code></a>(conn,&nbsp;world,&nbsp;robot[,&nbsp;face_id])</td>
+<td>A single face that Cozmo has detected.</td>
+</tr>
+</tbody>
+</table>
+<dl class="data">
+<dt id="cozmo.faces.FACE_VISIBILITY_TIMEOUT">
+<code class="descclassname">cozmo.faces.</code><code class="descname">FACE_VISIBILITY_TIMEOUT</code><em class="property"> = 0.4</em><a class="headerlink" href="#cozmo.faces.FACE_VISIBILITY_TIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Length of time in seconds to go without receiving an observed event before
+assuming that Cozmo can no longer see a face.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.faces.FACIAL_EXPRESSION_UNKNOWN">
+<code class="descclassname">cozmo.faces.</code><code class="descname">FACIAL_EXPRESSION_UNKNOWN</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#cozmo.faces.FACIAL_EXPRESSION_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Facial expression not recognized.
+Call <a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot.enable_facial_expression_estimation" title="cozmo.robot.Robot.enable_facial_expression_estimation"><code class="xref py py-func docutils literal notranslate"><span class="pre">cozmo.robot.Robot.enable_facial_expression_estimation()</span></code></a> to enable recognition.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.faces.FACIAL_EXPRESSION_NEUTRAL">
+<code class="descclassname">cozmo.faces.</code><code class="descname">FACIAL_EXPRESSION_NEUTRAL</code><em class="property"> = 'neutral'</em><a class="headerlink" href="#cozmo.faces.FACIAL_EXPRESSION_NEUTRAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Facial expression neutral</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.faces.FACIAL_EXPRESSION_HAPPY">
+<code class="descclassname">cozmo.faces.</code><code class="descname">FACIAL_EXPRESSION_HAPPY</code><em class="property"> = 'happy'</em><a class="headerlink" href="#cozmo.faces.FACIAL_EXPRESSION_HAPPY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Facial expression happy</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.faces.FACIAL_EXPRESSION_SURPRISED">
+<code class="descclassname">cozmo.faces.</code><code class="descname">FACIAL_EXPRESSION_SURPRISED</code><em class="property"> = 'surprised'</em><a class="headerlink" href="#cozmo.faces.FACIAL_EXPRESSION_SURPRISED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Facial expression surprised</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.faces.FACIAL_EXPRESSION_ANGRY">
+<code class="descclassname">cozmo.faces.</code><code class="descname">FACIAL_EXPRESSION_ANGRY</code><em class="property"> = 'angry'</em><a class="headerlink" href="#cozmo.faces.FACIAL_EXPRESSION_ANGRY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Facial expression angry</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.faces.FACIAL_EXPRESSION_SAD">
+<code class="descclassname">cozmo.faces.</code><code class="descname">FACIAL_EXPRESSION_SAD</code><em class="property"> = 'sad'</em><a class="headerlink" href="#cozmo.faces.FACIAL_EXPRESSION_SAD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Facial expression sad</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.faces.EvtErasedEnrolledFace">
+<em class="property">class </em><code class="descclassname">cozmo.faces.</code><code class="descname">EvtErasedEnrolledFace</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.EvtErasedEnrolledFace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered when a face enrollment is removed (via erase_enrolled_face_by_id)</p>
+<dl class="attribute">
+<dt id="cozmo.faces.EvtErasedEnrolledFace.face">
+<code class="descname">face</code><em class="property"> = 'The Face instance that the enrollment is being erased for'</em><a class="headerlink" href="#cozmo.faces.EvtErasedEnrolledFace.face" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtErasedEnrolledFace.old_name">
+<code class="descname">old_name</code><em class="property"> = 'The name previously used for this face'</em><a class="headerlink" href="#cozmo.faces.EvtErasedEnrolledFace.old_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.faces.EvtFaceAppeared">
+<em class="property">class </em><code class="descclassname">cozmo.faces.</code><code class="descname">EvtFaceAppeared</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.EvtFaceAppeared" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered whenever a face is first visually identified by a robot.</p>
+<p>This differs from EvtFaceObserved in that it’s only triggered when
+a face initially becomes visible.  If it disappears for more than
+FACE_VISIBILITY_TIMEOUT seconds and then is seen again, a
+EvtFaceDisappeared will be dispatched, followed by another
+EvtFaceAppeared event.</p>
+<p>For continuous tracking information about a visible face, see
+EvtFaceObserved.</p>
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceAppeared.face">
+<code class="descname">face</code><em class="property"> = 'The Face instance that was observed'</em><a class="headerlink" href="#cozmo.faces.EvtFaceAppeared.face" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceAppeared.image_box">
+<code class="descname">image_box</code><em class="property"> = &quot;A comzo.util.ImageBox defining where the face is within Cozmo's camera view&quot;</em><a class="headerlink" href="#cozmo.faces.EvtFaceAppeared.image_box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceAppeared.name">
+<code class="descname">name</code><em class="property"> = 'The name associated with the face that was observed'</em><a class="headerlink" href="#cozmo.faces.EvtFaceAppeared.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceAppeared.pose">
+<code class="descname">pose</code><em class="property"> = 'The cozmo.util.Pose defining the position and rotation of the face.'</em><a class="headerlink" href="#cozmo.faces.EvtFaceAppeared.pose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceAppeared.updated">
+<code class="descname">updated</code><em class="property"> = 'A set of field names that have changed'</em><a class="headerlink" href="#cozmo.faces.EvtFaceAppeared.updated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.faces.EvtFaceDisappeared">
+<em class="property">class </em><code class="descclassname">cozmo.faces.</code><code class="descname">EvtFaceDisappeared</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.EvtFaceDisappeared" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered whenever a face that was previously being observed is no longer visible.</p>
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceDisappeared.face">
+<code class="descname">face</code><em class="property"> = 'The Face instance that is no longer being observed'</em><a class="headerlink" href="#cozmo.faces.EvtFaceDisappeared.face" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.faces.EvtFaceIdChanged">
+<em class="property">class </em><code class="descclassname">cozmo.faces.</code><code class="descname">EvtFaceIdChanged</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.EvtFaceIdChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered whenever a face has its ID updated in engine.</p>
+<p>Generally occurs when:
+1) A tracked but unrecognized face (negative ID) is recognized and receives a positive ID or
+2) Face records get merged (on realization that 2 faces are actually the same)</p>
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceIdChanged.face">
+<code class="descname">face</code><em class="property"> = 'The Face instance that is being given a new id'</em><a class="headerlink" href="#cozmo.faces.EvtFaceIdChanged.face" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceIdChanged.new_id">
+<code class="descname">new_id</code><em class="property"> = 'The new ID that will be used for this face'</em><a class="headerlink" href="#cozmo.faces.EvtFaceIdChanged.new_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceIdChanged.old_id">
+<code class="descname">old_id</code><em class="property"> = 'The ID previously used for this face'</em><a class="headerlink" href="#cozmo.faces.EvtFaceIdChanged.old_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.faces.EvtFaceObserved">
+<em class="property">class </em><code class="descclassname">cozmo.faces.</code><code class="descname">EvtFaceObserved</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.EvtFaceObserved" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered whenever a face is visually identified by the robot.</p>
+<p>A stream of these events are produced while a face is visible to the robot.
+Each event has an updated image_box field.</p>
+<p>See EvtFaceAppeared if you only want to know when a face first
+becomes visible.</p>
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceObserved.face">
+<code class="descname">face</code><em class="property"> = 'The Face instance that was observed'</em><a class="headerlink" href="#cozmo.faces.EvtFaceObserved.face" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceObserved.image_box">
+<code class="descname">image_box</code><em class="property"> = &quot;A comzo.util.ImageBox defining where the face is within Cozmo's camera view&quot;</em><a class="headerlink" href="#cozmo.faces.EvtFaceObserved.image_box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceObserved.name">
+<code class="descname">name</code><em class="property"> = 'The name associated with the face that was observed'</em><a class="headerlink" href="#cozmo.faces.EvtFaceObserved.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceObserved.pose">
+<code class="descname">pose</code><em class="property"> = 'The cozmo.util.Pose defining the position and rotation of the face.'</em><a class="headerlink" href="#cozmo.faces.EvtFaceObserved.pose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceObserved.updated">
+<code class="descname">updated</code><em class="property"> = 'A set of field names that have changed'</em><a class="headerlink" href="#cozmo.faces.EvtFaceObserved.updated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.faces.EvtFaceRenamed">
+<em class="property">class </em><code class="descclassname">cozmo.faces.</code><code class="descname">EvtFaceRenamed</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.EvtFaceRenamed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered whenever a face is renamed (via RobotRenamedEnrolledFace)</p>
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceRenamed.face">
+<code class="descname">face</code><em class="property"> = 'The Face instance that is being given a new name'</em><a class="headerlink" href="#cozmo.faces.EvtFaceRenamed.face" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceRenamed.new_name">
+<code class="descname">new_name</code><em class="property"> = 'The new name that will be used for this face'</em><a class="headerlink" href="#cozmo.faces.EvtFaceRenamed.new_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.EvtFaceRenamed.old_name">
+<code class="descname">old_name</code><em class="property"> = 'The name previously used for this face'</em><a class="headerlink" href="#cozmo.faces.EvtFaceRenamed.old_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.faces.Face">
+<em class="property">class </em><code class="descclassname">cozmo.faces.</code><code class="descname">Face</code><span class="sig-paren">(</span><em>conn</em>, <em>world</em>, <em>robot</em>, <em>face_id=None</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.Face" title="Permalink to this definition">¶</a></dt>
+<dd><p>A single face that Cozmo has detected.</p>
+<p>May represent a face that has previously been enrolled, in which case
+<a class="reference internal" href="#cozmo.faces.Face.name" title="cozmo.faces.Face.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a> will hold the name that it was enrolled with.</p>
+<p>Each Face instance has a <a class="reference internal" href="#cozmo.faces.Face.face_id" title="cozmo.faces.Face.face_id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">face_id</span></code></a> integer - This may change if
+Cozmo later gets an improved view and makes a different prediction about
+which face it is looking at.</p>
+<p>See parent class <a class="reference internal" href="cozmo.objects.html#cozmo.objects.ObservableElement" title="cozmo.objects.ObservableElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">ObservableElement</span></code></a> for additional properties
+and methods.</p>
+<dl class="method">
+<dt id="cozmo.faces.Face.erase_enrolled_face">
+<code class="descname">erase_enrolled_face</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.Face.erase_enrolled_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the name associated with this face.</p>
+<p>Cozmo will no longer remember the name associated with this face between SDK runs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.Face.expression">
+<code class="descname">expression</code><a class="headerlink" href="#cozmo.faces.Face.expression" title="Permalink to this definition">¶</a></dt>
+<dd><p>The facial expression Cozmo has recognized on the face.</p>
+<p>Will be <a class="reference internal" href="#cozmo.faces.FACIAL_EXPRESSION_UNKNOWN" title="cozmo.faces.FACIAL_EXPRESSION_UNKNOWN"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FACIAL_EXPRESSION_UNKNOWN</span></code></a> by default if you haven’t called
+<a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot.enable_facial_expression_estimation" title="cozmo.robot.Robot.enable_facial_expression_estimation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cozmo.robot.Robot.enable_facial_expression_estimation()</span></code></a> to enable
+the facial expression estimation. Otherwise it will be equal to one of:
+<a class="reference internal" href="#cozmo.faces.FACIAL_EXPRESSION_NEUTRAL" title="cozmo.faces.FACIAL_EXPRESSION_NEUTRAL"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FACIAL_EXPRESSION_NEUTRAL</span></code></a>, <a class="reference internal" href="#cozmo.faces.FACIAL_EXPRESSION_HAPPY" title="cozmo.faces.FACIAL_EXPRESSION_HAPPY"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FACIAL_EXPRESSION_HAPPY</span></code></a>,
+<a class="reference internal" href="#cozmo.faces.FACIAL_EXPRESSION_SURPRISED" title="cozmo.faces.FACIAL_EXPRESSION_SURPRISED"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FACIAL_EXPRESSION_SURPRISED</span></code></a>, <a class="reference internal" href="#cozmo.faces.FACIAL_EXPRESSION_ANGRY" title="cozmo.faces.FACIAL_EXPRESSION_ANGRY"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FACIAL_EXPRESSION_ANGRY</span></code></a>,
+or <a class="reference internal" href="#cozmo.faces.FACIAL_EXPRESSION_SAD" title="cozmo.faces.FACIAL_EXPRESSION_SAD"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FACIAL_EXPRESSION_SAD</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.Face.expression_score">
+<code class="descname">expression_score</code><a class="headerlink" href="#cozmo.faces.Face.expression_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>The score/confidence that <a class="reference internal" href="#cozmo.faces.Face.expression" title="cozmo.faces.Face.expression"><code class="xref py py-attr docutils literal notranslate"><span class="pre">expression</span></code></a> was correct.</p>
+<p>Will be 0 if expression is <a class="reference internal" href="#cozmo.faces.FACIAL_EXPRESSION_UNKNOWN" title="cozmo.faces.FACIAL_EXPRESSION_UNKNOWN"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FACIAL_EXPRESSION_UNKNOWN</span></code></a> (e.g. if
+<a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot.enable_facial_expression_estimation" title="cozmo.robot.Robot.enable_facial_expression_estimation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cozmo.robot.Robot.enable_facial_expression_estimation()</span></code></a> wasn’t
+called yet). The maximum possible score is 100.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.Face.face_id">
+<code class="descname">face_id</code><a class="headerlink" href="#cozmo.faces.Face.face_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The internal ID assigned to the face.</p>
+<p>This value can only be assigned once as it is static in the engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.Face.has_updated_face_id">
+<code class="descname">has_updated_face_id</code><a class="headerlink" href="#cozmo.faces.Face.has_updated_face_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if this face been updated / superseded by a face with a new ID</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.Face.known_expression">
+<code class="descname">known_expression</code><a class="headerlink" href="#cozmo.faces.Face.known_expression" title="Permalink to this definition">¶</a></dt>
+<dd><p>The known facial expression Cozmo has recognized on the face.</p>
+<p>Like <a class="reference internal" href="#cozmo.faces.Face.expression" title="cozmo.faces.Face.expression"><code class="xref py py-meth docutils literal notranslate"><span class="pre">expression()</span></code></a> but returns an empty string for the unknown expression.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.Face.left_eye">
+<code class="descname">left_eye</code><a class="headerlink" href="#cozmo.faces.Face.left_eye" title="Permalink to this definition">¶</a></dt>
+<dd><p>points representing the outline of the left eye</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">sequence of tuples of float (x,y)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.Face.mouth">
+<code class="descname">mouth</code><a class="headerlink" href="#cozmo.faces.Face.mouth" title="Permalink to this definition">¶</a></dt>
+<dd><p>points representing the outline of the mouth</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">sequence of tuples of float (x,y)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.Face.name">
+<code class="descname">name</code><a class="headerlink" href="#cozmo.faces.Face.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name Cozmo has associated with the face in his memory.</p>
+<p>This string will be empty if the face is not recognized or enrolled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.faces.Face.name_face">
+<code class="descname">name_face</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.Face.name_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign a name to this face. Cozmo will remember this name between SDK runs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>string</em>) – The name that will be assigned to this face. Must
+be a non-empty ASCII string of alphabetic characters only.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">An instance of <a class="reference internal" href="cozmo.behavior.html#cozmo.behavior.Behavior" title="cozmo.behavior.Behavior"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.behavior.Behavior</span></code></a> object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></a> if name is invalid.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.Face.nose">
+<code class="descname">nose</code><a class="headerlink" href="#cozmo.faces.Face.nose" title="Permalink to this definition">¶</a></dt>
+<dd><p>points representing the outline of the nose</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">sequence of tuples of float (x,y)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.faces.Face.rename_face">
+<code class="descname">rename_face</code><span class="sig-paren">(</span><em>new_name</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.Face.rename_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the name assigned to the face. Cozmo will remember this name between SDK runs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>new_name</strong> (<em>string</em>) – The new name that will be assigned to this face. Must
+be a non-empty ASCII string of alphabetic characters only.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></a> if new_name is invalid.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.Face.right_eye">
+<code class="descname">right_eye</code><a class="headerlink" href="#cozmo.faces.Face.right_eye" title="Permalink to this definition">¶</a></dt>
+<dd><p>points representing the outline of the right eye</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">sequence of tuples of float (x,y)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.Face.updated_face_id">
+<code class="descname">updated_face_id</code><a class="headerlink" href="#cozmo.faces.Face.updated_face_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID for the face that superseded this one (if any, otherwise <a class="reference internal" href="#cozmo.faces.Face.face_id" title="cozmo.faces.Face.face_id"><code class="xref py py-meth docutils literal notranslate"><span class="pre">face_id()</span></code></a>)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.faces.Face.visibility_timeout">
+<code class="descname">visibility_timeout</code><em class="property"> = 0.4</em><a class="headerlink" href="#cozmo.faces.Face.visibility_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Length of time in seconds to go without receiving an observed event before
+assuming that Cozmo can no longer see a face.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.faces.erase_all_enrolled_faces">
+<code class="descclassname">cozmo.faces.</code><code class="descname">erase_all_enrolled_faces</code><span class="sig-paren">(</span><em>conn</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.erase_all_enrolled_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Erase the enrollment (name) records for all faces.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>conn</strong> (<a class="reference internal" href="cozmo.conn.html#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">CozmoConnection</span></code></a>) – The connection to send the message over</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.faces.erase_enrolled_face_by_id">
+<code class="descclassname">cozmo.faces.</code><code class="descname">erase_enrolled_face_by_id</code><span class="sig-paren">(</span><em>conn</em>, <em>face_id</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.erase_enrolled_face_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Erase the enrollment (name) record for the face with this ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>conn</strong> (<a class="reference internal" href="cozmo.conn.html#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">CozmoConnection</span></code></a>) – The connection to send the message over</li>
+<li><strong>face_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The ID of the face to erase.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.faces.update_enrolled_face_by_id">
+<code class="descclassname">cozmo.faces.</code><code class="descname">update_enrolled_face_by_id</code><span class="sig-paren">(</span><em>conn</em>, <em>face_id</em>, <em>old_name</em>, <em>new_name</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.faces.update_enrolled_face_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the name enrolled for a given face.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>conn</strong> (<a class="reference internal" href="cozmo.conn.html#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">CozmoConnection</span></code></a>) – The connection to send the message over.</li>
+<li><strong>face_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The ID of the face to rename.</li>
+<li><strong>old_name</strong> (<em>string</em>) – The old name of the face (must be correct, otherwise message is ignored).</li>
+<li><strong>new_name</strong> (<em>string</em>) – The new name for the face.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cozmo.lights.html" class="btn btn-neutral float-right" title="cozmo.lights" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cozmo.exceptions.html" class="btn btn-neutral float-left" title="cozmo.exceptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

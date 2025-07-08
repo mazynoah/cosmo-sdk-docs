@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Alternate Install via Virtual Machine &mdash; Cozmo SDK 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Cozmo SDK 0.1 documentation" href="index.html"/>
+        <link rel="next" title="Getting Started With the Cozmo SDK" href="getstarted.html"/>
+        <link rel="prev" title="Android Debug Bridge" href="adb.html"/>
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.14.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adb.html">Android Debug Bridge</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Alternate Install via Virtual Machine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install">Install</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-beginner.html">Programming Cozmo - Beginner’s Tutorials</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial-advanced.html">Programming Cozmo - Advanced Tutorials</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">The API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Alternate Install via Virtual Machine</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/vagrant.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="alternate-install-via-virtual-machine">
+<span id="vagrant-guide"></span><h1>Alternate Install via Virtual Machine<a class="headerlink" href="#alternate-install-via-virtual-machine" title="Permalink to this headline">¶</a></h1>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">THIS IS THE COZMO SDK BETA. The SDK is under development and is subject to change.</p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">The installation steps on this page are intended only for people that are having difficulties installing the SDK using the main Installation Guide steps.</p>
+</div>
+<p>If you have difficulties using the regular Installation Guide steps (e.g. you are using an unsupported Operating System / OS Version), then we also provide a self-contained VM (Virtual Machine) setup using Vagrant that you can install to run entirely inside VirtualBox. The steps are listed below.</p>
+<p>To use the Cozmo SDK, the Cozmo mobile app must be installed on your mobile device and that device must be tethered to a computer via USB cable.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>WiFi connection</li>
+<li>An iOS or Android mobile device with the Cozmo app installed, connected to the computer via USB cable</li>
+</ul>
+</div>
+<div class="section" id="install">
+<h3>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Install <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">VirtualBox and the VirtualBox Extension Pack</a> from the official webpage. Both of these <em>must</em> be installed in order for Vagrant to work properly.</li>
+<li>Install <a class="reference external" href="https://www.vagrantup.com/downloads.html">Vagrant</a> from the official webpage.</li>
+<li>Install the Cozmo app on your mobile device.</li>
+<li>Plug the mobile device containing the Cozmo app into your computer.</li>
+<li>For <strong>Windows</strong>:</li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Download <a class="reference external" href="http://cozmosdk.anki.com/0.14.0/vagrant_bundle_0.14.0.zip">vagrant_bundle_0.14.0.zip</a>.</li>
+<li>Unzip the <code class="docutils literal"><span class="pre">vagrant_bundle_***.zip</span></code> file into a folder of your choosing.</li>
+<li>Open a Command Prompt window.</li>
+</ol>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Enter the following commands:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">(</span><span class="n">location</span> <span class="n">you</span> <span class="n">extracted</span> <span class="n">the</span> <span class="o">.</span><span class="n">zip</span> <span class="n">file</span><span class="p">)</span>
+<span class="n">cd</span> <span class="n">vagrant_bundle</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Enter the following command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vagrant</span> <span class="n">up</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Wait for <cite>vagrant up</cite> to completely finish before continuing to the next step.</p>
+</div>
+</div></blockquote>
+<ol class="loweralpha" start="4">
+<li><p class="first">Navigate to where the Virtual Machine is currently running.</p>
+</li>
+<li><p class="first">Within the VM, open xterm. Once xterm is open, run the following commands in order. Please wait for each command to finish before entering the next one. This step may take several minutes.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">vagrant</span><span class="o">/</span><span class="n">setup</span><span class="o">-</span><span class="n">vm</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div><div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Be sure to accept the Android SDK license prompt before continuing.</p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">If using an Android device, the device will will prompt with <em>“Allow USB Debugging?”</em>. Tap <strong>OK</strong> to allow this option.</p>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">vagrant</span><span class="o">/</span><span class="n">cozmo_sdk_examples_</span><span class="o">***</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li>For <strong>macOS/Linux</strong>:</li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Download <a class="reference external" href="http://cozmosdk.anki.com/0.14.0/vagrant_bundle_0.14.0.tar.gz">vagrant_bundle_0.14.0.tar.gz</a>.</li>
+<li>Open a Terminal window.</li>
+</ol>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Enter the following commands:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">(</span><span class="n">location</span> <span class="n">you</span> <span class="n">downloaded</span> <span class="n">the</span> <span class="n">vagrant_bundle_</span><span class="o">***.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="n">file</span><span class="p">)</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">xzf</span> <span class="n">vagrant_bundle_</span><span class="o">***.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">cd</span> <span class="n">vagrant_bundle</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Enter the following command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vagrant</span> <span class="n">up</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Wait for <cite>vagrant up</cite> to completely finish before continuing to the next step.</p>
+</div>
+</div></blockquote>
+<ol class="loweralpha" start="4">
+<li><p class="first">Navigate to where the Virtual Machine is currently running.</p>
+</li>
+<li><p class="first">Within the VM, open xterm. Once xterm is open, run the following commands in order. Please wait for each command to finish before entering the next one. This step may take several minutes.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">vagrant</span><span class="o">/</span><span class="n">setup</span><span class="o">-</span><span class="n">vm</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div><div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Be sure to accept the Android SDK license prompt before continuing.</p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">If using an Android device, the device will will prompt with <em>“Allow USB Debugging?”</em>. Tap <strong>OK</strong> to allow this option.</p>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">vagrant</span><span class="o">/</span><span class="n">cozmo_sdk_examples_</span><span class="o">***</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+<ol class="arabic" start="7">
+<li><p class="first">Make sure Cozmo is powered on and charged. Connect to the Cozmo robot’s WiFi from the mobile device and then connect to the Cozmo robot within the app.</p>
+</li>
+<li><p class="first">Enter SDK mode on the app.</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>On the Cozmo app, tap the gear icon at the top right corner to open the Settings menu.</li>
+<li>Swipe left to show the Cozmo SDK option and tap the <strong>Enable SDK</strong> button.</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first">To run a program enter the following into the virtual machine’s Terminal prompt:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">program_name</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>For example, to run the Hello World example program, you would type <code class="docutils literal"><span class="pre">./hello_world.py</span></code>.</p>
+<hr class="docutils" />
+<p><a class="reference external" href="http://developer.anki.com">Click here to return to the Cozmo Developer website.</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="getstarted.html" class="btn btn-neutral float-right" title="Getting Started With the Cozmo SDK" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="adb.html" class="btn btn-neutral" title="Android Debug Bridge" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Anki.
+      Last updated on May, 24, 2017 03:59:17 GMT+00:00.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

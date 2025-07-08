@@ -1,0 +1,22 @@
+cozmo.audio
+===========
+
+.. automodule:: cozmo.audio
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AudioEvents
+   
+   
+
+   
+   
+   

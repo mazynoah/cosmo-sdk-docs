@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo.opengl &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cozmo.pets" href="cozmo.pets.html" />
+    <link rel="prev" title="cozmo.oled_face" href="cozmo.oled_face.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cozmo.html">cozmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.action.html">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.annotate.html">cozmo.annotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.audio.html">cozmo.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.behavior.html">cozmo.behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.camera.html">cozmo.camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.conn.html">cozmo.conn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.event.html">cozmo.event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.exceptions.html">cozmo.exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.faces.html">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo.opengl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.pets.html">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.world.html">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo.opengl</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.opengl.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo.opengl">
+<span id="cozmo-opengl"></span><h1>cozmo.opengl<a class="headerlink" href="#module-cozmo.opengl" title="Permalink to this headline">¶</a></h1>
+<p>This module provides a 3D visualizer for Cozmo’s world state.</p>
+<p>It uses PyOpenGL, a Python OpenGL 3D graphics library which is available on most
+platforms. It also depends on the Pillow library for image processing.</p>
+<p>The easiest way to make use of this viewer is to call <a class="reference internal" href="cozmo.html#cozmo.run_program" title="cozmo.run_program"><code class="xref py py-func docutils literal notranslate"><span class="pre">cozmo.run_program()</span></code></a>
+with <cite>use_3d_viewer=True</cite> or <a class="reference internal" href="cozmo.run.html#cozmo.run.connect_with_3dviewer" title="cozmo.run.connect_with_3dviewer"><code class="xref py py-func docutils literal notranslate"><span class="pre">cozmo.run.connect_with_3dviewer()</span></code></a>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>This package requires Python to have the PyOpenGL package installed, along
+with an implementation of GLUT (OpenGL Utility Toolkit).</p>
+<p>To install the Python packages do <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">&quot;cozmo[3dviewer]&quot;</span></code></p>
+<p>On Windows and Linux you must also install freeglut (macOS / OSX has one
+preinstalled).</p>
+<p>On Linux: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">freeglut3</span></code></p>
+<p class="last">On Windows: Go to <a class="reference external" href="http://freeglut.sourceforge.net/">http://freeglut.sourceforge.net/</a> to get a <code class="docutils literal notranslate"><span class="pre">freeglut.dll</span></code>
+file. It’s included in any of the <cite>Windows binaries</cite> downloads. Place the DLL
+next to your Python script, or install it somewhere in your PATH to allow any
+script to use it.”</p>
+</div>
+<p class="rubric">Functions</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.opengl.LoadMtlFile" title="cozmo.opengl.LoadMtlFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadMtlFile</span></code></a>(filename)</td>
+<td>Load a .mtl material file, and return the contents as a dictionary.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Classes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">CubeRenderFrame</span></code>(cube)</td>
+<td>Minimal copy of a Cube’s state for 1 frame of rendering.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomObjectRenderFrame</span></code>(obj,&nbsp;is_fixed)</td>
+<td>Minimal copy of a CustomObject’s state for 1 frame of rendering.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.opengl.DynamicTexture" title="cozmo.opengl.DynamicTexture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicTexture</span></code></a>()</td>
+<td>Wrapper around An OpenGL Texture that can be dynamically updated.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">FaceRenderFrame</span></code>(face)</td>
+<td>Minimal copy of a Face’s state for 1 frame of rendering.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.opengl.LoadedObjFile" title="cozmo.opengl.LoadedObjFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadedObjFile</span></code></a>(filename)</td>
+<td>The loaded / parsed contents of a 3D Wavefront OBJ file.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObservableElementRenderFrame</span></code>(element)</td>
+<td>Minimal copy of a Cube’s state for 1 frame of rendering.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.opengl.OpenGLViewer" title="cozmo.opengl.OpenGLViewer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenGLViewer</span></code></a>(enable_camera_view[,&nbsp;…])</td>
+<td>OpenGL based 3D Viewer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.opengl.OpenGLWindow" title="cozmo.opengl.OpenGLWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenGLWindow</span></code></a>(x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;…)</td>
+<td>A Window displaying an OpenGL viewport.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.opengl.RenderableObject" title="cozmo.opengl.RenderableObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RenderableObject</span></code></a>(object_data[,&nbsp;override_mtl])</td>
+<td>Container for an object that can be rendered via OpenGL.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">RobotControlIntents</span></code>([left_wheel_speed,&nbsp;…])</td>
+<td>Input intents for controlling the robot.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">RobotRenderFrame</span></code>(robot)</td>
+<td>Minimal copy of a Robot’s state for 1 frame of rendering.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorldRenderFrame</span></code>(robot)</td>
+<td>Minimal copy of the World’s state for 1 frame of rendering.</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="cozmo.opengl.DynamicTexture">
+<em class="property">class </em><code class="descclassname">cozmo.opengl.</code><code class="descname">DynamicTexture</code><a class="headerlink" href="#cozmo.opengl.DynamicTexture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper around An OpenGL Texture that can be dynamically updated.</p>
+<dl class="method">
+<dt id="cozmo.opengl.DynamicTexture.bind">
+<code class="descname">bind</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.opengl.DynamicTexture.bind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bind the texture for rendering.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.opengl.DynamicTexture.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>pil_image: PIL.Image.Image</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.opengl.DynamicTexture.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the texture to contain the provided image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pil_image</strong> (<a class="reference external" href="https://pillow.readthedocs.io/en/latest/reference/Image.html#PIL.Image.Image" title="(in Pillow (PIL Fork) v6.0.0.dev0)"><em>PIL.Image.Image</em></a>) – The image to write into the texture.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.opengl.LoadedObjFile">
+<em class="property">class </em><code class="descclassname">cozmo.opengl.</code><code class="descname">LoadedObjFile</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.opengl.LoadedObjFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>The loaded / parsed contents of a 3D Wavefront OBJ file.</p>
+<p>This is the intermediary step between the file on the disk, and a renderable
+3D object. It supports the subset of the OBJ file that was used in the
+Cozmo and Cube assets, and does not attempt to exhaustively support every
+possible setting.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The filename of the OBJ file to load.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.opengl.OpenGLViewer">
+<em class="property">class </em><code class="descclassname">cozmo.opengl.</code><code class="descname">OpenGLViewer</code><span class="sig-paren">(</span><em>enable_camera_view</em>, <em>show_viewer_controls=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.opengl.OpenGLViewer" title="Permalink to this definition">¶</a></dt>
+<dd><p>OpenGL based 3D Viewer.</p>
+<p>Handles rendering of both a 3D world view and a 2D camera window.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>enable_camera_view</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – True to also open a 2nd window to display
+the live camera view.</li>
+<li><strong>show_viewer_controls</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether to draw controls on the view.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="cozmo.opengl.OpenGLViewer.disconnect">
+<code class="descname">disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.opengl.OpenGLViewer.disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called from the SDK when the program is complete and it’s time to exit.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.opengl.OpenGLWindow">
+<em class="property">class </em><code class="descclassname">cozmo.opengl.</code><code class="descname">OpenGLWindow</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>, <em>window_name</em>, <em>is_3d</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.opengl.OpenGLWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Window displaying an OpenGL viewport.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The initial x coordinate of the window in pixels.</li>
+<li><strong>y</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The initial y coordinate of the window in pixels.</li>
+<li><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The initial height of the window in pixels.</li>
+<li><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The initial height of the window in pixels.</li>
+<li><strong>window_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name / title for the window.</li>
+<li><strong>is_3d</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – True to create a Window for 3D rendering.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="cozmo.opengl.OpenGLWindow.height">
+<code class="descname">height</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.opengl.OpenGLWindow.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>The height of the window</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.opengl.OpenGLWindow.init_display">
+<code class="descname">init_display</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.opengl.OpenGLWindow.init_display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialze the OpenGL display parts of the Window.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Must be called on the same thread as OpenGL (usually the main thread),
+and after glutInit().</p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.opengl.OpenGLWindow.width">
+<code class="descname">width</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.opengl.OpenGLWindow.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width of the window</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.opengl.RenderableObject">
+<em class="property">class </em><code class="descclassname">cozmo.opengl.</code><code class="descname">RenderableObject</code><span class="sig-paren">(</span><em>object_data: cozmo.opengl.LoadedObjFile</em>, <em>override_mtl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.opengl.RenderableObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Container for an object that can be rendered via OpenGL.</p>
+<p>Can contain multiple meshes, for e.g. articulated objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>object_data</strong> (<a class="reference internal" href="#cozmo.opengl.LoadedObjFile" title="cozmo.opengl.LoadedObjFile"><em>LoadedObjFile</em></a>) – The object data (vertices, faces, etc.)
+to generate the renderable object from.</li>
+<li><strong>override_mtl</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – An optional material to use as an override instead
+of the material specified in the data. This allows one OBJ file
+to be used to create multiple objects with different materials
+and textures. Use <a class="reference internal" href="#cozmo.opengl.LoadMtlFile" title="cozmo.opengl.LoadMtlFile"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LoadMtlFile()</span></code></a> to generate a dict from a
+MTL file.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="cozmo.opengl.RenderableObject.draw_all">
+<code class="descname">draw_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.opengl.RenderableObject.draw_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw all of the meshes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.opengl.RenderableObject.meshes">
+<code class="descname">meshes</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.opengl.RenderableObject.meshes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The individual meshes, indexed by name, for this object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.opengl.LoadMtlFile">
+<code class="descclassname">cozmo.opengl.</code><code class="descname">LoadMtlFile</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.opengl.LoadMtlFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a .mtl material file, and return the contents as a dictionary.</p>
+<p>Supports the subset of MTL required for the Cozmo 3D viewer assets.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The filename of the file to load.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A dictionary mapping named MTL attributes to values.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cozmo.pets.html" class="btn btn-neutral float-right" title="cozmo.pets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cozmo.oled_face.html" class="btn btn-neutral float-left" title="cozmo.oled_face" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

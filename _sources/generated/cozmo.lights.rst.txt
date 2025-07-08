@@ -1,0 +1,23 @@
+cozmo.lights
+============
+
+.. automodule:: cozmo.lights
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Color
+      Light
+   
+   
+
+   
+   
+   

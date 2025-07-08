@@ -1,0 +1,24 @@
+cozmo.song
+==========
+
+.. automodule:: cozmo.song
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      NoteDurations
+      NoteTypes
+      SongNote
+   
+   
+
+   
+   
+   

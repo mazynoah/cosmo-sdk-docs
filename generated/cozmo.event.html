@@ -1,0 +1,603 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo.event &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cozmo.exceptions" href="cozmo.exceptions.html" />
+    <link rel="prev" title="cozmo.conn" href="cozmo.conn.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cozmo.html">cozmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.action.html">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.annotate.html">cozmo.annotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.audio.html">cozmo.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.behavior.html">cozmo.behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.camera.html">cozmo.camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.conn.html">cozmo.conn</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo.event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.exceptions.html">cozmo.exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.faces.html">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.opengl.html">cozmo.opengl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.pets.html">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.world.html">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo.event</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.event.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo.event">
+<span id="cozmo-event"></span><h1>cozmo.event<a class="headerlink" href="#module-cozmo.event" title="Permalink to this headline">¶</a></h1>
+<p>Event dispatch system.</p>
+<p>The SDK is based around the dispatch and observation of events.
+Objects inheriting from the <a class="reference internal" href="#cozmo.event.Dispatcher" title="cozmo.event.Dispatcher"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dispatcher</span></code></a> generate and
+dispatch events as the state of the robot and its world are updated.</p>
+<p>For example the <a class="reference internal" href="cozmo.objects.html#cozmo.objects.LightCube" title="cozmo.objects.LightCube"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.LightCube</span></code></a> class generates an
+<a class="reference internal" href="cozmo.objects.html#cozmo.objects.EvtObjectTapped" title="cozmo.objects.EvtObjectTapped"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvtObjectTapped</span></code></a> event anytime the cube the object
+represents is tapped.</p>
+<p>The event can be observed in a number of different ways:</p>
+<ol class="arabic simple">
+<li>By calling the <a class="reference internal" href="#cozmo.event.Dispatcher.wait_for" title="cozmo.event.Dispatcher.wait_for"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait_for()</span></code></a> method on the object to observe.
+This will wait until the specific event has been sent to that object and
+return the generated event.</li>
+<li>By calling <a class="reference internal" href="#cozmo.event.Dispatcher.add_event_handler" title="cozmo.event.Dispatcher.add_event_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_event_handler()</span></code></a> on the object
+to observe, which will cause the supplied function to be called every time
+the specified event occurs (use the <a class="reference internal" href="#cozmo.event.oneshot" title="cozmo.event.oneshot"><code class="xref py py-func docutils literal notranslate"><span class="pre">oneshot()</span></code></a> decorator
+to only have the handler called once)</li>
+<li>By sub-classing a type and implementing a receiver method.
+For example, subclass the <a class="reference internal" href="cozmo.objects.html#cozmo.objects.LightCube" title="cozmo.objects.LightCube"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.LightCube</span></code></a> type and implement <cite>evt_object_tapped</cite>.
+Note that the factory attribute would need to be updated on the
+generating class for your type to be used by the SDK.
+For example, <a class="reference internal" href="cozmo.world.html#cozmo.world.World.light_cube_factory" title="cozmo.world.World.light_cube_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">light_cube_factory</span></code></a> in this example.</li>
+<li>By subclassing a type and implementing a default receiver method.
+Events not dispatched to an explicit receiver method are dispatched to
+<cite>recv_default_handler</cite>.</li>
+</ol>
+<p>Events are dispatched to a target object (by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">dispatch_event()</span></code>
+on the receiving object).  In line with the above, upon receiving an event,
+the object will:</p>
+<ol class="arabic simple">
+<li>Dispatch the event to any handlers which have explicitly registered interest
+in the event (or a superclass of the event) via
+<a class="reference internal" href="#cozmo.event.Dispatcher.add_event_handler" title="cozmo.event.Dispatcher.add_event_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_event_handler()</span></code></a> or via <a class="reference internal" href="#cozmo.event.Dispatcher.wait_for" title="cozmo.event.Dispatcher.wait_for"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Dispatcher.wait_for()</span></code></a></li>
+<li>Dispatch the event to any “children” of the object (see below)</li>
+<li>Dispatch the event to method handlers on the receiving object, or the
+<cite>recv_default_handler</cite> if it has no matching handler</li>
+<li>Dispatch the event to the parent of the object (if any), and in turn onto
+the parent’s parents.</li>
+</ol>
+<p>Any handler may raise a <a class="reference internal" href="cozmo.exceptions.html#cozmo.exceptions.StopPropogation" title="cozmo.exceptions.StopPropogation"><code class="xref py py-class docutils literal notranslate"><span class="pre">StopPropogation</span></code></a> exception
+to prevent the event reaching any subsequent handlers (but generally should
+have no need to do so).</p>
+<p>Child objects receive all events that are sent to the originating object
+(which may have multiple children).</p>
+<p>Originating objects may have one parent object, which receives all events sent
+to its child.</p>
+<p>For example, <a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot" title="cozmo.robot.Robot"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.robot.Robot</span></code></a> creates a <a class="reference internal" href="cozmo.world.html#cozmo.world.World" title="cozmo.world.World"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.world.World</span></code></a>
+object and sets itself as a parent and the World as the child; both receive
+events sent to the other.</p>
+<p>The World class creates individual <a class="reference internal" href="cozmo.objects.html#cozmo.objects.ObservableObject" title="cozmo.objects.ObservableObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.ObservableObject</span></code></a> objects
+as they are discovered and makes itself a parent, so as to receive all events
+sent to the child.  However, it does not make those ObservableObject objects children
+for the sake of message dispatch as they only need to receive a small subset
+of messages the World object receives.</p>
+<p class="rubric">Functions</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.event.filter_handler" title="cozmo.event.filter_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_handler</span></code></a>(event,&nbsp;**filters)</td>
+<td>Decorates a handler function or Future to only be called if a filter is matched.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.event.oneshot" title="cozmo.event.oneshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oneshot</span></code></a>(f)</td>
+<td>Event handler decorator; causes the handler to only be dispatched to once.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.event.wait_for_first" title="cozmo.event.wait_for_first"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_first</span></code></a>(*futures[,&nbsp;…])</td>
+<td>Wait the first of a set of futures to complete.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Classes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.event.Dispatcher" title="cozmo.event.Dispatcher"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Dispatcher</span></code></a>(*a[,&nbsp;dispatch_parent,&nbsp;loop])</td>
+<td>Mixin to provide event dispatch handling.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.event.Event" title="cozmo.event.Event"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Event</span></code></a>(**kwargs)</td>
+<td>An event representing an action that has occurred.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.event.Filter" title="cozmo.event.Filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Filter</span></code></a>(event,&nbsp;**filters)</td>
+<td>Provides fine-grain filtering of events for dispatch.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.event.Handler" title="cozmo.event.Handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Handler</span></code></a></td>
+<td>A Handler is returned by <a class="reference internal" href="#cozmo.event.Dispatcher.add_event_handler" title="cozmo.event.Dispatcher.add_event_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Dispatcher.add_event_handler()</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">NullHandler</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">docstr</span></code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="cozmo.event.Event">
+<em class="property">class </em><code class="descclassname">cozmo.event.</code><code class="descname">Event</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.event.Event" title="Permalink to this definition">¶</a></dt>
+<dd><p>An event representing an action that has occurred.</p>
+<p>Instances of an Event have attributes set to values passed to the event.</p>
+<p>For example, <a class="reference internal" href="cozmo.objects.html#cozmo.objects.EvtObjectTapped" title="cozmo.objects.EvtObjectTapped"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.objects.EvtObjectTapped</span></code></a> defines obj and tap_count
+parameters which can be accessed as <code class="docutils literal notranslate"><span class="pre">evt.obj</span></code> and <code class="docutils literal notranslate"><span class="pre">evt.tap_count</span></code>.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.event.Dispatcher">
+<em class="property">class </em><code class="descclassname">cozmo.event.</code><code class="descname">Dispatcher</code><span class="sig-paren">(</span><em>*a</em>, <em>dispatch_parent=None</em>, <em>loop=None</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.event.Dispatcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mixin to provide event dispatch handling.</p>
+<dl class="method">
+<dt id="cozmo.event.Dispatcher.add_event_handler">
+<code class="descname">add_event_handler</code><span class="sig-paren">(</span><em>event</em>, <em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.event.Dispatcher.add_event_handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register an event handler to be notified when this object receives a type of Event.</p>
+<p>Expects a subclass of Event as the first argument.  If the class has
+subclasses then the handler will be notified for events of that subclass too.
+For example, adding a handler for <a class="reference internal" href="cozmo.action.html#cozmo.action.EvtActionCompleted" title="cozmo.action.EvtActionCompleted"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvtActionCompleted</span></code></a>
+will cause the handler to also be notified for
+<a class="reference internal" href="cozmo.anim.html#cozmo.anim.EvtAnimationCompleted" title="cozmo.anim.EvtAnimationCompleted"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvtAnimationCompleted</span></code></a> as it’s a subclass.</p>
+<p>Callable handlers (e.g. functions) are called with a first argument
+containing an Event instance and the remaining keyword arguments set as
+the event parameters.</p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">my_ontap_handler(evt,</span> <span class="pre">*,</span> <span class="pre">obj,</span> <span class="pre">tap_count,</span> <span class="pre">**kwargs)</span></code>
+or <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">my_ontap_handler(evt,</span> <span class="pre">obj=None,</span> <span class="pre">tap_count=None,</span> <span class="pre">**kwargs)</span></code></p>
+<p>It’s recommended that a <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> parameter be included in the
+definition so that future expansion of event parameters do not cause
+the handler to fail.</p>
+<p>Callable handlers may raise an events.StopProgation exception to prevent
+other handlers listening to the same event from being triggered.</p>
+<p><a class="reference external" href="https://docs.python.org/3.5/library/asyncio-task.html#asyncio.Future" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.Future</span></code></a> handlers are called with a result set to the event.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>event</strong> (<a class="reference internal" href="#cozmo.event.Event" title="cozmo.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>) – A subclass of <a class="reference internal" href="#cozmo.event.Event" title="cozmo.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> (not an instance of that class)</li>
+<li><strong>f</strong> (<em>callable</em>) – A callable or <a class="reference external" href="https://docs.python.org/3.5/library/asyncio-task.html#asyncio.Future" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.Future</span></code></a> to execute when the event is received</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#TypeError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeError</span></code></a> – An invalid event type was supplied</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.event.Dispatcher.dispatch_event">
+<code class="descname">dispatch_event</code><span class="sig-paren">(</span><em>event</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.event.Dispatcher.dispatch_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches a single event to registered handlers.</p>
+<p>Not generally called from user-facing code.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>event</strong> (<a class="reference internal" href="#cozmo.event.Event" title="cozmo.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>) – An class or instance of <a class="reference internal" href="#cozmo.event.Event" title="cozmo.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a></li>
+<li><strong>kw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – If a class is passed to event, then the remaining keywords
+are passed to it to create an instance of the event.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference external" href="https://docs.python.org/3.5/library/asyncio-task.html#asyncio.Task" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.Task</span></code></a> or <a class="reference external" href="https://docs.python.org/3.5/library/asyncio-task.html#asyncio.Future" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.Future</span></code></a> that will
+complete once all event handlers have been called.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#TypeError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeError</span></code></a> if an invalid event is supplied.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.event.Dispatcher.remove_event_handler">
+<code class="descname">remove_event_handler</code><span class="sig-paren">(</span><em>event</em>, <em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.event.Dispatcher.remove_event_handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove an event handler for this object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>event</strong> (<a class="reference internal" href="#cozmo.event.Event" title="cozmo.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>) – The event class, or an instance thereof,
+used with register_event_handler.</li>
+<li><strong>f</strong> (callable or <a class="reference internal" href="#cozmo.event.Handler" title="cozmo.event.Handler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Handler</span></code></a>) – The callable object that was
+passed as a handler to <a class="reference internal" href="#cozmo.event.Dispatcher.add_event_handler" title="cozmo.event.Dispatcher.add_event_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_event_handler()</span></code></a>, or a
+<a class="reference internal" href="#cozmo.event.Handler" title="cozmo.event.Handler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Handler</span></code></a> instance that was returned by
+<a class="reference internal" href="#cozmo.event.Dispatcher.add_event_handler" title="cozmo.event.Dispatcher.add_event_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_event_handler()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></a> – No matching handler found.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.event.Dispatcher.wait_for">
+<code class="descname">wait_for</code><span class="sig-paren">(</span><em>event_or_filter</em>, <em>timeout=30</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.event.Dispatcher.wait_for" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for the specified event to be sent to the current object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>event_or_filter</strong> (<a class="reference internal" href="#cozmo.event.Event" title="cozmo.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>) – Either a <a class="reference internal" href="#cozmo.event.Event" title="cozmo.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> class
+or a <a class="reference internal" href="#cozmo.event.Filter" title="cozmo.event.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Filter</span></code></a> instance to wait to trigger</li>
+<li><strong>timeout</strong> – Maximum time to wait for the event.  Pass None to wait indefinitely.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The <a class="reference internal" href="#cozmo.event.Event" title="cozmo.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> instance that was dispatched</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/asyncio-task.html#asyncio.TimeoutError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.TimeoutError</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.event.Filter">
+<em class="property">class </em><code class="descclassname">cozmo.event.</code><code class="descname">Filter</code><span class="sig-paren">(</span><em>event</em>, <em>**filters</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.event.Filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides fine-grain filtering of events for dispatch.</p>
+<p>See the ::func::<cite>filter_handler</cite> method for further details.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.event.Handler">
+<em class="property">class </em><code class="descclassname">cozmo.event.</code><code class="descname">Handler</code><a class="headerlink" href="#cozmo.event.Handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Handler is returned by <a class="reference internal" href="#cozmo.event.Dispatcher.add_event_handler" title="cozmo.event.Dispatcher.add_event_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Dispatcher.add_event_handler()</span></code></a></p>
+<p>The handler can be disabled at any time by calling its <a class="reference internal" href="#cozmo.event.Handler.disable" title="cozmo.event.Handler.disable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">disable()</span></code></a>
+method.</p>
+<dl class="method">
+<dt id="cozmo.event.Handler.disable">
+<code class="descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.event.Handler.disable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the handler from the object it was originally registered with.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.event.Handler.oneshot">
+<code class="descname">oneshot</code><a class="headerlink" href="#cozmo.event.Handler.oneshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the wrapped handler function will only be called once.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.event.oneshot">
+<code class="descclassname">cozmo.event.</code><code class="descname">oneshot</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.event.oneshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event handler decorator; causes the handler to only be dispatched to once.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.event.filter_handler">
+<code class="descclassname">cozmo.event.</code><code class="descname">filter_handler</code><span class="sig-paren">(</span><em>event</em>, <em>**filters</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.event.filter_handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorates a handler function or Future to only be called if a filter is matched.</p>
+<p>A handler may apply multiple separate filters; the handlers will be called
+if any of those filters matches.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Handle only if the anim_majorwin animation completed</span>
+<span class="nd">@filter_handler</span><span class="p">(</span><span class="n">cozmo</span><span class="o">.</span><span class="n">anim</span><span class="o">.</span><span class="n">EvtAnimationCompleted</span><span class="p">,</span> <span class="n">animation_name</span><span class="o">=</span><span class="s2">&quot;anim_majorwin&quot;</span><span class="p">)</span>
+
+<span class="c1"># Handle only when the observed object is a LightCube</span>
+<span class="nd">@filter_handler</span><span class="p">(</span><span class="n">cozmo</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">EvtObjectObserved</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="k">lambda</span> <span class="n">obj</span><span class="p">:</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cozmo</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">LightCube</span><span class="p">))</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>event</strong> (<a class="reference internal" href="#cozmo.event.Event" title="cozmo.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>) – The event class to match on</li>
+<li><strong>filters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – Zero or more event parameters to filter on.  Values may
+be either strings for exact matches, or functions which accept the
+value as the first argument and return a bool indicating whether
+the value passes the filter.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cozmo.event.wait_for_first">
+<code class="descclassname">cozmo.event.</code><code class="descname">wait_for_first</code><span class="sig-paren">(</span><em>*futures</em>, <em>discard_remaining=True</em>, <em>loop=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.event.wait_for_first" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait the first of a set of futures to complete.</p>
+<p>Eg:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">event</span> <span class="o">=</span> <span class="n">cozmo</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">wait_for_first</span><span class="p">(</span>
+    <span class="n">coz</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">wait_for_new_cube</span><span class="p">(),</span>
+    <span class="n">playing_anim</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span><span class="n">cozmo</span><span class="o">.</span><span class="n">anim</span><span class="o">.</span><span class="n">EvtAnimationCompleted</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>If more than one completes during a single event loop run, then
+if any of those results are not exception, one of them will be selected
+(at random, as determined by <code class="docutils literal notranslate"><span class="pre">set.pop</span></code>) to be returned, else one
+of the result exceptions will be raised instead.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>futures</strong> (list of <a class="reference external" href="https://docs.python.org/3.5/library/asyncio-task.html#asyncio.Future" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.Future</span></code></a>) – The futures or coroutines to wait on.</li>
+<li><strong>discard_remaining</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Cancel or discard the results of the futures
+that did not return first.</li>
+<li><strong>loop</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/asyncio-eventloop.html#asyncio.BaseEventLoop" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.BaseEventLoop</span></code></a>) – The event loop to wait on.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The first result, or raised exception</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cozmo.exceptions.html" class="btn btn-neutral float-right" title="cozmo.exceptions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cozmo.conn.html" class="btn btn-neutral float-left" title="cozmo.conn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

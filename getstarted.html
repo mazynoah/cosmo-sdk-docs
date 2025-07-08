@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started With the Cozmo SDK &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SDK vs. App Versions" href="sdk-versions.html" />
+    <link rel="prev" title="Downloads" href="downloads.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started With the Cozmo SDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cozmo-sdk-forums">Cozmo SDK Forums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starting-up-the-sdk">Starting Up the SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-programs">Example Programs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#walkthrough-video">Walkthrough Video</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#first-steps-hello-world">First Steps - “Hello, World!”</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-program">The Program</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#next-steps-night-night">Next Steps - “Night-Night”</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">The API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Getting Started With the Cozmo SDK</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/getstarted.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started-with-the-cozmo-sdk">
+<h1>Getting Started With the Cozmo SDK<a class="headerlink" href="#getting-started-with-the-cozmo-sdk" title="Permalink to this headline">¶</a></h1>
+<p>To make sure you get the best experience possible out of the SDK, please ensure you have followed the steps in the <a class="reference internal" href="initial.html"><span class="doc">Initial Setup</span></a>.</p>
+<div class="section" id="cozmo-sdk-forums">
+<h2>Cozmo SDK Forums<a class="headerlink" href="#cozmo-sdk-forums" title="Permalink to this headline">¶</a></h2>
+<p>Please visit our <a class="reference external" href="https://forums.anki.com/">Cozmo SDK Forums</a> where you can:</p>
+<ul class="simple">
+<li>Get assistance with your code</li>
+<li>Hear about upcoming SDK additions</li>
+<li>Share your work</li>
+<li>Join discussion about the SDK</li>
+<li>Be a part of the Cozmo SDK Community!</li>
+</ul>
+</div>
+<div class="section" id="starting-up-the-sdk">
+<h2>Starting Up the SDK<a class="headerlink" href="#starting-up-the-sdk" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Plug the mobile device containing the Cozmo app into your computer.</li>
+<li>Open the Cozmo app on the phone. Make sure Cozmo is on and connected to the app via WiFi.</li>
+<li>Tap on the gear icon at the top right corner to open the Settings menu.</li>
+<li>Swipe left to show the Cozmo SDK option and tap the Enable SDK button.</li>
+<li>Make sure the SDK examples are downloaded from the <a class="reference internal" href="downloads.html"><span class="doc">Downloads page</span></a>.</li>
+<li>On the computer, open Terminal (macOS/Linux) or Command Prompt (Windows) and type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">cozmo_sdk_examples</span></code>, where <em>cozmo_sdk_examples</em> is the directory you extracted the examples into, and press <strong>Enter</strong>.</li>
+</ol>
+</div>
+<div class="section" id="example-programs">
+<h2>Example Programs<a class="headerlink" href="#example-programs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="walkthrough-video">
+<h3>Walkthrough Video<a class="headerlink" href="#walkthrough-video" title="Permalink to this headline">¶</a></h3>
+<p>For your convenience, here is a video detailing the first few simple example programs. You can also find a simple text-based walkthrough of running your first program below.</p>
+<iframe width="690" height="388" src="https://www.youtube.com/embed/YAQ_USpkxgE?rel=0" frameborder="0" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="first-steps-hello-world">
+<h3>First Steps - “Hello, World!”<a class="headerlink" href="#first-steps-hello-world" title="Permalink to this headline">¶</a></h3>
+<p>Let’s test your new setup by running a very simple program. This program instructs Cozmo to say “Hello, World!” - a perfect way to introduce him and you to the world of programming.</p>
+<div class="section" id="the-program">
+<h4>The Program<a class="headerlink" href="#the-program" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>To run the program, using the same Terminal (macOS/Linux) / Command Prompt (Windows) window mentioned above:</li>
+</ol>
+<p>First, change to the <code class="docutils literal notranslate"><span class="pre">01_basics</span></code> sub-directory of the <code class="docutils literal notranslate"><span class="pre">tutorials</span></code> directory.</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p class="first">For macOS and Linux systems, type the following and press <strong>Enter</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tutorials</span><span class="o">/</span><span class="mi">01</span><span class="n">_basics</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">For Windows systems, type the following and press <strong>Enter</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">tutorials</span>\<span class="mi">01</span><span class="n">_basics</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<p>Then, run the program.</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p class="first">For macOS and Linux systems, type the following and press <strong>Enter</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="mi">01</span><span class="n">_hello_world</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>The same can also be achieved on macOS/Linux with:</p>
+<blockquote>
+<div>python3 01_hello_world.py</div></blockquote>
+<ol class="loweralpha" start="2">
+<li><p class="first">For Windows systems, type the following and press <strong>Enter</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">py</span> <span class="mi">01</span><span class="n">_hello_world</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>If done correctly, Cozmo will say “Hello, World!”</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If Cozmo does not perform as expected, look at the first Terminal window and make sure no error messages appeared. If you continue to have issues, please seek help in the Forums.</p>
+</div>
+<p>The code for the Hello World program can be <a class="reference external" href="https://github.com/anki/cozmo-python-sdk/tree/master/examples/tutorials/01_basics/01_hello_world.py">viewed here.</a></p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">The usbmuxd (USB Multiplexor Daemon) must be installed on any computer system paired with an iOS device before running any programs. Installing <a class="reference external" href="http://www.apple.com/itunes/download/">iTunes</a> will also install the usbmuxd on those systems. Linux users can install the usbmuxd module through the command line with <cite>sudo apt-get install usbmuxd</cite>.</p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Make sure adb (Android Debug Bridge) is installed on your system prior to running a program with an Android device. See the <a class="reference internal" href="initial.html#initial"><span class="std std-ref">Install page</span></a> for instructions.</p>
+</div>
+<p>You are now all set up to run Python programs on Cozmo. Next we will go over how to edit the above code to make Cozmo say something new. Let’s write our first program.</p>
+</div>
+</div>
+<div class="section" id="next-steps-night-night">
+<h3>Next Steps - “Night-Night”<a class="headerlink" href="#next-steps-night-night" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Copy <code class="docutils literal notranslate"><span class="pre">01_hello_world.py</span></code> to a new file named <code class="docutils literal notranslate"><span class="pre">nightnight.py</span></code> by doing the following:</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p class="first">For macOS and Linux systems, type the following and press <strong>Enter</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="mi">01</span><span class="n">_hello_world</span><span class="o">.</span><span class="n">py</span> <span class="n">nightnight</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">For Windows systems, type the following and press <strong>Enter</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">copy</span> <span class="mi">01</span><span class="n">_hello_world</span><span class="o">.</span><span class="n">py</span> <span class="n">nightnight</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<p>Now, nightnight.py is saved in the same folder as 01_hello_world.py.</p>
+<ol class="arabic" start="2">
+<li><p class="first">Open this new document in a source code editor or plain-text editor. Free source code editors, such as <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm Community Edition</a> , <a class="reference external" href="https://atom.io">Atom</a> , <a class="reference external" href="https://www.sublimetext.com">Sublime</a> , or <a class="reference external" href="http://www.barebones.com/products/textwrangler/">TextWrangler</a> can be found online. Anki does not provide tech support for third-party source code editors.</p>
+</li>
+<li><p class="first">Each line in the program relates to a specific function.</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">cozmo</span></code> allows your program to access the Cozmo SDK code contained within the <code class="docutils literal notranslate"><span class="pre">cozmo</span></code> module.</p>
+</li>
+<li><p class="first">Text sandwiched between three <code class="docutils literal notranslate"><span class="pre">'</span></code> marks is a Docstring. Docstrings are like comments, and are placed inside code to give information to the user.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">robot.say_text(&quot;Hello,</span> <span class="pre">World!&quot;).wait_for_completed()</span></code> is the core of the program:</p>
+<blockquote>
+<div><ol class="lowerroman simple">
+<li><code class="docutils literal notranslate"><span class="pre">robot.say_text(…)</span></code> is the function that makes Cozmo speak a string out loud.</li>
+<li><code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">World&quot;</span></code> is the string which Cozmo will speak.</li>
+<li><code class="docutils literal notranslate"><span class="pre">wait_for_completed()</span></code> tells Cozmo to finish speaking before moving to the next line of code. Without this, our program would end before Cozmo said anything!</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first">Move to the line that starts with “robot.say_text”</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Select the phrase “Hello World”. Do NOT select the parentheses or quotation marks around the phrase; those are necessary for Python to properly parse the command.</li>
+<li>Type in the new phrase you would like Cozmo to say. In this example, Cozmo will say “Night Night”, so that line should look like this: <code class="docutils literal notranslate"><span class="pre">robot.say_text(&quot;Night</span> <span class="pre">Night&quot;).wait_for_completed()</span></code></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first">Save the nightnight.py file.</p>
+</li>
+<li><p class="first">Now you can run your program:</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p class="first">For macOS and Linux systems, type the following into the same Terminal window and press <strong>Enter</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">nightnight</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">For Windows systems, type the following into the same Command Prompt window and press <strong>Enter</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">py</span> <span class="n">nightnight</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first">If done correctly, Cozmo will say the new phrase.</p>
+</li>
+</ol>
+<p>Now that you have written your own Cozmo program, take a look at the rest of the Cozmo SDK and at the many other example programs to get more ideas.</p>
+<p><a class="reference external" href="https://www.anki.com/en-us/company/terms-and-conditions">Terms and Conditions</a> and <a class="reference external" href="https://www.anki.com/en-us/company/privacy">Privacy Policy</a></p>
+<p><a class="reference external" href="http://developer.anki.com">Click here to return to the Anki Developer website.</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sdk-versions.html" class="btn btn-neutral float-right" title="SDK vs. App Versions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="downloads.html" class="btn btn-neutral float-left" title="Downloads" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

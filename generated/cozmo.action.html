@@ -1,0 +1,870 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cozmo.action &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cozmo.anim" href="cozmo.anim.html" />
+    <link rel="prev" title="cozmo" href="cozmo.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cozmo.html">cozmo</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cozmo.action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.anim.html">cozmo.anim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.annotate.html">cozmo.annotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.audio.html">cozmo.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.behavior.html">cozmo.behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.camera.html">cozmo.camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.conn.html">cozmo.conn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.event.html">cozmo.event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.exceptions.html">cozmo.exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.faces.html">cozmo.faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.lights.html">cozmo.lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.nav_memory_map.html">cozmo.nav_memory_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.objects.html">cozmo.objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.oled_face.html">cozmo.oled_face</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.opengl.html">cozmo.opengl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.pets.html">cozmo.pets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot.html">cozmo.robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.robot_alignment.html">cozmo.robot_alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.run.html">cozmo.run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.song.html">cozmo.song</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.tkview.html">cozmo.tkview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.util.html">cozmo.util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cozmo.world.html">cozmo.world</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The API</a> &raquo;</li>
+        
+      <li>cozmo.action</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/cozmo.action.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cozmo.action">
+<span id="cozmo-action"></span><h1>cozmo.action<a class="headerlink" href="#module-cozmo.action" title="Permalink to this headline">¶</a></h1>
+<p>Actions encapsulate specific high-level tasks that the Cozmo robot can perform.
+They have a definite beginning and end.</p>
+<p>These tasks include picking up an object, rotating in place, saying text, etc.</p>
+<p>Actions are usually triggered by a call to a method on the
+<a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot" title="cozmo.robot.Robot"><code class="xref py py-class docutils literal notranslate"><span class="pre">cozmo.robot.Robot</span></code></a> class such as <a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot.turn_in_place" title="cozmo.robot.Robot.turn_in_place"><code class="xref py py-meth docutils literal notranslate"><span class="pre">turn_in_place()</span></code></a></p>
+<p>The call will return an object that subclasses <a class="reference internal" href="#cozmo.action.Action" title="cozmo.action.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">Action</span></code></a> that can be
+used to cancel the action, or be observed to wait or be notified when the
+action completes (or fails) by calling its
+<a class="reference internal" href="cozmo.event.html#cozmo.event.Dispatcher.wait_for" title="cozmo.event.Dispatcher.wait_for"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wait_for()</span></code></a> or
+<a class="reference internal" href="cozmo.event.html#cozmo.event.Dispatcher.add_event_handler" title="cozmo.event.Dispatcher.add_event_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_event_handler()</span></code></a> methods.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Unless you pass <code class="docutils literal notranslate"><span class="pre">in_parallel=True</span></code> when starting the action, no other
+action can be active at the same time.  Attempting to trigger a non-parallel
+action when another action is already in progress will result in a
+<a class="reference internal" href="cozmo.exceptions.html#cozmo.exceptions.RobotBusy" title="cozmo.exceptions.RobotBusy"><code class="xref py py-class docutils literal notranslate"><span class="pre">RobotBusy</span></code></a> exception being raised.</p>
+<p class="last">When using <code class="docutils literal notranslate"><span class="pre">in_parallel=True</span></code> you may see an action fail with the result
+<a class="reference internal" href="#cozmo.action.ActionResults.TRACKS_LOCKED" title="cozmo.action.ActionResults.TRACKS_LOCKED"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ActionResults.TRACKS_LOCKED</span></code></a> - this indicates that another in-progress
+action has already locked that movement track (e.g. two actions cannot
+move the head at the same time).</p>
+</div>
+<p class="rubric">Classes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.action.Action" title="cozmo.action.Action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Action</span></code></a>(*,&nbsp;conn,&nbsp;robot,&nbsp;**kw)</td>
+<td>An action holds the state of an in-progress robot action</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.action.ActionResults" title="cozmo.action.ActionResults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionResults</span></code></a></td>
+<td>The possible result values for an Action.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cozmo.action.EvtActionCompleted" title="cozmo.action.EvtActionCompleted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtActionCompleted</span></code></a>(**kwargs)</td>
+<td>Triggered when a robot action has completed or failed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cozmo.action.EvtActionStarted" title="cozmo.action.EvtActionStarted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EvtActionStarted</span></code></a>(**kwargs)</td>
+<td>Triggered when a robot starts an action.</td>
+</tr>
+</tbody>
+</table>
+<dl class="data">
+<dt id="cozmo.action.ACTION_IDLE">
+<code class="descclassname">cozmo.action.</code><code class="descname">ACTION_IDLE</code><em class="property"> = 'action_idle'</em><a class="headerlink" href="#cozmo.action.ACTION_IDLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action idle state</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.action.ACTION_RUNNING">
+<code class="descclassname">cozmo.action.</code><code class="descname">ACTION_RUNNING</code><em class="property"> = 'action_running'</em><a class="headerlink" href="#cozmo.action.ACTION_RUNNING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action running state</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.action.ACTION_SUCCEEDED">
+<code class="descclassname">cozmo.action.</code><code class="descname">ACTION_SUCCEEDED</code><em class="property"> = 'action_succeeded'</em><a class="headerlink" href="#cozmo.action.ACTION_SUCCEEDED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action succeeded state</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.action.ACTION_FAILED">
+<code class="descclassname">cozmo.action.</code><code class="descname">ACTION_FAILED</code><em class="property"> = 'action_failed'</em><a class="headerlink" href="#cozmo.action.ACTION_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action failed state</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="data">
+<dt id="cozmo.action.ACTION_ABORTING">
+<code class="descclassname">cozmo.action.</code><code class="descname">ACTION_ABORTING</code><em class="property"> = 'action_aborting'</em><a class="headerlink" href="#cozmo.action.ACTION_ABORTING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action failed state</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.action.EvtActionStarted">
+<em class="property">class </em><code class="descclassname">cozmo.action.</code><code class="descname">EvtActionStarted</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.action.EvtActionStarted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered when a robot starts an action.</p>
+<dl class="attribute">
+<dt id="cozmo.action.EvtActionStarted.action">
+<code class="descname">action</code><em class="property"> = 'The action that started'</em><a class="headerlink" href="#cozmo.action.EvtActionStarted.action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.action.EvtActionCompleted">
+<em class="property">class </em><code class="descclassname">cozmo.action.</code><code class="descname">EvtActionCompleted</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.action.EvtActionCompleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered when a robot action has completed or failed.</p>
+<dl class="attribute">
+<dt id="cozmo.action.EvtActionCompleted.action">
+<code class="descname">action</code><em class="property"> = 'The action that completed'</em><a class="headerlink" href="#cozmo.action.EvtActionCompleted.action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.EvtActionCompleted.failure_code">
+<code class="descname">failure_code</code><em class="property"> = 'A failure code such as &quot;cancelled&quot;'</em><a class="headerlink" href="#cozmo.action.EvtActionCompleted.failure_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.EvtActionCompleted.failure_reason">
+<code class="descname">failure_reason</code><em class="property"> = 'A human-readable failure reason'</em><a class="headerlink" href="#cozmo.action.EvtActionCompleted.failure_reason" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.EvtActionCompleted.state">
+<code class="descname">state</code><em class="property"> = 'The state of the action; either cozmo.action.ACTION_SUCCEEDED or cozmo.action.ACTION_FAILED'</em><a class="headerlink" href="#cozmo.action.EvtActionCompleted.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.action.Action">
+<em class="property">class </em><code class="descclassname">cozmo.action.</code><code class="descname">Action</code><span class="sig-paren">(</span><em>*</em>, <em>conn</em>, <em>robot</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.action.Action" title="Permalink to this definition">¶</a></dt>
+<dd><p>An action holds the state of an in-progress robot action</p>
+<dl class="method">
+<dt id="cozmo.action.Action.abort">
+<code class="descname">abort</code><span class="sig-paren">(</span><em>log_abort_messages=False</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.action.Action.abort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trigger the robot to abort the running action.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>log_abort_messages</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – True to log info on the action that
+is aborted.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if the action is not currently being executed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.Action.conn">
+<code class="descname">conn</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.action.Action.conn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The connection on which the action was sent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.conn.html#cozmo.conn.CozmoConnection" title="cozmo.conn.CozmoConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">CozmoConnection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.Action.failure_reason">
+<code class="descname">failure_reason</code><a class="headerlink" href="#cozmo.action.Action.failure_reason" title="Permalink to this definition">¶</a></dt>
+<dd><p>Both values will be None if no failure has occurred.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">tuple of (failure_code, failure_reason)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.Action.has_failed">
+<code class="descname">has_failed</code><a class="headerlink" href="#cozmo.action.Action.has_failed" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the action has failed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.Action.has_succeeded">
+<code class="descname">has_succeeded</code><a class="headerlink" href="#cozmo.action.Action.has_succeeded" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the action has succeeded.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.Action.is_aborting">
+<code class="descname">is_aborting</code><a class="headerlink" href="#cozmo.action.Action.is_aborting" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the action is aborting (will soon be either succeeded or failed).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.Action.is_completed">
+<code class="descname">is_completed</code><a class="headerlink" href="#cozmo.action.Action.is_completed" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the action has completed (either succeeded or failed).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.Action.is_running">
+<code class="descname">is_running</code><a class="headerlink" href="#cozmo.action.Action.is_running" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the action is currently in progress.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.action.Action.on_completed">
+<code class="descname">on_completed</code><span class="sig-paren">(</span><em>handler</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.action.Action.on_completed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggers a handler when the action completes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>handler</strong> (<em>callable</em>) – An event handler which accepts arguments
+suited to the <a class="reference internal" href="#cozmo.action.EvtActionCompleted" title="cozmo.action.EvtActionCompleted"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvtActionCompleted</span></code></a> event.
+See <code class="xref py py-meth docutils literal notranslate"><span class="pre">cozmo.event.add_event_handler()</span></code> for more information.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.Action.result">
+<code class="descname">result</code><a class="headerlink" href="#cozmo.action.Action.result" title="Permalink to this definition">¶</a></dt>
+<dd><p>The result of running the action.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">An attribute of <a class="reference internal" href="#cozmo.action.ActionResults" title="cozmo.action.ActionResults"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionResults</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.Action.robot">
+<code class="descname">robot</code><em class="property"> = None</em><a class="headerlink" href="#cozmo.action.Action.robot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Th robot instance executing the action.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot" title="cozmo.robot.Robot"><code class="xref py py-class docutils literal notranslate"><span class="pre">Robot</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.Action.state">
+<code class="descname">state</code><a class="headerlink" href="#cozmo.action.Action.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current internal state of the action as a string.</p>
+<p>Will match one of the constants:
+<a class="reference internal" href="#cozmo.action.ACTION_IDLE" title="cozmo.action.ACTION_IDLE"><code class="xref py py-const docutils literal notranslate"><span class="pre">ACTION_IDLE</span></code></a>
+<a class="reference internal" href="#cozmo.action.ACTION_RUNNING" title="cozmo.action.ACTION_RUNNING"><code class="xref py py-const docutils literal notranslate"><span class="pre">ACTION_RUNNING</span></code></a>
+<a class="reference internal" href="#cozmo.action.ACTION_SUCCEEDED" title="cozmo.action.ACTION_SUCCEEDED"><code class="xref py py-const docutils literal notranslate"><span class="pre">ACTION_SUCCEEDED</span></code></a>
+<a class="reference internal" href="#cozmo.action.ACTION_FAILED" title="cozmo.action.ACTION_FAILED"><code class="xref py py-const docutils literal notranslate"><span class="pre">ACTION_FAILED</span></code></a>
+<a class="reference internal" href="#cozmo.action.ACTION_ABORTING" title="cozmo.action.ACTION_ABORTING"><code class="xref py py-const docutils literal notranslate"><span class="pre">ACTION_ABORTING</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cozmo.action.Action.wait_for_completed">
+<code class="descname">wait_for_completed</code><span class="sig-paren">(</span><em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cozmo.action.Action.wait_for_completed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for the action to complete.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)"><em>None</em></a>) – Maximum time in seconds to wait for the event.
+Pass None to wait indefinitely.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The <a class="reference internal" href="#cozmo.action.EvtActionCompleted" title="cozmo.action.EvtActionCompleted"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvtActionCompleted</span></code></a> event instance</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/asyncio-task.html#asyncio.TimeoutError" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.TimeoutError</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cozmo.action.ActionResults">
+<em class="property">class </em><code class="descclassname">cozmo.action.</code><code class="descname">ActionResults</code><a class="headerlink" href="#cozmo.action.ActionResults" title="Permalink to this definition">¶</a></dt>
+<dd><p>The possible result values for an Action.</p>
+<p>An Action’s result is set when the action completes.</p>
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.ABORT">
+<code class="descname">ABORT</code><em class="property"> = _ActionResult(name='ABORT', id=50331648)</em><a class="headerlink" href="#cozmo.action.ActionResults.ABORT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action aborted itself (e.g. had invalid attributes, or a runtime failure).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.ANIM_ABORTED">
+<code class="descname">ANIM_ABORTED</code><em class="property"> = _ActionResult(name='ANIM_ABORTED', id=50331649)</em><a class="headerlink" href="#cozmo.action.ActionResults.ANIM_ABORTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Animation Action aborted itself (e.g. there was an error playing the animation).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.BAD_MARKER">
+<code class="descname">BAD_MARKER</code><em class="property"> = _ActionResult(name='BAD_MARKER', id=50331650)</em><a class="headerlink" href="#cozmo.action.ActionResults.BAD_MARKER" title="Permalink to this definition">¶</a></dt>
+<dd><p>There was an error related to vision markers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.BAD_OBJECT">
+<code class="descname">BAD_OBJECT</code><em class="property"> = _ActionResult(name='BAD_OBJECT', id=50331652)</em><a class="headerlink" href="#cozmo.action.ActionResults.BAD_OBJECT" title="Permalink to this definition">¶</a></dt>
+<dd><p>There was a problem with the Object ID provided (e.g. there is no Object with that ID).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.BAD_POSE">
+<code class="descname">BAD_POSE</code><em class="property"> = _ActionResult(name='BAD_POSE', id=50331653)</em><a class="headerlink" href="#cozmo.action.ActionResults.BAD_POSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>There was a problem with the Pose provided.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.CANCELLED_WHILE_RUNNING">
+<code class="descname">CANCELLED_WHILE_RUNNING</code><em class="property"> = _ActionResult(name='CANCELLED_WHILE_RUNNING', id=33554432)</em><a class="headerlink" href="#cozmo.action.ActionResults.CANCELLED_WHILE_RUNNING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action was cancelled (e.g. via <a class="reference internal" href="cozmo.robot.html#cozmo.robot.Robot.abort_all_actions" title="cozmo.robot.Robot.abort_all_actions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">abort_all_actions()</span></code></a> or
+<a class="reference internal" href="#cozmo.action.Action.abort" title="cozmo.action.Action.abort"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Action.abort()</span></code></a>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.DID_NOT_REACH_PREACTION_POSE">
+<code class="descname">DID_NOT_REACH_PREACTION_POSE</code><em class="property"> = _ActionResult(name='DID_NOT_REACH_PREACTION_POSE', id=67108865)</em><a class="headerlink" href="#cozmo.action.ActionResults.DID_NOT_REACH_PREACTION_POSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Failed to get into position.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.FAILED_TRAVERSING_PATH">
+<code class="descname">FAILED_TRAVERSING_PATH</code><em class="property"> = _ActionResult(name='FAILED_TRAVERSING_PATH', id=67108866)</em><a class="headerlink" href="#cozmo.action.ActionResults.FAILED_TRAVERSING_PATH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Failed to follow the planned path.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.FOLLOWING_PATH_BUT_NOT_TRAVERSING">
+<code class="descname">FOLLOWING_PATH_BUT_NOT_TRAVERSING</code><em class="property"> = _ActionResult(name='FOLLOWING_PATH_BUT_NOT_TRAVERSING', id=50331656)</em><a class="headerlink" href="#cozmo.action.ActionResults.FOLLOWING_PATH_BUT_NOT_TRAVERSING" title="Permalink to this definition">¶</a></dt>
+<dd><p>There was an error following the planned path.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.INTERRUPTED">
+<code class="descname">INTERRUPTED</code><em class="property"> = _ActionResult(name='INTERRUPTED', id=50331657)</em><a class="headerlink" href="#cozmo.action.ActionResults.INTERRUPTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>The action was interrupted by another Action or Behavior.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.INVALID_OFF_TREADS_STATE">
+<code class="descname">INVALID_OFF_TREADS_STATE</code><em class="property"> = _ActionResult(name='INVALID_OFF_TREADS_STATE', id=50331658)</em><a class="headerlink" href="#cozmo.action.ActionResults.INVALID_OFF_TREADS_STATE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The robot ended up in an “off treads state” not valid for this action (e.g.
+the robot was placed on its back while executing a turn)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.LAST_PICK_AND_PLACE_FAILED">
+<code class="descname">LAST_PICK_AND_PLACE_FAILED</code><em class="property"> = _ActionResult(name='LAST_PICK_AND_PLACE_FAILED', id=67108867)</em><a class="headerlink" href="#cozmo.action.ActionResults.LAST_PICK_AND_PLACE_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd><p>The previous attempt to pick and place an object failed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.MISMATCHED_UP_AXIS">
+<code class="descname">MISMATCHED_UP_AXIS</code><em class="property"> = _ActionResult(name='MISMATCHED_UP_AXIS', id=50331659)</em><a class="headerlink" href="#cozmo.action.ActionResults.MISMATCHED_UP_AXIS" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Up Axis of a carried object doesn’t match the desired placement pose.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.MOTOR_STOPPED_MAKING_PROGRESS">
+<code class="descname">MOTOR_STOPPED_MAKING_PROGRESS</code><em class="property"> = _ActionResult(name='MOTOR_STOPPED_MAKING_PROGRESS', id=67108868)</em><a class="headerlink" href="#cozmo.action.ActionResults.MOTOR_STOPPED_MAKING_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>The required motor isn’t moving so the action cannot complete.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.NOT_CARRYING_OBJECT_ABORT">
+<code class="descname">NOT_CARRYING_OBJECT_ABORT</code><em class="property"> = _ActionResult(name='NOT_CARRYING_OBJECT_ABORT', id=50331665)</em><a class="headerlink" href="#cozmo.action.ActionResults.NOT_CARRYING_OBJECT_ABORT" title="Permalink to this definition">¶</a></dt>
+<dd><p>No object is being carried, but the action requires one.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.NOT_CARRYING_OBJECT_RETRY">
+<code class="descname">NOT_CARRYING_OBJECT_RETRY</code><em class="property"> = _ActionResult(name='NOT_CARRYING_OBJECT_RETRY', id=67108869)</em><a class="headerlink" href="#cozmo.action.ActionResults.NOT_CARRYING_OBJECT_RETRY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not carrying an object when it was expected, but may succeed if the action is retried.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.NOT_ON_CHARGER">
+<code class="descname">NOT_ON_CHARGER</code><em class="property"> = _ActionResult(name='NOT_ON_CHARGER', id=67108870)</em><a class="headerlink" href="#cozmo.action.ActionResults.NOT_ON_CHARGER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cozmo is expected to be on the charger, but is not.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.NOT_STARTED">
+<code class="descname">NOT_STARTED</code><em class="property"> = _ActionResult(name='NOT_STARTED', id=33554433)</em><a class="headerlink" href="#cozmo.action.ActionResults.NOT_STARTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initial state of an Action to indicate it has not yet started.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.NO_ANIM_NAME">
+<code class="descname">NO_ANIM_NAME</code><em class="property"> = _ActionResult(name='NO_ANIM_NAME', id=50331660)</em><a class="headerlink" href="#cozmo.action.ActionResults.NO_ANIM_NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>No valid Animation name was found.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.NO_DISTANCE_SET">
+<code class="descname">NO_DISTANCE_SET</code><em class="property"> = _ActionResult(name='NO_DISTANCE_SET', id=50331661)</em><a class="headerlink" href="#cozmo.action.ActionResults.NO_DISTANCE_SET" title="Permalink to this definition">¶</a></dt>
+<dd><p>An invalid distance value was given.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.NO_FACE">
+<code class="descname">NO_FACE</code><em class="property"> = _ActionResult(name='NO_FACE', id=50331662)</em><a class="headerlink" href="#cozmo.action.ActionResults.NO_FACE" title="Permalink to this definition">¶</a></dt>
+<dd><p>There was a problem with the Face ID (e.g. Cozmo doesn’t no where it is).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.NO_GOAL_SET">
+<code class="descname">NO_GOAL_SET</code><em class="property"> = _ActionResult(name='NO_GOAL_SET', id=50331663)</em><a class="headerlink" href="#cozmo.action.ActionResults.NO_GOAL_SET" title="Permalink to this definition">¶</a></dt>
+<dd><p>No goal pose was set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.NO_PREACTION_POSES">
+<code class="descname">NO_PREACTION_POSES</code><em class="property"> = _ActionResult(name='NO_PREACTION_POSES', id=50331664)</em><a class="headerlink" href="#cozmo.action.ActionResults.NO_PREACTION_POSES" title="Permalink to this definition">¶</a></dt>
+<dd><p>No pre-action poses were found (e.g. could not get into position).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.NULL_SUBACTION">
+<code class="descname">NULL_SUBACTION</code><em class="property"> = _ActionResult(name='NULL_SUBACTION', id=50331666)</em><a class="headerlink" href="#cozmo.action.ActionResults.NULL_SUBACTION" title="Permalink to this definition">¶</a></dt>
+<dd><p>No sub-action was provided.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.PATH_PLANNING_FAILED_ABORT">
+<code class="descname">PATH_PLANNING_FAILED_ABORT</code><em class="property"> = _ActionResult(name='PATH_PLANNING_FAILED_ABORT', id=50331667)</em><a class="headerlink" href="#cozmo.action.ActionResults.PATH_PLANNING_FAILED_ABORT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cozmo was unable to plan a path.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.PATH_PLANNING_FAILED_RETRY">
+<code class="descname">PATH_PLANNING_FAILED_RETRY</code><em class="property"> = _ActionResult(name='PATH_PLANNING_FAILED_RETRY', id=67108871)</em><a class="headerlink" href="#cozmo.action.ActionResults.PATH_PLANNING_FAILED_RETRY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cozmo was unable to plan a path, but may succeed if the action is retried.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.PICKUP_OBJECT_UNEXPECTEDLY_MOVING">
+<code class="descname">PICKUP_OBJECT_UNEXPECTEDLY_MOVING</code><em class="property"> = _ActionResult(name='PICKUP_OBJECT_UNEXPECTEDLY_MOVING', id=50331668)</em><a class="headerlink" href="#cozmo.action.ActionResults.PICKUP_OBJECT_UNEXPECTEDLY_MOVING" title="Permalink to this definition">¶</a></dt>
+<dd><p>The object that Cozmo is attempting to pickup is unexpectedly moving (e.g
+it is being moved by someone else).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.PICKUP_OBJECT_UNEXPECTEDLY_NOT_MOVING">
+<code class="descname">PICKUP_OBJECT_UNEXPECTEDLY_NOT_MOVING</code><em class="property"> = _ActionResult(name='PICKUP_OBJECT_UNEXPECTEDLY_NOT_MOVING', id=50331669)</em><a class="headerlink" href="#cozmo.action.ActionResults.PICKUP_OBJECT_UNEXPECTEDLY_NOT_MOVING" title="Permalink to this definition">¶</a></dt>
+<dd><p>The object that Cozmo thought he was lifting didn’t start moving, so he
+must have missed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.PLACEMENT_GOAL_NOT_FREE">
+<code class="descname">PLACEMENT_GOAL_NOT_FREE</code><em class="property"> = _ActionResult(name='PLACEMENT_GOAL_NOT_FREE', id=67108872)</em><a class="headerlink" href="#cozmo.action.ActionResults.PLACEMENT_GOAL_NOT_FREE" title="Permalink to this definition">¶</a></dt>
+<dd><p>There is no room to place the object at the desired destination.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.RETRY">
+<code class="descname">RETRY</code><em class="property"> = _ActionResult(name='RETRY', id=67108864)</em><a class="headerlink" href="#cozmo.action.ActionResults.RETRY" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Action failed, but may succeed if retried.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.RUNNING">
+<code class="descname">RUNNING</code><em class="property"> = _ActionResult(name='RUNNING', id=16777216)</em><a class="headerlink" href="#cozmo.action.ActionResults.RUNNING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action is still running.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.STILL_CARRYING_OBJECT">
+<code class="descname">STILL_CARRYING_OBJECT</code><em class="property"> = _ActionResult(name='STILL_CARRYING_OBJECT', id=50331671)</em><a class="headerlink" href="#cozmo.action.ActionResults.STILL_CARRYING_OBJECT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cozmo is unexpectedly still carrying an object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.STILL_ON_CHARGER">
+<code class="descname">STILL_ON_CHARGER</code><em class="property"> = _ActionResult(name='STILL_ON_CHARGER', id=67108873)</em><a class="headerlink" href="#cozmo.action.ActionResults.STILL_ON_CHARGER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cozmo failed to drive off the charger.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.SUCCESS">
+<code class="descname">SUCCESS</code><em class="property"> = _ActionResult(name='SUCCESS', id=0)</em><a class="headerlink" href="#cozmo.action.ActionResults.SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action completed successfully.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.TIMEOUT">
+<code class="descname">TIMEOUT</code><em class="property"> = _ActionResult(name='TIMEOUT', id=50331672)</em><a class="headerlink" href="#cozmo.action.ActionResults.TIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Action timed out before completing correctly.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.TRACKS_LOCKED">
+<code class="descname">TRACKS_LOCKED</code><em class="property"> = _ActionResult(name='TRACKS_LOCKED', id=50331673)</em><a class="headerlink" href="#cozmo.action.ActionResults.TRACKS_LOCKED" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more animation tracks (Head, Lift, Body, Face, Backpack Lights, Audio)
+are already being used by another Action.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.UNEXPECTED_DOCK_ACTION">
+<code class="descname">UNEXPECTED_DOCK_ACTION</code><em class="property"> = _ActionResult(name='UNEXPECTED_DOCK_ACTION', id=50331674)</em><a class="headerlink" href="#cozmo.action.ActionResults.UNEXPECTED_DOCK_ACTION" title="Permalink to this definition">¶</a></dt>
+<dd><p>There was an internal error related to an unexpected type of dock action.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.UNEXPECTED_PITCH_ANGLE">
+<code class="descname">UNEXPECTED_PITCH_ANGLE</code><em class="property"> = _ActionResult(name='UNEXPECTED_PITCH_ANGLE', id=67108874)</em><a class="headerlink" href="#cozmo.action.ActionResults.UNEXPECTED_PITCH_ANGLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cozmo’s pitch is at an unexpected angle for the Action.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cozmo.action.ActionResults.VISUAL_OBSERVATION_FAILED">
+<code class="descname">VISUAL_OBSERVATION_FAILED</code><em class="property"> = _ActionResult(name='VISUAL_OBSERVATION_FAILED', id=50331677)</em><a class="headerlink" href="#cozmo.action.ActionResults.VISUAL_OBSERVATION_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cozmo did not see the expected result (e.g. unable to see cubes in their
+expected position after a related action).</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cozmo.anim.html" class="btn btn-neutral float-right" title="cozmo.anim" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cozmo.html" class="btn btn-neutral float-left" title="cozmo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation - Windows &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation - Linux" href="install-linux.html" />
+    <link rel="prev" title="Installation - macOS / OS X" href="install-macos.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation - Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-videos">Installation Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-installation">Python Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sdk-installation">SDK Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sdk-upgrade">SDK Upgrade</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mobile-device-setup">Mobile Device Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adb.html">Android Debug Bridge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">The API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation - Windows</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/install-windows.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation-windows">
+<span id="install-windows"></span><h1>Installation - Windows<a class="headerlink" href="#installation-windows" title="Permalink to this headline">¶</a></h1>
+<p>This guide provides instructions on installing the Cozmo SDK for computers running with a Windows operating system.</p>
+<div class="section" id="installation-videos">
+<h2>Installation Videos<a class="headerlink" href="#installation-videos" title="Permalink to this headline">¶</a></h2>
+<p>For your convenience, videos are provided showing the installation steps being followed on a Windows computer; one using an iOS device, and one using an Android device. There is also full text-based documentation below these.</p>
+<iframe width="690" height="388" src="https://www.youtube.com/embed/gtRS3iqzSuA?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="690" height="388" src="https://www.youtube.com/embed/9TJeK_AEFYo?rel=0" frameborder="0" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="python-installation">
+<h2>Python Installation<a class="headerlink" href="#python-installation" title="Permalink to this headline">¶</a></h2>
+<p>Download the <a class="reference external" href="https://www.python.org/downloads/">Python 3.5.1 (or later) executable file from Python.org</a> and
+run it on your computer.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">We recommend that you tick the “Add Python 3.5 to PATH” checkbox on the Setup screen.</p>
+</div>
+</div>
+<div class="section" id="sdk-installation">
+<h2>SDK Installation<a class="headerlink" href="#sdk-installation" title="Permalink to this headline">¶</a></h2>
+<p>To install the SDK, type the following into the Command Prompt window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">cozmo</span><span class="p">[</span><span class="n">camera</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Note that the [camera] option adds support for processing images from Cozmo’s camera.</p>
+<div class="section" id="sdk-upgrade">
+<h3>SDK Upgrade<a class="headerlink" href="#sdk-upgrade" title="Permalink to this headline">¶</a></h3>
+<p>To upgrade the SDK from a previous install, enter this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">cozmo</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="mobile-device-setup">
+<h2>Mobile Device Setup<a class="headerlink" href="#mobile-device-setup" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>iOS</strong> devices require <a class="reference external" href="http://www.apple.com/itunes/download/">iTunes</a> to ensure that the usbmuxd service is installed on your computer. Usbmuxd is required for the computer to communicate with the iOS device over a USB cable. While iTunes needs to be installed, it does not need to be running.</li>
+<li><strong>Android</strong> devices require installation of <a class="reference internal" href="adb.html#adb"><span class="std std-ref">Android Debug Bridge</span></a> (adb) in order to run the Cozmo SDK. This is required for the computer to communicate with the Android mobile device over a USB cable and runs automatically when required.</li>
+</ul>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>Please see the <a class="reference internal" href="initial.html#trouble"><span class="std std-ref">Troubleshooting</span></a> section of the Initial Setup page for tips, or visit the <a class="reference external" href="https://forums.anki.com/">Cozmo SDK Forums</a> to ask questions, find solutions, or for general discussion.</p>
+<hr class="docutils" />
+<p><a class="reference external" href="https://www.anki.com/en-us/company/terms-and-conditions">Terms and Conditions</a> and <a class="reference external" href="https://www.anki.com/en-us/company/privacy">Privacy Policy</a></p>
+<p><a class="reference external" href="http://developer.anki.com">Click here to return to the Anki Developer website.</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install-linux.html" class="btn btn-neutral float-right" title="Installation - Linux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install-macos.html" class="btn btn-neutral float-left" title="Installation - macOS / OS X" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+cozmo.oled\_face
+================
+
+.. automodule:: cozmo.oled_face
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      convert_image_to_screen_data
+      convert_pixels_to_screen_data
+      dimensions
+   
+   
+
+   
+   
+   
+
+   
+   
+   

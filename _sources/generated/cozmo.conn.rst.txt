@@ -1,0 +1,25 @@
+cozmo.conn
+==========
+
+.. automodule:: cozmo.conn
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      CozmoConnection
+      EvtConnected
+      EvtConnectionClosed
+      EvtRobotFound
+   
+   
+
+   
+   
+   

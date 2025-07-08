@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Android Debug Bridge &mdash; Cozmo SDK 1.4.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Downloads" href="downloads.html" />
+    <link rel="prev" title="Installation - Linux" href="install-linux.html" />
+    <!-- Google Analytics -->
+    <script>
+        if (window.location.hostname.toLowerCase() == 'cozmosdk.anki.com') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-40941061-1', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+     
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cozmo SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.10
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="initial.html">Initial Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-macos.html">Installation - macOS / OS X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-windows.html">Installation - Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-linux.html">Installation - Linux</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Android Debug Bridge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#macos-installation">macOS Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-installation">Windows Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linux-installation">Linux Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-installation-all-platforms">Final Installation (All Platforms)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">Downloads</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Getting Started With the Cozmo SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK Versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk-versions.html">SDK vs. App Versions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">The API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cozmo SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Android Debug Bridge</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/adb.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="android-debug-bridge">
+<span id="adb"></span><h1>Android Debug Bridge<a class="headerlink" href="#android-debug-bridge" title="Permalink to this headline">¶</a></h1>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Android Debug Bridge (adb) is required ONLY for those users pairing an Android mobile device with Cozmo.</p>
+</div>
+<p>Android Debug Bridge (adb) is necessary in order for the Cozmo SDK to work with Android mobile devices. Please ensure adb is installed before attempting to run the Cozmo SDK with a paired Android device.</p>
+<div class="section" id="macos-installation">
+<h2>macOS Installation<a class="headerlink" href="#macos-installation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Type the following into a Terminal window (requires Homebrew to be installed):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">tap</span> <span class="n">caskroom</span><span class="o">/</span><span class="n">cask</span>
+<span class="n">brew</span> <span class="n">cask</span> <span class="n">install</span> <span class="n">android</span><span class="o">-</span><span class="n">platform</span><span class="o">-</span><span class="n">tools</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Continue to <a class="reference internal" href="#final-install"><span class="std std-ref">Final Installation (All Platforms)</span></a> below to complete installation.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="windows-installation">
+<h2>Windows Installation<a class="headerlink" href="#windows-installation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>In your internet browser, navigate to this <a class="reference external" href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip">link</a> and download file <code class="docutils literal notranslate"><span class="pre">platform-tools-latest-windows.zip</span></code> to your Downloads folder.</li>
+<li>Open a File Explorer window to your Downloads folder and see that your downloaded file <code class="docutils literal notranslate"><span class="pre">platform-tools-latest-windows.zip</span></code> is there.</li>
+<li>Open a new File Explorer window and create a new folder in <code class="docutils literal notranslate"><span class="pre">C:\Users\your_name</span></code> named <code class="docutils literal notranslate"><span class="pre">Android</span></code>. Then, navigate into your new Android folder. You should now be inside folder <code class="docutils literal notranslate"><span class="pre">C:\Users\your_name\Android</span></code>.</li>
+<li>Move the zip file you downloaded in step 1, <code class="docutils literal notranslate"><span class="pre">platform-tools-latest-windows.zip</span></code>, to your new Android folder at <code class="docutils literal notranslate"><span class="pre">C:\Users\your_name\Android</span></code>.</li>
+<li>Right-click the <code class="docutils literal notranslate"><span class="pre">platform-tools-latest-windows.zip</span></code> file in <code class="docutils literal notranslate"><span class="pre">C:\Users\your_name\Android</span></code> and select Extract All.</li>
+<li>With File Explorer, navigate to <code class="docutils literal notranslate"><span class="pre">C:\Users\your_name\Android\platform-tools-latest-windows\platform-tools</span></code> and confirm that the adb is there. You will now add this path to your PATH environment variable in the next step.</li>
+<li>Add adb to your PATH environment variable.</li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Right-click the Start menu and select <em>System</em>.</li>
+<li>Select <em>Advanced System Settings -&gt; Advanced -&gt; Environment Variables</em>.</li>
+<li>Under <em>User Variables</em>, select <em>PATH</em> and click <strong>Edit</strong>.</li>
+<li>Under <em>Edit Environment Variables</em>, click <strong>New</strong> and add the path to the folder containing adb (e.g. <code class="docutils literal notranslate"><span class="pre">C:\Users\your_name\Android\platform-tools-latest-windows\platform-tools</span></code>). Click OK on all dialog boxes to confirm your change.</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="8">
+<li>Confirm that the PATH is correctly pointing to adb.</li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Open new a Command Prompt window. (To find the Command Prompt, you may use the search box in the lower left-hand corner of your screen.)</li>
+<li>Type <code class="docutils literal notranslate"><span class="pre">adb</span></code> and adb instructions should print out.</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="9">
+<li>Continue to <a class="reference internal" href="#final-install"><span class="std std-ref">Final Installation (All Platforms)</span></a> below to complete installation.</li>
+</ol>
+</div>
+<div class="section" id="linux-installation">
+<h2>Linux Installation<a class="headerlink" href="#linux-installation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">In your internet browser, navigate to this <a class="reference external" href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip">link</a> and download file <code class="docutils literal notranslate"><span class="pre">platform-tools-latest-linux.zip</span></code>. You may need to accept the license before downloading.</p>
+</li>
+<li><p class="first">Navigate to the zip file download location (e.g., ~/Downloads) and extract the files. The files will be extracted to folder <code class="docutils literal notranslate"><span class="pre">platform-tools</span></code>.</p>
+</li>
+<li><p class="first">In your home directory, create folder <code class="docutils literal notranslate"><span class="pre">android-sdk-linux</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~</span>
+<span class="n">mkdir</span> <span class="n">android</span><span class="o">-</span><span class="n">sdk</span><span class="o">-</span><span class="n">linux</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Move the extracted <code class="docutils literal notranslate"><span class="pre">platform-tools</span></code> folder to your new <code class="docutils literal notranslate"><span class="pre">android-sdk-linux</span></code> folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">Downloads</span><span class="o">/</span><span class="n">platform</span><span class="o">-</span><span class="n">tools</span> <span class="n">android</span><span class="o">-</span><span class="n">sdk</span><span class="o">-</span><span class="n">linux</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Confirm you see adb inside <code class="docutils literal notranslate"><span class="pre">platform-tools</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">android</span><span class="o">-</span><span class="n">sdk</span><span class="o">-</span><span class="n">linux</span><span class="o">/</span><span class="n">platform</span><span class="o">-</span><span class="n">tools</span>
+<span class="n">ls</span> <span class="n">adb</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Add adb to your PATH.</p>
+</li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p class="first">Edit your <cite>~/.bashrc</cite> file and add this line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PATH=${PATH}:~/android-sdk-linux/platform-tools
+</pre></div>
+</div>
+</li>
+<li><p class="first">Save <cite>.bashrc</cite> and then call:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Confirm that adb is in your PATH by calling the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">which</span> <span class="n">adb</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">The result of this command should be the path where adb is installed.</p>
+</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="7">
+<li>Continue to <a class="reference internal" href="#final-install"><span class="std std-ref">Final Installation (All Platforms)</span></a> below to complete installation.</li>
+</ol>
+</div>
+<div class="section" id="final-installation-all-platforms">
+<span id="final-install"></span><h2>Final Installation (All Platforms)<a class="headerlink" href="#final-installation-all-platforms" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Enable USB Debugging on your phone.</li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>On Android devices:</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Tap seven (7) times on the Build Number listed under <em>Settings -&gt; About Phone</em>.</li>
+<li>Then, under <em>Settings -&gt; Developer Options</em>, enable USB debugging.</li>
+</ol>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li>On Amazon Kindle Fire:</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Tap seven (7) times on the Serial Number listed under <em>Settings -&gt; Device Options</em>.</li>
+<li>Then, under <em>Settings -&gt; Device Options -&gt; Developer Options</em>, turn on Enable ADB.</li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p class="first">Connect your Android device to your computer via USB. When the <em>Allow USB Debugging?</em> popup displays, tap <strong>OK</strong>.</p>
+</li>
+<li><p class="first">At the command line, type this command to confirm that your device shows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">adb</span> <span class="n">devices</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div><p>At least one device should show in the result, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="n">devices</span> <span class="n">attached</span>
+<span class="mi">88148</span><span class="n">a08</span>    <span class="n">device</span>
+</pre></div>
+</div>
+<p>If you are required to accept the connection request on the mobile device itself, a message will appear saying the device is unauthorized. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="n">devices</span> <span class="n">attached</span>
+<span class="mi">88148</span><span class="n">a08</span> <span class="n">unauthorized</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><a class="reference external" href="https://www.anki.com/en-us/company/terms-and-conditions">Terms and Conditions</a> and <a class="reference external" href="https://www.anki.com/en-us/company/privacy">Privacy Policy</a></p>
+<p><a class="reference external" href="http://developer.anki.com">Click here to return to the Anki Developer website.</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="downloads.html" class="btn btn-neutral float-right" title="Downloads" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install-linux.html" class="btn btn-neutral float-left" title="Installation - Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Anki
+      <span class="lastupdated">
+        Last updated on Mar, 12, 2019 01:34:57 Coordinated Universal Time.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

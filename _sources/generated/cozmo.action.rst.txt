@@ -1,0 +1,25 @@
+cozmo.action
+============
+
+.. automodule:: cozmo.action
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Action
+      ActionResults
+      EvtActionCompleted
+      EvtActionStarted
+   
+   
+
+   
+   
+   

@@ -1,0 +1,39 @@
+cozmo.objects
+=============
+
+.. automodule:: cozmo.objects
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Charger
+      CustomObject
+      CustomObjectMarkers
+      CustomObjectTypes
+      EvtObjectAppeared
+      EvtObjectConnectChanged
+      EvtObjectConnected
+      EvtObjectDisappeared
+      EvtObjectLocated
+      EvtObjectMoving
+      EvtObjectMovingStarted
+      EvtObjectMovingStopped
+      EvtObjectObserved
+      EvtObjectTapped
+      FixedCustomObject
+      LightCube
+      ObservableElement
+      ObservableObject
+   
+   
+
+   
+   
+   

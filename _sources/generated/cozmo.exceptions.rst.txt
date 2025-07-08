@@ -1,0 +1,35 @@
+cozmo.exceptions
+================
+
+.. automodule:: cozmo.exceptions
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Exceptions
+
+   .. autosummary::
+   
+      ActionError
+      AnimationsNotLoaded
+      CannotPlaceObjectsOnThis
+      ConnectionAborted
+      ConnectionCheckFailed
+      ConnectionError
+      CozmoSDKException
+      InvalidOpenGLGlutImplementation
+      NoDevicesFound
+      NotPickupable
+      RobotBusy
+      SDKShutdown
+      SDKVersionMismatch
+      StopPropogation
+   
+   

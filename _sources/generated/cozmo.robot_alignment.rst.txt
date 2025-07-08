@@ -1,0 +1,22 @@
+cozmo.robot\_alignment
+======================
+
+.. automodule:: cozmo.robot_alignment
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      RobotAlignmentTypes
+   
+   
+
+   
+   
+   
